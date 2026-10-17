@@ -1,0 +1,70 @@
+# ==============================================================================
+# TICKET-RELAY WORKFLOW (PADRÃO SPLIT-RESOLVER PARA CAPTCHA TURNSTILE)
+# ==============================================================================
+# Arquitetura:
+# 1. O runner gratuito do GitHub (2 vCPU, 7 GB RAM) roda Chrome headless + Xvfb.
+# 2. Carrega com os cookies de sessão da VPS (secret BOT_SESSION).
+# 3. O hook no browser rouba o 'turnstileToken' antes de ser consumido pelo jogo.
+# 4. Devolve o token para a VPS via tunnel: POST <push_url>/api/ticket {turnstileToken}
+# 5. O bot na VPS emite o ticket com o IP e o sid da VPS (evita erro 4401).
+# ==============================================================================
+
+name: ticket-relay
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "probe = apenas testa a captura | push = envia o token pro bot na VPS"
+        required: false
+        default: "push"
+      push_url:
+        description: "URL base do bot (ex: https://xxx.trycloudflare.com)"
+        required: true
+        default: ""
+
+concurrency:
+  group: ticket-relay
+  cancel-in-progress: false
+
+jobs:
+  solve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: Executar solver Turnstile via Chrome Headless (Xvfb)
+        env:
+          BOT_SESSION: ${{ secrets.BOT_SESSION }}
+          MODE: ${{ inputs.mode }}
+          PUSH_URL: ${{ inputs.push_url }}
+        run: |
+          set -euo pipefail
+          if [ -z "$BOT_SESSION" ]; then
+            echo "::error::Secret BOT_SESSION não configurado no repositório."
+            exit 1
+          fi
+
+          echo "[Solver] Iniciando resolução do Turnstile via Chrome..."
+          ok=0
+          for i in 1 2; do
+            if xvfb-run -a go run ./cmd/get_ticket -cookies "$BOT_SESSION" -push "$PUSH_URL"; then
+              ok=1
+              break
+            fi
+            echo "[Aviso] Tentativa $i falhou, repetindo em 3s..."
+            sleep 3
+          done
+
+          if [ "$ok" != "1" ]; then
+            echo "::error::Captura do Turnstile falhou após 2 tentativas."
+            exit 1
+          fi
+
+          echo "✔ Token Turnstile capturado e entregue com sucesso para $PUSH_URL"

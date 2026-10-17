@@ -1,0 +1,28 @@
+[
+  {
+    "id": "acc-1",
+    "name": "Conta Principal",
+    "enabled": false,
+    "credentials": {
+      "email": "seu_email@exemplo.com",
+      "username": "",
+      "password": "sua_senha",
+      "token": "",
+      "deviceId": ""
+    },
+    "settings": {
+      "huntTarget": "auto",
+      "autoHunt": true,
+      "autoSell": true,
+      "autoHeal": true,
+      "autoDaily": true,
+      "autoCatch": true,
+      "focusPokedex": true,
+      "exploitWeakness": true,
+      "preferredBall": "pokeball",
+      "minHpPercent": 25,
+      "saveIntervalSec": 30
+    },
+    "bindIP": ""
+  }
+]

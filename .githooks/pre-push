@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# Git Pre-Commit Hook — Anti-Leak & Secret Shield
+# Bloqueia qualquer commit que contenha tokens, chaves privadas, senhas ou IPs.
+# ==============================================================================
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+BLOCKED=0
+
+# Pega apenas os arquivos que estão staged para commit (ignora arquivos deletados)
+FILES=$(git diff --cached --name-only --diff-filter=ACM)
+
+if [ -z "$FILES" ]; then
+  exit 0
+fi
+
+# 1. Checagem de Nomes de Arquivos Proibidos
+for file in $FILES; do
+  case "$file" in
+    *.key|*.pem|.env|.secrets.json|secrets.json|accounts.json|session.json)
+      echo -e "${RED}[BLOQUEADO] Tentativa de commitar arquivo sensível proibido: $file${NC}"
+      BLOCKED=1
+      ;;
+  esac
+done
+
+# 2. Varredura de Conteúdo Staged por Padrões de Segredos
+for file in $FILES; do
+  # Ignora arquivos binários ou de documentação histórica
+  if git diff --cached -- "$file" | grep -qE "Binary files"; then
+    continue
+  fi
+
+  # Pega apenas as linhas ADICIONADAS no commit (+...)
+  ADDED_LINES=$(git diff --cached -U0 -- "$file" | grep -E "^\+[^\+]")
+
+  if [ -n "$ADDED_LINES" ]; then
+    # a) Telegram Bot Token (ex: 123456789:ABCDefgh...)
+    if echo "$ADDED_LINES" | grep -qE "[0-9]{8,11}:[a-zA-Z0-9_-]{35}"; then
+      echo -e "${RED}[BLOQUEADO] Token do Telegram detectado em: $file${NC}"
+      echo -e "${YELLOW}Dica: Mova o token para ~/.secrets.json ou use variáveis de ambiente (TELEGRAM_TOKEN).${NC}"
+      BLOCKED=1
+    fi
+
+    # b) Chave Privada (RSA/SSH/PGP/EC)
+    if echo "$ADDED_LINES" | grep -qiE "BEGIN[ A-Z_-]*PRIVATE KEY"; then
+      echo -e "${RED}[BLOQUEADO] Chave privada detectada em: $file${NC}"
+      BLOCKED=1
+    fi
+
+    # c) IP público da VPS Oracle
+    if echo "$ADDED_LINES" | grep -qE "129\.153\.157\.17"; then
+      echo -e "${RED}[BLOQUEADO] IP público da VPS detectado em: $file${NC}"
+      echo -e "${YELLOW}Dica: Use 127.0.0.1 ou placeholder <VPS_IP>.${NC}"
+      BLOCKED=1
+    fi
+
+    # d) Twitch OAuth Token
+    if echo "$ADDED_LINES" | grep -qE "oauth:[a-zA-Z0-9]{30}"; then
+      echo -e "${RED}[BLOQUEADO] OAuth token da Twitch detectado em: $file${NC}"
+      BLOCKED=1
+    fi
+  fi
+done
+
+if [ $BLOCKED -ne 0 ]; then
+  echo -e "\n${RED}❌ COMMIT CANCELADO AUTOMATICAMENTE PELO PRE-COMMIT HOOK!${NC}"
+  echo -e "${YELLOW}Remova as credenciais/segredos antes de commitar.${NC}\n"
+  exit 1
+fi
+
+exit 0

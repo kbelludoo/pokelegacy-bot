@@ -1,0 +1,5669 @@
+{
+  "species": {
+    "1": {
+      "id": 1,
+      "name": "Bulbasaur",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "baseExp": 64
+    },
+    "10": {
+      "id": 10,
+      "name": "Caterpie",
+      "types": [
+        "bug"
+      ],
+      "baseExp": 39
+    },
+    "100": {
+      "id": 100,
+      "name": "Voltorb",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 66
+    },
+    "101": {
+      "id": 101,
+      "name": "Electrode",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 172
+    },
+    "102": {
+      "id": 102,
+      "name": "Exeggcute",
+      "types": [
+        "grass",
+        "psychic"
+      ],
+      "baseExp": 65
+    },
+    "103": {
+      "id": 103,
+      "name": "Exeggutor",
+      "types": [
+        "grass",
+        "psychic"
+      ],
+      "baseExp": 186
+    },
+    "104": {
+      "id": 104,
+      "name": "Cubone",
+      "types": [
+        "ground"
+      ],
+      "baseExp": 64
+    },
+    "105": {
+      "id": 105,
+      "name": "Marowak",
+      "types": [
+        "ground"
+      ],
+      "baseExp": 149
+    },
+    "106": {
+      "id": 106,
+      "name": "Hitmonlee",
+      "types": [
+        "fighting"
+      ],
+      "baseExp": 159
+    },
+    "107": {
+      "id": 107,
+      "name": "Hitmonchan",
+      "types": [
+        "fighting"
+      ],
+      "baseExp": 159
+    },
+    "108": {
+      "id": 108,
+      "name": "Lickitung",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 77
+    },
+    "109": {
+      "id": 109,
+      "name": "Koffing",
+      "types": [
+        "poison"
+      ],
+      "baseExp": 68
+    },
+    "11": {
+      "id": 11,
+      "name": "Metapod",
+      "types": [
+        "bug"
+      ],
+      "baseExp": 72
+    },
+    "110": {
+      "id": 110,
+      "name": "Weezing",
+      "types": [
+        "poison"
+      ],
+      "baseExp": 172
+    },
+    "111": {
+      "id": 111,
+      "name": "Rhyhorn",
+      "types": [
+        "ground",
+        "rock"
+      ],
+      "baseExp": 69
+    },
+    "112": {
+      "id": 112,
+      "name": "Rhydon",
+      "types": [
+        "ground",
+        "rock"
+      ],
+      "baseExp": 170
+    },
+    "113": {
+      "id": 113,
+      "name": "Chansey",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 395
+    },
+    "114": {
+      "id": 114,
+      "name": "Tangela",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 87
+    },
+    "115": {
+      "id": 115,
+      "name": "Kangaskhan",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 172
+    },
+    "116": {
+      "id": 116,
+      "name": "Horsea",
+      "types": [
+        "water"
+      ],
+      "baseExp": 59
+    },
+    "117": {
+      "id": 117,
+      "name": "Seadra",
+      "types": [
+        "water"
+      ],
+      "baseExp": 154
+    },
+    "118": {
+      "id": 118,
+      "name": "Goldeen",
+      "types": [
+        "water"
+      ],
+      "baseExp": 64
+    },
+    "119": {
+      "id": 119,
+      "name": "Seaking",
+      "types": [
+        "water"
+      ],
+      "baseExp": 158
+    },
+    "12": {
+      "id": 12,
+      "name": "Butterfree",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "baseExp": 178
+    },
+    "120": {
+      "id": 120,
+      "name": "Staryu",
+      "types": [
+        "water"
+      ],
+      "baseExp": 68
+    },
+    "121": {
+      "id": 121,
+      "name": "Starmie",
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "baseExp": 182
+    },
+    "122": {
+      "id": 122,
+      "name": "Mr. Mime",
+      "types": [
+        "psychic",
+        "fairy"
+      ],
+      "baseExp": 161
+    },
+    "123": {
+      "id": 123,
+      "name": "Scyther",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "baseExp": 100
+    },
+    "124": {
+      "id": 124,
+      "name": "Jynx",
+      "types": [
+        "ice",
+        "psychic"
+      ],
+      "baseExp": 159
+    },
+    "125": {
+      "id": 125,
+      "name": "Electabuzz",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 172
+    },
+    "126": {
+      "id": 126,
+      "name": "Magmar",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 173
+    },
+    "127": {
+      "id": 127,
+      "name": "Pinsir",
+      "types": [
+        "bug"
+      ],
+      "baseExp": 175
+    },
+    "128": {
+      "id": 128,
+      "name": "Tauros",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 172
+    },
+    "129": {
+      "id": 129,
+      "name": "Magikarp",
+      "types": [
+        "water"
+      ],
+      "baseExp": 40
+    },
+    "13": {
+      "id": 13,
+      "name": "Weedle",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "baseExp": 39
+    },
+    "130": {
+      "id": 130,
+      "name": "Gyarados",
+      "types": [
+        "water",
+        "flying"
+      ],
+      "baseExp": 189
+    },
+    "131": {
+      "id": 131,
+      "name": "Lapras",
+      "types": [
+        "water",
+        "ice"
+      ],
+      "baseExp": 187
+    },
+    "132": {
+      "id": 132,
+      "name": "Ditto",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 101
+    },
+    "133": {
+      "id": 133,
+      "name": "Eevee",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 65
+    },
+    "134": {
+      "id": 134,
+      "name": "Vaporeon",
+      "types": [
+        "water"
+      ],
+      "baseExp": 184
+    },
+    "135": {
+      "id": 135,
+      "name": "Jolteon",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 184
+    },
+    "136": {
+      "id": 136,
+      "name": "Flareon",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 184
+    },
+    "137": {
+      "id": 137,
+      "name": "Porygon",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 79
+    },
+    "138": {
+      "id": 138,
+      "name": "Omanyte",
+      "types": [
+        "rock",
+        "water"
+      ],
+      "baseExp": 71
+    },
+    "139": {
+      "id": 139,
+      "name": "Omastar",
+      "types": [
+        "rock",
+        "water"
+      ],
+      "baseExp": 173
+    },
+    "14": {
+      "id": 14,
+      "name": "Kakuna",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "baseExp": 72
+    },
+    "140": {
+      "id": 140,
+      "name": "Kabuto",
+      "types": [
+        "rock",
+        "water"
+      ],
+      "baseExp": 71
+    },
+    "141": {
+      "id": 141,
+      "name": "Kabutops",
+      "types": [
+        "rock",
+        "water"
+      ],
+      "baseExp": 173
+    },
+    "142": {
+      "id": 142,
+      "name": "Aerodactyl",
+      "types": [
+        "rock",
+        "flying"
+      ],
+      "baseExp": 180
+    },
+    "143": {
+      "id": 143,
+      "name": "Snorlax",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 189
+    },
+    "144": {
+      "id": 144,
+      "name": "Articuno",
+      "types": [
+        "ice",
+        "flying"
+      ],
+      "baseExp": 261
+    },
+    "145": {
+      "id": 145,
+      "name": "Zapdos",
+      "types": [
+        "electric",
+        "flying"
+      ],
+      "baseExp": 261
+    },
+    "146": {
+      "id": 146,
+      "name": "Moltres",
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "baseExp": 261
+    },
+    "147": {
+      "id": 147,
+      "name": "Dratini",
+      "types": [
+        "dragon"
+      ],
+      "baseExp": 60
+    },
+    "148": {
+      "id": 148,
+      "name": "Dragonair",
+      "types": [
+        "dragon"
+      ],
+      "baseExp": 147
+    },
+    "149": {
+      "id": 149,
+      "name": "Dragonite",
+      "types": [
+        "dragon",
+        "flying"
+      ],
+      "baseExp": 270
+    },
+    "15": {
+      "id": 15,
+      "name": "Beedrill",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "baseExp": 178
+    },
+    "150": {
+      "id": 150,
+      "name": "Mewtwo",
+      "types": [
+        "psychic"
+      ],
+      "baseExp": 306
+    },
+    "151": {
+      "id": 151,
+      "name": "Mew",
+      "types": [
+        "psychic"
+      ],
+      "baseExp": 270
+    },
+    "152": {
+      "id": 152,
+      "name": "Chikorita",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 64
+    },
+    "153": {
+      "id": 153,
+      "name": "Bayleef",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 142
+    },
+    "154": {
+      "id": 154,
+      "name": "Meganium",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 236
+    },
+    "155": {
+      "id": 155,
+      "name": "Cyndaquil",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 62
+    },
+    "156": {
+      "id": 156,
+      "name": "Quilava",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 142
+    },
+    "157": {
+      "id": 157,
+      "name": "Typhlosion",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 240
+    },
+    "158": {
+      "id": 158,
+      "name": "Totodile",
+      "types": [
+        "water"
+      ],
+      "baseExp": 63
+    },
+    "159": {
+      "id": 159,
+      "name": "Croconaw",
+      "types": [
+        "water"
+      ],
+      "baseExp": 142
+    },
+    "16": {
+      "id": 16,
+      "name": "Pidgey",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 50
+    },
+    "160": {
+      "id": 160,
+      "name": "Feraligatr",
+      "types": [
+        "water"
+      ],
+      "baseExp": 239
+    },
+    "161": {
+      "id": 161,
+      "name": "Sentret",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 43
+    },
+    "162": {
+      "id": 162,
+      "name": "Furret",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 145
+    },
+    "163": {
+      "id": 163,
+      "name": "Hoothoot",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 52
+    },
+    "164": {
+      "id": 164,
+      "name": "Noctowl",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 158
+    },
+    "165": {
+      "id": 165,
+      "name": "Ledyba",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "baseExp": 53
+    },
+    "166": {
+      "id": 166,
+      "name": "Ledian",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "baseExp": 137
+    },
+    "167": {
+      "id": 167,
+      "name": "Spinarak",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "baseExp": 50
+    },
+    "168": {
+      "id": 168,
+      "name": "Ariados",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "baseExp": 140
+    },
+    "169": {
+      "id": 169,
+      "name": "Crobat",
+      "types": [
+        "poison",
+        "flying"
+      ],
+      "baseExp": 241
+    },
+    "17": {
+      "id": 17,
+      "name": "Pidgeotto",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 122
+    },
+    "170": {
+      "id": 170,
+      "name": "Chinchou",
+      "types": [
+        "water",
+        "electric"
+      ],
+      "baseExp": 66
+    },
+    "171": {
+      "id": 171,
+      "name": "Lanturn",
+      "types": [
+        "water",
+        "electric"
+      ],
+      "baseExp": 161
+    },
+    "172": {
+      "id": 172,
+      "name": "Pichu",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 41
+    },
+    "173": {
+      "id": 173,
+      "name": "Cleffa",
+      "types": [
+        "fairy"
+      ],
+      "baseExp": 44
+    },
+    "174": {
+      "id": 174,
+      "name": "Igglybuff",
+      "types": [
+        "normal",
+        "fairy"
+      ],
+      "baseExp": 42
+    },
+    "175": {
+      "id": 175,
+      "name": "Togepi",
+      "types": [
+        "fairy"
+      ],
+      "baseExp": 49
+    },
+    "176": {
+      "id": 176,
+      "name": "Togetic",
+      "types": [
+        "fairy",
+        "flying"
+      ],
+      "baseExp": 142
+    },
+    "177": {
+      "id": 177,
+      "name": "Natu",
+      "types": [
+        "psychic",
+        "flying"
+      ],
+      "baseExp": 64
+    },
+    "178": {
+      "id": 178,
+      "name": "Xatu",
+      "types": [
+        "psychic",
+        "flying"
+      ],
+      "baseExp": 165
+    },
+    "179": {
+      "id": 179,
+      "name": "Mareep",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 56
+    },
+    "18": {
+      "id": 18,
+      "name": "Pidgeot",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 216
+    },
+    "180": {
+      "id": 180,
+      "name": "Flaaffy",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 128
+    },
+    "181": {
+      "id": 181,
+      "name": "Ampharos",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 230
+    },
+    "182": {
+      "id": 182,
+      "name": "Bellossom",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 221
+    },
+    "183": {
+      "id": 183,
+      "name": "Marill",
+      "types": [
+        "water",
+        "fairy"
+      ],
+      "baseExp": 88
+    },
+    "184": {
+      "id": 184,
+      "name": "Azumarill",
+      "types": [
+        "water",
+        "fairy"
+      ],
+      "baseExp": 189
+    },
+    "185": {
+      "id": 185,
+      "name": "Sudowoodo",
+      "types": [
+        "rock"
+      ],
+      "baseExp": 144
+    },
+    "186": {
+      "id": 186,
+      "name": "Politoed",
+      "types": [
+        "water"
+      ],
+      "baseExp": 225
+    },
+    "187": {
+      "id": 187,
+      "name": "Hoppip",
+      "types": [
+        "grass",
+        "flying"
+      ],
+      "baseExp": 50
+    },
+    "188": {
+      "id": 188,
+      "name": "Skiploom",
+      "types": [
+        "grass",
+        "flying"
+      ],
+      "baseExp": 119
+    },
+    "189": {
+      "id": 189,
+      "name": "Jumpluff",
+      "types": [
+        "grass",
+        "flying"
+      ],
+      "baseExp": 207
+    },
+    "19": {
+      "id": 19,
+      "name": "Rattata",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 51
+    },
+    "190": {
+      "id": 190,
+      "name": "Aipom",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 72
+    },
+    "191": {
+      "id": 191,
+      "name": "Sunkern",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 36
+    },
+    "192": {
+      "id": 192,
+      "name": "Sunflora",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 149
+    },
+    "193": {
+      "id": 193,
+      "name": "Yanma",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "baseExp": 78
+    },
+    "194": {
+      "id": 194,
+      "name": "Wooper",
+      "types": [
+        "water",
+        "ground"
+      ],
+      "baseExp": 42
+    },
+    "195": {
+      "id": 195,
+      "name": "Quagsire",
+      "types": [
+        "water",
+        "ground"
+      ],
+      "baseExp": 151
+    },
+    "196": {
+      "id": 196,
+      "name": "Espeon",
+      "types": [
+        "psychic"
+      ],
+      "baseExp": 184
+    },
+    "197": {
+      "id": 197,
+      "name": "Umbreon",
+      "types": [
+        "dark"
+      ],
+      "baseExp": 184
+    },
+    "198": {
+      "id": 198,
+      "name": "Murkrow",
+      "types": [
+        "dark",
+        "flying"
+      ],
+      "baseExp": 81
+    },
+    "199": {
+      "id": 199,
+      "name": "Slowking",
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "baseExp": 172
+    },
+    "2": {
+      "id": 2,
+      "name": "Ivysaur",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "baseExp": 142
+    },
+    "20": {
+      "id": 20,
+      "name": "Raticate",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 145
+    },
+    "200": {
+      "id": 200,
+      "name": "Misdreavus",
+      "types": [
+        "ghost"
+      ],
+      "baseExp": 87
+    },
+    "201": {
+      "id": 201,
+      "name": "Unown",
+      "types": [
+        "psychic"
+      ],
+      "baseExp": 118
+    },
+    "202": {
+      "id": 202,
+      "name": "Wobbuffet",
+      "types": [
+        "psychic"
+      ],
+      "baseExp": 142
+    },
+    "203": {
+      "id": 203,
+      "name": "Girafarig",
+      "types": [
+        "normal",
+        "psychic"
+      ],
+      "baseExp": 159
+    },
+    "204": {
+      "id": 204,
+      "name": "Pineco",
+      "types": [
+        "bug"
+      ],
+      "baseExp": 58
+    },
+    "205": {
+      "id": 205,
+      "name": "Forretress",
+      "types": [
+        "bug",
+        "steel"
+      ],
+      "baseExp": 163
+    },
+    "206": {
+      "id": 206,
+      "name": "Dunsparce",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 145
+    },
+    "207": {
+      "id": 207,
+      "name": "Gligar",
+      "types": [
+        "ground",
+        "flying"
+      ],
+      "baseExp": 86
+    },
+    "208": {
+      "id": 208,
+      "name": "Steelix",
+      "types": [
+        "steel",
+        "ground"
+      ],
+      "baseExp": 179
+    },
+    "209": {
+      "id": 209,
+      "name": "Snubbull",
+      "types": [
+        "fairy"
+      ],
+      "baseExp": 60
+    },
+    "21": {
+      "id": 21,
+      "name": "Spearow",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 52
+    },
+    "210": {
+      "id": 210,
+      "name": "Granbull",
+      "types": [
+        "fairy"
+      ],
+      "baseExp": 158
+    },
+    "211": {
+      "id": 211,
+      "name": "Qwilfish",
+      "types": [
+        "water",
+        "poison"
+      ],
+      "baseExp": 88
+    },
+    "212": {
+      "id": 212,
+      "name": "Scizor",
+      "types": [
+        "bug",
+        "steel"
+      ],
+      "baseExp": 175
+    },
+    "213": {
+      "id": 213,
+      "name": "Shuckle",
+      "types": [
+        "bug",
+        "rock"
+      ],
+      "baseExp": 177
+    },
+    "214": {
+      "id": 214,
+      "name": "Heracross",
+      "types": [
+        "bug",
+        "fighting"
+      ],
+      "baseExp": 175
+    },
+    "215": {
+      "id": 215,
+      "name": "Sneasel",
+      "types": [
+        "dark",
+        "ice"
+      ],
+      "baseExp": 86
+    },
+    "216": {
+      "id": 216,
+      "name": "Teddiursa",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 66
+    },
+    "217": {
+      "id": 217,
+      "name": "Ursaring",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 175
+    },
+    "218": {
+      "id": 218,
+      "name": "Slugma",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 50
+    },
+    "219": {
+      "id": 219,
+      "name": "Magcargo",
+      "types": [
+        "fire",
+        "rock"
+      ],
+      "baseExp": 151
+    },
+    "22": {
+      "id": 22,
+      "name": "Fearow",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 155
+    },
+    "220": {
+      "id": 220,
+      "name": "Swinub",
+      "types": [
+        "ice",
+        "ground"
+      ],
+      "baseExp": 50
+    },
+    "221": {
+      "id": 221,
+      "name": "Piloswine",
+      "types": [
+        "ice",
+        "ground"
+      ],
+      "baseExp": 158
+    },
+    "222": {
+      "id": 222,
+      "name": "Corsola",
+      "types": [
+        "water",
+        "rock"
+      ],
+      "baseExp": 144
+    },
+    "223": {
+      "id": 223,
+      "name": "Remoraid",
+      "types": [
+        "water"
+      ],
+      "baseExp": 60
+    },
+    "224": {
+      "id": 224,
+      "name": "Octillery",
+      "types": [
+        "water"
+      ],
+      "baseExp": 168
+    },
+    "225": {
+      "id": 225,
+      "name": "Delibird",
+      "types": [
+        "ice",
+        "flying"
+      ],
+      "baseExp": 116
+    },
+    "226": {
+      "id": 226,
+      "name": "Mantine",
+      "types": [
+        "water",
+        "flying"
+      ],
+      "baseExp": 170
+    },
+    "227": {
+      "id": 227,
+      "name": "Skarmory",
+      "types": [
+        "steel",
+        "flying"
+      ],
+      "baseExp": 163
+    },
+    "228": {
+      "id": 228,
+      "name": "Houndour",
+      "types": [
+        "dark",
+        "fire"
+      ],
+      "baseExp": 66
+    },
+    "229": {
+      "id": 229,
+      "name": "Houndoom",
+      "types": [
+        "dark",
+        "fire"
+      ],
+      "baseExp": 175
+    },
+    "23": {
+      "id": 23,
+      "name": "Ekans",
+      "types": [
+        "poison"
+      ],
+      "baseExp": 58
+    },
+    "230": {
+      "id": 230,
+      "name": "Kingdra",
+      "types": [
+        "water",
+        "dragon"
+      ],
+      "baseExp": 243
+    },
+    "231": {
+      "id": 231,
+      "name": "Phanpy",
+      "types": [
+        "ground"
+      ],
+      "baseExp": 66
+    },
+    "232": {
+      "id": 232,
+      "name": "Donphan",
+      "types": [
+        "ground"
+      ],
+      "baseExp": 175
+    },
+    "233": {
+      "id": 233,
+      "name": "Porygon2",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 180
+    },
+    "234": {
+      "id": 234,
+      "name": "Stantler",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 163
+    },
+    "235": {
+      "id": 235,
+      "name": "Smeargle",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 88
+    },
+    "236": {
+      "id": 236,
+      "name": "Tyrogue",
+      "types": [
+        "fighting"
+      ],
+      "baseExp": 42
+    },
+    "237": {
+      "id": 237,
+      "name": "Hitmontop",
+      "types": [
+        "fighting"
+      ],
+      "baseExp": 159
+    },
+    "238": {
+      "id": 238,
+      "name": "Smoochum",
+      "types": [
+        "ice",
+        "psychic"
+      ],
+      "baseExp": 61
+    },
+    "239": {
+      "id": 239,
+      "name": "Elekid",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 72
+    },
+    "24": {
+      "id": 24,
+      "name": "Arbok",
+      "types": [
+        "poison"
+      ],
+      "baseExp": 157
+    },
+    "240": {
+      "id": 240,
+      "name": "Magby",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 73
+    },
+    "241": {
+      "id": 241,
+      "name": "Miltank",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 172
+    },
+    "242": {
+      "id": 242,
+      "name": "Blissey",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 608
+    },
+    "243": {
+      "id": 243,
+      "name": "Raikou",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 261
+    },
+    "244": {
+      "id": 244,
+      "name": "Entei",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 261
+    },
+    "245": {
+      "id": 245,
+      "name": "Suicune",
+      "types": [
+        "water"
+      ],
+      "baseExp": 261
+    },
+    "246": {
+      "id": 246,
+      "name": "Larvitar",
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "baseExp": 60
+    },
+    "247": {
+      "id": 247,
+      "name": "Pupitar",
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "baseExp": 144
+    },
+    "248": {
+      "id": 248,
+      "name": "Tyranitar",
+      "types": [
+        "rock",
+        "dark"
+      ],
+      "baseExp": 270
+    },
+    "249": {
+      "id": 249,
+      "name": "Lugia",
+      "types": [
+        "psychic",
+        "flying"
+      ],
+      "baseExp": 306
+    },
+    "25": {
+      "id": 25,
+      "name": "Pikachu",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 112
+    },
+    "250": {
+      "id": 250,
+      "name": "Ho-Oh",
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "baseExp": 306
+    },
+    "251": {
+      "id": 251,
+      "name": "Celebi",
+      "types": [
+        "psychic",
+        "grass"
+      ],
+      "baseExp": 270
+    },
+    "252": {
+      "id": 252,
+      "name": "Treecko",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 62
+    },
+    "253": {
+      "id": 253,
+      "name": "Grovyle",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 142
+    },
+    "254": {
+      "id": 254,
+      "name": "Sceptile",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 239
+    },
+    "255": {
+      "id": 255,
+      "name": "Torchic",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 62
+    },
+    "256": {
+      "id": 256,
+      "name": "Combusken",
+      "types": [
+        "fire",
+        "fighting"
+      ],
+      "baseExp": 142
+    },
+    "257": {
+      "id": 257,
+      "name": "Blaziken",
+      "types": [
+        "fire",
+        "fighting"
+      ],
+      "baseExp": 239
+    },
+    "258": {
+      "id": 258,
+      "name": "Mudkip",
+      "types": [
+        "water"
+      ],
+      "baseExp": 62
+    },
+    "259": {
+      "id": 259,
+      "name": "Marshtomp",
+      "types": [
+        "water",
+        "ground"
+      ],
+      "baseExp": 142
+    },
+    "26": {
+      "id": 26,
+      "name": "Raichu",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 218
+    },
+    "260": {
+      "id": 260,
+      "name": "Swampert",
+      "types": [
+        "water",
+        "ground"
+      ],
+      "baseExp": 241
+    },
+    "261": {
+      "id": 261,
+      "name": "Poochyena",
+      "types": [
+        "dark"
+      ],
+      "baseExp": 56
+    },
+    "262": {
+      "id": 262,
+      "name": "Mightyena",
+      "types": [
+        "dark"
+      ],
+      "baseExp": 147
+    },
+    "263": {
+      "id": 263,
+      "name": "Zigzagoon",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 56
+    },
+    "264": {
+      "id": 264,
+      "name": "Linoone",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 147
+    },
+    "265": {
+      "id": 265,
+      "name": "Wurmple",
+      "types": [
+        "bug"
+      ],
+      "baseExp": 56
+    },
+    "266": {
+      "id": 266,
+      "name": "Silcoon",
+      "types": [
+        "bug"
+      ],
+      "baseExp": 72
+    },
+    "267": {
+      "id": 267,
+      "name": "Beautifly",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "baseExp": 178
+    },
+    "268": {
+      "id": 268,
+      "name": "Cascoon",
+      "types": [
+        "bug"
+      ],
+      "baseExp": 72
+    },
+    "269": {
+      "id": 269,
+      "name": "Dustox",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "baseExp": 173
+    },
+    "27": {
+      "id": 27,
+      "name": "Sandshrew",
+      "types": [
+        "ground"
+      ],
+      "baseExp": 60
+    },
+    "270": {
+      "id": 270,
+      "name": "Lotad",
+      "types": [
+        "water",
+        "grass"
+      ],
+      "baseExp": 44
+    },
+    "271": {
+      "id": 271,
+      "name": "Lombre",
+      "types": [
+        "water",
+        "grass"
+      ],
+      "baseExp": 119
+    },
+    "272": {
+      "id": 272,
+      "name": "Ludicolo",
+      "types": [
+        "water",
+        "grass"
+      ],
+      "baseExp": 216
+    },
+    "273": {
+      "id": 273,
+      "name": "Seedot",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 44
+    },
+    "274": {
+      "id": 274,
+      "name": "Nuzleaf",
+      "types": [
+        "grass",
+        "dark"
+      ],
+      "baseExp": 119
+    },
+    "275": {
+      "id": 275,
+      "name": "Shiftry",
+      "types": [
+        "grass",
+        "dark"
+      ],
+      "baseExp": 216
+    },
+    "276": {
+      "id": 276,
+      "name": "Taillow",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 54
+    },
+    "277": {
+      "id": 277,
+      "name": "Swellow",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 159
+    },
+    "278": {
+      "id": 278,
+      "name": "Wingull",
+      "types": [
+        "water",
+        "flying"
+      ],
+      "baseExp": 54
+    },
+    "279": {
+      "id": 279,
+      "name": "Pelipper",
+      "types": [
+        "water",
+        "flying"
+      ],
+      "baseExp": 154
+    },
+    "28": {
+      "id": 28,
+      "name": "Sandslash",
+      "types": [
+        "ground"
+      ],
+      "baseExp": 158
+    },
+    "280": {
+      "id": 280,
+      "name": "Ralts",
+      "types": [
+        "psychic",
+        "fairy"
+      ],
+      "baseExp": 40
+    },
+    "281": {
+      "id": 281,
+      "name": "Kirlia",
+      "types": [
+        "psychic",
+        "fairy"
+      ],
+      "baseExp": 97
+    },
+    "282": {
+      "id": 282,
+      "name": "Gardevoir",
+      "types": [
+        "psychic",
+        "fairy"
+      ],
+      "baseExp": 233
+    },
+    "283": {
+      "id": 283,
+      "name": "Surskit",
+      "types": [
+        "bug",
+        "water"
+      ],
+      "baseExp": 54
+    },
+    "284": {
+      "id": 284,
+      "name": "Masquerain",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "baseExp": 159
+    },
+    "285": {
+      "id": 285,
+      "name": "Shroomish",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 59
+    },
+    "286": {
+      "id": 286,
+      "name": "Breloom",
+      "types": [
+        "grass",
+        "fighting"
+      ],
+      "baseExp": 161
+    },
+    "287": {
+      "id": 287,
+      "name": "Slakoth",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 56
+    },
+    "288": {
+      "id": 288,
+      "name": "Vigoroth",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 154
+    },
+    "289": {
+      "id": 289,
+      "name": "Slaking",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 252
+    },
+    "29": {
+      "id": 29,
+      "name": "Nidoran♀",
+      "types": [
+        "poison"
+      ],
+      "baseExp": 55
+    },
+    "290": {
+      "id": 290,
+      "name": "Nincada",
+      "types": [
+        "bug",
+        "ground"
+      ],
+      "baseExp": 53
+    },
+    "291": {
+      "id": 291,
+      "name": "Ninjask",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "baseExp": 160
+    },
+    "292": {
+      "id": 292,
+      "name": "Shedinja",
+      "types": [
+        "bug",
+        "ghost"
+      ],
+      "baseExp": 83
+    },
+    "293": {
+      "id": 293,
+      "name": "Whismur",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 48
+    },
+    "294": {
+      "id": 294,
+      "name": "Loudred",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 126
+    },
+    "295": {
+      "id": 295,
+      "name": "Exploud",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 221
+    },
+    "296": {
+      "id": 296,
+      "name": "Makuhita",
+      "types": [
+        "fighting"
+      ],
+      "baseExp": 47
+    },
+    "297": {
+      "id": 297,
+      "name": "Hariyama",
+      "types": [
+        "fighting"
+      ],
+      "baseExp": 166
+    },
+    "298": {
+      "id": 298,
+      "name": "Azurill",
+      "types": [
+        "normal",
+        "fairy"
+      ],
+      "baseExp": 38
+    },
+    "299": {
+      "id": 299,
+      "name": "Nosepass",
+      "types": [
+        "rock"
+      ],
+      "baseExp": 75
+    },
+    "3": {
+      "id": 3,
+      "name": "Venusaur",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "baseExp": 236
+    },
+    "30": {
+      "id": 30,
+      "name": "Nidorina",
+      "types": [
+        "poison"
+      ],
+      "baseExp": 128
+    },
+    "300": {
+      "id": 300,
+      "name": "Skitty",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 52
+    },
+    "301": {
+      "id": 301,
+      "name": "Delcatty",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 140
+    },
+    "302": {
+      "id": 302,
+      "name": "Sableye",
+      "types": [
+        "dark",
+        "ghost"
+      ],
+      "baseExp": 133
+    },
+    "303": {
+      "id": 303,
+      "name": "Mawile",
+      "types": [
+        "steel",
+        "fairy"
+      ],
+      "baseExp": 133
+    },
+    "304": {
+      "id": 304,
+      "name": "Aron",
+      "types": [
+        "steel",
+        "rock"
+      ],
+      "baseExp": 66
+    },
+    "305": {
+      "id": 305,
+      "name": "Lairon",
+      "types": [
+        "steel",
+        "rock"
+      ],
+      "baseExp": 151
+    },
+    "306": {
+      "id": 306,
+      "name": "Aggron",
+      "types": [
+        "steel",
+        "rock"
+      ],
+      "baseExp": 239
+    },
+    "307": {
+      "id": 307,
+      "name": "Meditite",
+      "types": [
+        "fighting",
+        "psychic"
+      ],
+      "baseExp": 56
+    },
+    "308": {
+      "id": 308,
+      "name": "Medicham",
+      "types": [
+        "fighting",
+        "psychic"
+      ],
+      "baseExp": 144
+    },
+    "309": {
+      "id": 309,
+      "name": "Electrike",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 59
+    },
+    "31": {
+      "id": 31,
+      "name": "Nidoqueen",
+      "types": [
+        "poison",
+        "ground"
+      ],
+      "baseExp": 227
+    },
+    "310": {
+      "id": 310,
+      "name": "Manectric",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 166
+    },
+    "311": {
+      "id": 311,
+      "name": "Plusle",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 142
+    },
+    "312": {
+      "id": 312,
+      "name": "Minun",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 142
+    },
+    "313": {
+      "id": 313,
+      "name": "Volbeat",
+      "types": [
+        "bug"
+      ],
+      "baseExp": 151
+    },
+    "314": {
+      "id": 314,
+      "name": "Illumise",
+      "types": [
+        "bug"
+      ],
+      "baseExp": 151
+    },
+    "315": {
+      "id": 315,
+      "name": "Roselia",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "baseExp": 140
+    },
+    "316": {
+      "id": 316,
+      "name": "Gulpin",
+      "types": [
+        "poison"
+      ],
+      "baseExp": 60
+    },
+    "317": {
+      "id": 317,
+      "name": "Swalot",
+      "types": [
+        "poison"
+      ],
+      "baseExp": 163
+    },
+    "318": {
+      "id": 318,
+      "name": "Carvanha",
+      "types": [
+        "water",
+        "dark"
+      ],
+      "baseExp": 61
+    },
+    "319": {
+      "id": 319,
+      "name": "Sharpedo",
+      "types": [
+        "water",
+        "dark"
+      ],
+      "baseExp": 161
+    },
+    "32": {
+      "id": 32,
+      "name": "Nidoran♂",
+      "types": [
+        "poison"
+      ],
+      "baseExp": 55
+    },
+    "320": {
+      "id": 320,
+      "name": "Wailmer",
+      "types": [
+        "water"
+      ],
+      "baseExp": 80
+    },
+    "321": {
+      "id": 321,
+      "name": "Wailord",
+      "types": [
+        "water"
+      ],
+      "baseExp": 175
+    },
+    "322": {
+      "id": 322,
+      "name": "Numel",
+      "types": [
+        "fire",
+        "ground"
+      ],
+      "baseExp": 61
+    },
+    "323": {
+      "id": 323,
+      "name": "Camerupt",
+      "types": [
+        "fire",
+        "ground"
+      ],
+      "baseExp": 161
+    },
+    "324": {
+      "id": 324,
+      "name": "Torkoal",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 165
+    },
+    "325": {
+      "id": 325,
+      "name": "Spoink",
+      "types": [
+        "psychic"
+      ],
+      "baseExp": 66
+    },
+    "326": {
+      "id": 326,
+      "name": "Grumpig",
+      "types": [
+        "psychic"
+      ],
+      "baseExp": 165
+    },
+    "327": {
+      "id": 327,
+      "name": "Spinda",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 126
+    },
+    "328": {
+      "id": 328,
+      "name": "Trapinch",
+      "types": [
+        "ground"
+      ],
+      "baseExp": 58
+    },
+    "329": {
+      "id": 329,
+      "name": "Vibrava",
+      "types": [
+        "ground",
+        "dragon"
+      ],
+      "baseExp": 119
+    },
+    "33": {
+      "id": 33,
+      "name": "Nidorino",
+      "types": [
+        "poison"
+      ],
+      "baseExp": 128
+    },
+    "330": {
+      "id": 330,
+      "name": "Flygon",
+      "types": [
+        "ground",
+        "dragon"
+      ],
+      "baseExp": 234
+    },
+    "331": {
+      "id": 331,
+      "name": "Cacnea",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 67
+    },
+    "332": {
+      "id": 332,
+      "name": "Cacturne",
+      "types": [
+        "grass",
+        "dark"
+      ],
+      "baseExp": 166
+    },
+    "333": {
+      "id": 333,
+      "name": "Swablu",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 62
+    },
+    "334": {
+      "id": 334,
+      "name": "Altaria",
+      "types": [
+        "dragon",
+        "flying"
+      ],
+      "baseExp": 172
+    },
+    "335": {
+      "id": 335,
+      "name": "Zangoose",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 160
+    },
+    "336": {
+      "id": 336,
+      "name": "Seviper",
+      "types": [
+        "poison"
+      ],
+      "baseExp": 160
+    },
+    "337": {
+      "id": 337,
+      "name": "Lunatone",
+      "types": [
+        "rock",
+        "psychic"
+      ],
+      "baseExp": 161
+    },
+    "338": {
+      "id": 338,
+      "name": "Solrock",
+      "types": [
+        "rock",
+        "psychic"
+      ],
+      "baseExp": 161
+    },
+    "339": {
+      "id": 339,
+      "name": "Barboach",
+      "types": [
+        "water",
+        "ground"
+      ],
+      "baseExp": 58
+    },
+    "34": {
+      "id": 34,
+      "name": "Nidoking",
+      "types": [
+        "poison",
+        "ground"
+      ],
+      "baseExp": 227
+    },
+    "340": {
+      "id": 340,
+      "name": "Whiscash",
+      "types": [
+        "water",
+        "ground"
+      ],
+      "baseExp": 164
+    },
+    "341": {
+      "id": 341,
+      "name": "Corphish",
+      "types": [
+        "water"
+      ],
+      "baseExp": 62
+    },
+    "342": {
+      "id": 342,
+      "name": "Crawdaunt",
+      "types": [
+        "water",
+        "dark"
+      ],
+      "baseExp": 164
+    },
+    "343": {
+      "id": 343,
+      "name": "Baltoy",
+      "types": [
+        "ground",
+        "psychic"
+      ],
+      "baseExp": 60
+    },
+    "344": {
+      "id": 344,
+      "name": "Claydol",
+      "types": [
+        "ground",
+        "psychic"
+      ],
+      "baseExp": 175
+    },
+    "345": {
+      "id": 345,
+      "name": "Lileep",
+      "types": [
+        "rock",
+        "grass"
+      ],
+      "baseExp": 71
+    },
+    "346": {
+      "id": 346,
+      "name": "Cradily",
+      "types": [
+        "rock",
+        "grass"
+      ],
+      "baseExp": 173
+    },
+    "347": {
+      "id": 347,
+      "name": "Anorith",
+      "types": [
+        "rock",
+        "bug"
+      ],
+      "baseExp": 71
+    },
+    "348": {
+      "id": 348,
+      "name": "Armaldo",
+      "types": [
+        "rock",
+        "bug"
+      ],
+      "baseExp": 173
+    },
+    "349": {
+      "id": 349,
+      "name": "Feebas",
+      "types": [
+        "water"
+      ],
+      "baseExp": 40
+    },
+    "35": {
+      "id": 35,
+      "name": "Clefairy",
+      "types": [
+        "fairy"
+      ],
+      "baseExp": 113
+    },
+    "350": {
+      "id": 350,
+      "name": "Milotic",
+      "types": [
+        "water"
+      ],
+      "baseExp": 189
+    },
+    "351": {
+      "id": 351,
+      "name": "Castform",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 147
+    },
+    "352": {
+      "id": 352,
+      "name": "Kecleon",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 154
+    },
+    "353": {
+      "id": 353,
+      "name": "Shuppet",
+      "types": [
+        "ghost"
+      ],
+      "baseExp": 59
+    },
+    "354": {
+      "id": 354,
+      "name": "Banette",
+      "types": [
+        "ghost"
+      ],
+      "baseExp": 159
+    },
+    "355": {
+      "id": 355,
+      "name": "Duskull",
+      "types": [
+        "ghost"
+      ],
+      "baseExp": 59
+    },
+    "356": {
+      "id": 356,
+      "name": "Dusclops",
+      "types": [
+        "ghost"
+      ],
+      "baseExp": 159
+    },
+    "357": {
+      "id": 357,
+      "name": "Tropius",
+      "types": [
+        "grass",
+        "flying"
+      ],
+      "baseExp": 161
+    },
+    "358": {
+      "id": 358,
+      "name": "Chimecho",
+      "types": [
+        "psychic"
+      ],
+      "baseExp": 159
+    },
+    "359": {
+      "id": 359,
+      "name": "Absol",
+      "types": [
+        "dark"
+      ],
+      "baseExp": 163
+    },
+    "36": {
+      "id": 36,
+      "name": "Clefable",
+      "types": [
+        "fairy"
+      ],
+      "baseExp": 217
+    },
+    "360": {
+      "id": 360,
+      "name": "Wynaut",
+      "types": [
+        "psychic"
+      ],
+      "baseExp": 52
+    },
+    "361": {
+      "id": 361,
+      "name": "Snorunt",
+      "types": [
+        "ice"
+      ],
+      "baseExp": 60
+    },
+    "362": {
+      "id": 362,
+      "name": "Glalie",
+      "types": [
+        "ice"
+      ],
+      "baseExp": 168
+    },
+    "363": {
+      "id": 363,
+      "name": "Spheal",
+      "types": [
+        "ice",
+        "water"
+      ],
+      "baseExp": 58
+    },
+    "364": {
+      "id": 364,
+      "name": "Sealeo",
+      "types": [
+        "ice",
+        "water"
+      ],
+      "baseExp": 144
+    },
+    "365": {
+      "id": 365,
+      "name": "Walrein",
+      "types": [
+        "ice",
+        "water"
+      ],
+      "baseExp": 239
+    },
+    "366": {
+      "id": 366,
+      "name": "Clamperl",
+      "types": [
+        "water"
+      ],
+      "baseExp": 69
+    },
+    "367": {
+      "id": 367,
+      "name": "Huntail",
+      "types": [
+        "water"
+      ],
+      "baseExp": 170
+    },
+    "368": {
+      "id": 368,
+      "name": "Gorebyss",
+      "types": [
+        "water"
+      ],
+      "baseExp": 170
+    },
+    "369": {
+      "id": 369,
+      "name": "Relicanth",
+      "types": [
+        "water",
+        "rock"
+      ],
+      "baseExp": 170
+    },
+    "37": {
+      "id": 37,
+      "name": "Vulpix",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 60
+    },
+    "370": {
+      "id": 370,
+      "name": "Luvdisc",
+      "types": [
+        "water"
+      ],
+      "baseExp": 116
+    },
+    "371": {
+      "id": 371,
+      "name": "Bagon",
+      "types": [
+        "dragon"
+      ],
+      "baseExp": 60
+    },
+    "372": {
+      "id": 372,
+      "name": "Shelgon",
+      "types": [
+        "dragon"
+      ],
+      "baseExp": 147
+    },
+    "373": {
+      "id": 373,
+      "name": "Salamence",
+      "types": [
+        "dragon",
+        "flying"
+      ],
+      "baseExp": 270
+    },
+    "374": {
+      "id": 374,
+      "name": "Beldum",
+      "types": [
+        "steel",
+        "psychic"
+      ],
+      "baseExp": 60
+    },
+    "375": {
+      "id": 375,
+      "name": "Metang",
+      "types": [
+        "steel",
+        "psychic"
+      ],
+      "baseExp": 147
+    },
+    "376": {
+      "id": 376,
+      "name": "Metagross",
+      "types": [
+        "steel",
+        "psychic"
+      ],
+      "baseExp": 270
+    },
+    "377": {
+      "id": 377,
+      "name": "Regirock",
+      "types": [
+        "rock"
+      ],
+      "baseExp": 261
+    },
+    "378": {
+      "id": 378,
+      "name": "Regice",
+      "types": [
+        "ice"
+      ],
+      "baseExp": 261
+    },
+    "379": {
+      "id": 379,
+      "name": "Registeel",
+      "types": [
+        "steel"
+      ],
+      "baseExp": 261
+    },
+    "38": {
+      "id": 38,
+      "name": "Ninetales",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 177
+    },
+    "380": {
+      "id": 380,
+      "name": "Latias",
+      "types": [
+        "dragon",
+        "psychic"
+      ],
+      "baseExp": 270
+    },
+    "381": {
+      "id": 381,
+      "name": "Latios",
+      "types": [
+        "dragon",
+        "psychic"
+      ],
+      "baseExp": 270
+    },
+    "382": {
+      "id": 382,
+      "name": "Kyogre",
+      "types": [
+        "water"
+      ],
+      "baseExp": 302
+    },
+    "383": {
+      "id": 383,
+      "name": "Groudon",
+      "types": [
+        "ground"
+      ],
+      "baseExp": 302
+    },
+    "384": {
+      "id": 384,
+      "name": "Rayquaza",
+      "types": [
+        "dragon",
+        "flying"
+      ],
+      "baseExp": 306
+    },
+    "385": {
+      "id": 385,
+      "name": "Jirachi",
+      "types": [
+        "steel",
+        "psychic"
+      ],
+      "baseExp": 270
+    },
+    "386": {
+      "id": 386,
+      "name": "Deoxys",
+      "types": [
+        "psychic"
+      ],
+      "baseExp": 270
+    },
+    "387": {
+      "id": 387,
+      "name": "Turtwig",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 64
+    },
+    "388": {
+      "id": 388,
+      "name": "Grotle",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 142
+    },
+    "389": {
+      "id": 389,
+      "name": "Torterra",
+      "types": [
+        "grass",
+        "ground"
+      ],
+      "baseExp": 236
+    },
+    "39": {
+      "id": 39,
+      "name": "Jigglypuff",
+      "types": [
+        "normal",
+        "fairy"
+      ],
+      "baseExp": 95
+    },
+    "390": {
+      "id": 390,
+      "name": "Chimchar",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 62
+    },
+    "391": {
+      "id": 391,
+      "name": "Monferno",
+      "types": [
+        "fire",
+        "fighting"
+      ],
+      "baseExp": 142
+    },
+    "392": {
+      "id": 392,
+      "name": "Infernape",
+      "types": [
+        "fire",
+        "fighting"
+      ],
+      "baseExp": 240
+    },
+    "393": {
+      "id": 393,
+      "name": "Piplup",
+      "types": [
+        "water"
+      ],
+      "baseExp": 63
+    },
+    "394": {
+      "id": 394,
+      "name": "Prinplup",
+      "types": [
+        "water"
+      ],
+      "baseExp": 142
+    },
+    "395": {
+      "id": 395,
+      "name": "Empoleon",
+      "types": [
+        "water",
+        "steel"
+      ],
+      "baseExp": 239
+    },
+    "396": {
+      "id": 396,
+      "name": "Starly",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 49
+    },
+    "397": {
+      "id": 397,
+      "name": "Staravia",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 119
+    },
+    "398": {
+      "id": 398,
+      "name": "Staraptor",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 218
+    },
+    "399": {
+      "id": 399,
+      "name": "Bidoof",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 50
+    },
+    "4": {
+      "id": 4,
+      "name": "Charmander",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 62
+    },
+    "40": {
+      "id": 40,
+      "name": "Wigglytuff",
+      "types": [
+        "normal",
+        "fairy"
+      ],
+      "baseExp": 196
+    },
+    "400": {
+      "id": 400,
+      "name": "Bibarel",
+      "types": [
+        "normal",
+        "water"
+      ],
+      "baseExp": 144
+    },
+    "401": {
+      "id": 401,
+      "name": "Kricketot",
+      "types": [
+        "bug"
+      ],
+      "baseExp": 39
+    },
+    "402": {
+      "id": 402,
+      "name": "Kricketune",
+      "types": [
+        "bug"
+      ],
+      "baseExp": 134
+    },
+    "403": {
+      "id": 403,
+      "name": "Shinx",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 53
+    },
+    "404": {
+      "id": 404,
+      "name": "Luxio",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 127
+    },
+    "405": {
+      "id": 405,
+      "name": "Luxray",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 235
+    },
+    "406": {
+      "id": 406,
+      "name": "Budew",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "baseExp": 56
+    },
+    "407": {
+      "id": 407,
+      "name": "Roserade",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "baseExp": 232
+    },
+    "408": {
+      "id": 408,
+      "name": "Cranidos",
+      "types": [
+        "rock"
+      ],
+      "baseExp": 70
+    },
+    "409": {
+      "id": 409,
+      "name": "Rampardos",
+      "types": [
+        "rock"
+      ],
+      "baseExp": 173
+    },
+    "41": {
+      "id": 41,
+      "name": "Zubat",
+      "types": [
+        "poison",
+        "flying"
+      ],
+      "baseExp": 49
+    },
+    "410": {
+      "id": 410,
+      "name": "Shieldon",
+      "types": [
+        "rock",
+        "steel"
+      ],
+      "baseExp": 70
+    },
+    "411": {
+      "id": 411,
+      "name": "Bastiodon",
+      "types": [
+        "rock",
+        "steel"
+      ],
+      "baseExp": 173
+    },
+    "412": {
+      "id": 412,
+      "name": "Burmy",
+      "types": [
+        "bug"
+      ],
+      "baseExp": 45
+    },
+    "413": {
+      "id": 413,
+      "name": "Wormadam",
+      "types": [
+        "bug",
+        "grass"
+      ],
+      "baseExp": 148
+    },
+    "414": {
+      "id": 414,
+      "name": "Mothim",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "baseExp": 148
+    },
+    "415": {
+      "id": 415,
+      "name": "Combee",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "baseExp": 49
+    },
+    "416": {
+      "id": 416,
+      "name": "Vespiquen",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "baseExp": 166
+    },
+    "417": {
+      "id": 417,
+      "name": "Pachirisu",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 142
+    },
+    "418": {
+      "id": 418,
+      "name": "Buizel",
+      "types": [
+        "water"
+      ],
+      "baseExp": 66
+    },
+    "419": {
+      "id": 419,
+      "name": "Floatzel",
+      "types": [
+        "water"
+      ],
+      "baseExp": 173
+    },
+    "42": {
+      "id": 42,
+      "name": "Golbat",
+      "types": [
+        "poison",
+        "flying"
+      ],
+      "baseExp": 159
+    },
+    "420": {
+      "id": 420,
+      "name": "Cherubi",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 55
+    },
+    "421": {
+      "id": 421,
+      "name": "Cherrim",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 158
+    },
+    "422": {
+      "id": 422,
+      "name": "Shellos",
+      "types": [
+        "water"
+      ],
+      "baseExp": 65
+    },
+    "423": {
+      "id": 423,
+      "name": "Gastrodon",
+      "types": [
+        "water",
+        "ground"
+      ],
+      "baseExp": 166
+    },
+    "424": {
+      "id": 424,
+      "name": "Ambipom",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 169
+    },
+    "425": {
+      "id": 425,
+      "name": "Drifloon",
+      "types": [
+        "ghost",
+        "flying"
+      ],
+      "baseExp": 70
+    },
+    "426": {
+      "id": 426,
+      "name": "Drifblim",
+      "types": [
+        "ghost",
+        "flying"
+      ],
+      "baseExp": 174
+    },
+    "427": {
+      "id": 427,
+      "name": "Buneary",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 70
+    },
+    "428": {
+      "id": 428,
+      "name": "Lopunny",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 168
+    },
+    "429": {
+      "id": 429,
+      "name": "Mismagius",
+      "types": [
+        "ghost"
+      ],
+      "baseExp": 173
+    },
+    "43": {
+      "id": 43,
+      "name": "Oddish",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "baseExp": 64
+    },
+    "430": {
+      "id": 430,
+      "name": "Honchkrow",
+      "types": [
+        "dark",
+        "flying"
+      ],
+      "baseExp": 177
+    },
+    "431": {
+      "id": 431,
+      "name": "Glameow",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 62
+    },
+    "432": {
+      "id": 432,
+      "name": "Purugly",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 158
+    },
+    "433": {
+      "id": 433,
+      "name": "Chingling",
+      "types": [
+        "psychic"
+      ],
+      "baseExp": 57
+    },
+    "434": {
+      "id": 434,
+      "name": "Stunky",
+      "types": [
+        "poison",
+        "dark"
+      ],
+      "baseExp": 66
+    },
+    "435": {
+      "id": 435,
+      "name": "Skuntank",
+      "types": [
+        "poison",
+        "dark"
+      ],
+      "baseExp": 168
+    },
+    "436": {
+      "id": 436,
+      "name": "Bronzor",
+      "types": [
+        "steel",
+        "psychic"
+      ],
+      "baseExp": 60
+    },
+    "437": {
+      "id": 437,
+      "name": "Bronzong",
+      "types": [
+        "steel",
+        "psychic"
+      ],
+      "baseExp": 175
+    },
+    "438": {
+      "id": 438,
+      "name": "Bonsly",
+      "types": [
+        "rock"
+      ],
+      "baseExp": 58
+    },
+    "439": {
+      "id": 439,
+      "name": "Mime Jr.",
+      "types": [
+        "psychic",
+        "fairy"
+      ],
+      "baseExp": 62
+    },
+    "44": {
+      "id": 44,
+      "name": "Gloom",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "baseExp": 138
+    },
+    "440": {
+      "id": 440,
+      "name": "Happiny",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 110
+    },
+    "441": {
+      "id": 441,
+      "name": "Chatot",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 144
+    },
+    "442": {
+      "id": 442,
+      "name": "Spiritomb",
+      "types": [
+        "ghost",
+        "dark"
+      ],
+      "baseExp": 170
+    },
+    "443": {
+      "id": 443,
+      "name": "Gible",
+      "types": [
+        "dragon",
+        "ground"
+      ],
+      "baseExp": 60
+    },
+    "444": {
+      "id": 444,
+      "name": "Gabite",
+      "types": [
+        "dragon",
+        "ground"
+      ],
+      "baseExp": 144
+    },
+    "445": {
+      "id": 445,
+      "name": "Garchomp",
+      "types": [
+        "dragon",
+        "ground"
+      ],
+      "baseExp": 270
+    },
+    "446": {
+      "id": 446,
+      "name": "Munchlax",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 78
+    },
+    "447": {
+      "id": 447,
+      "name": "Riolu",
+      "types": [
+        "fighting"
+      ],
+      "baseExp": 57
+    },
+    "448": {
+      "id": 448,
+      "name": "Lucario",
+      "types": [
+        "fighting",
+        "steel"
+      ],
+      "baseExp": 184
+    },
+    "449": {
+      "id": 449,
+      "name": "Hippopotas",
+      "types": [
+        "ground"
+      ],
+      "baseExp": 66
+    },
+    "45": {
+      "id": 45,
+      "name": "Vileplume",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "baseExp": 221
+    },
+    "450": {
+      "id": 450,
+      "name": "Hippowdon",
+      "types": [
+        "ground"
+      ],
+      "baseExp": 184
+    },
+    "451": {
+      "id": 451,
+      "name": "Skorupi",
+      "types": [
+        "poison",
+        "bug"
+      ],
+      "baseExp": 66
+    },
+    "452": {
+      "id": 452,
+      "name": "Drapion",
+      "types": [
+        "poison",
+        "dark"
+      ],
+      "baseExp": 175
+    },
+    "453": {
+      "id": 453,
+      "name": "Croagunk",
+      "types": [
+        "poison",
+        "fighting"
+      ],
+      "baseExp": 60
+    },
+    "454": {
+      "id": 454,
+      "name": "Toxicroak",
+      "types": [
+        "poison",
+        "fighting"
+      ],
+      "baseExp": 172
+    },
+    "455": {
+      "id": 455,
+      "name": "Carnivine",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 159
+    },
+    "456": {
+      "id": 456,
+      "name": "Finneon",
+      "types": [
+        "water"
+      ],
+      "baseExp": 66
+    },
+    "457": {
+      "id": 457,
+      "name": "Lumineon",
+      "types": [
+        "water"
+      ],
+      "baseExp": 161
+    },
+    "458": {
+      "id": 458,
+      "name": "Mantyke",
+      "types": [
+        "water",
+        "flying"
+      ],
+      "baseExp": 69
+    },
+    "459": {
+      "id": 459,
+      "name": "Snover",
+      "types": [
+        "grass",
+        "ice"
+      ],
+      "baseExp": 67
+    },
+    "46": {
+      "id": 46,
+      "name": "Paras",
+      "types": [
+        "bug",
+        "grass"
+      ],
+      "baseExp": 57
+    },
+    "460": {
+      "id": 460,
+      "name": "Abomasnow",
+      "types": [
+        "grass",
+        "ice"
+      ],
+      "baseExp": 173
+    },
+    "461": {
+      "id": 461,
+      "name": "Weavile",
+      "types": [
+        "dark",
+        "ice"
+      ],
+      "baseExp": 179
+    },
+    "462": {
+      "id": 462,
+      "name": "Magnezone",
+      "types": [
+        "electric",
+        "steel"
+      ],
+      "baseExp": 241
+    },
+    "463": {
+      "id": 463,
+      "name": "Lickilicky",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 180
+    },
+    "464": {
+      "id": 464,
+      "name": "Rhyperior",
+      "types": [
+        "ground",
+        "rock"
+      ],
+      "baseExp": 241
+    },
+    "465": {
+      "id": 465,
+      "name": "Tangrowth",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 187
+    },
+    "466": {
+      "id": 466,
+      "name": "Electivire",
+      "types": [
+        "electric"
+      ],
+      "baseExp": 243
+    },
+    "467": {
+      "id": 467,
+      "name": "Magmortar",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 243
+    },
+    "468": {
+      "id": 468,
+      "name": "Togekiss",
+      "types": [
+        "fairy",
+        "flying"
+      ],
+      "baseExp": 245
+    },
+    "469": {
+      "id": 469,
+      "name": "Yanmega",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "baseExp": 180
+    },
+    "47": {
+      "id": 47,
+      "name": "Parasect",
+      "types": [
+        "bug",
+        "grass"
+      ],
+      "baseExp": 142
+    },
+    "470": {
+      "id": 470,
+      "name": "Leafeon",
+      "types": [
+        "grass"
+      ],
+      "baseExp": 184
+    },
+    "471": {
+      "id": 471,
+      "name": "Glaceon",
+      "types": [
+        "ice"
+      ],
+      "baseExp": 184
+    },
+    "472": {
+      "id": 472,
+      "name": "Gliscor",
+      "types": [
+        "ground",
+        "flying"
+      ],
+      "baseExp": 179
+    },
+    "473": {
+      "id": 473,
+      "name": "Mamoswine",
+      "types": [
+        "ice",
+        "ground"
+      ],
+      "baseExp": 239
+    },
+    "474": {
+      "id": 474,
+      "name": "Porygon-Z",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 241
+    },
+    "475": {
+      "id": 475,
+      "name": "Gallade",
+      "types": [
+        "psychic",
+        "fighting"
+      ],
+      "baseExp": 233
+    },
+    "476": {
+      "id": 476,
+      "name": "Probopass",
+      "types": [
+        "rock",
+        "steel"
+      ],
+      "baseExp": 184
+    },
+    "477": {
+      "id": 477,
+      "name": "Dusknoir",
+      "types": [
+        "ghost"
+      ],
+      "baseExp": 236
+    },
+    "478": {
+      "id": 478,
+      "name": "Froslass",
+      "types": [
+        "ice",
+        "ghost"
+      ],
+      "baseExp": 168
+    },
+    "479": {
+      "id": 479,
+      "name": "Rotom",
+      "types": [
+        "electric",
+        "ghost"
+      ],
+      "baseExp": 154
+    },
+    "48": {
+      "id": 48,
+      "name": "Venonat",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "baseExp": 61
+    },
+    "485": {
+      "id": 485,
+      "name": "Heatran",
+      "types": [
+        "fire",
+        "steel"
+      ],
+      "baseExp": 270
+    },
+    "49": {
+      "id": 49,
+      "name": "Venomoth",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "baseExp": 158
+    },
+    "491": {
+      "id": 491,
+      "name": "Darkrai",
+      "types": [
+        "dark"
+      ],
+      "baseExp": 270
+    },
+    "5": {
+      "id": 5,
+      "name": "Charmeleon",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 142
+    },
+    "50": {
+      "id": 50,
+      "name": "Diglett",
+      "types": [
+        "ground"
+      ],
+      "baseExp": 53
+    },
+    "51": {
+      "id": 51,
+      "name": "Dugtrio",
+      "types": [
+        "ground"
+      ],
+      "baseExp": 149
+    },
+    "52": {
+      "id": 52,
+      "name": "Meowth",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 58
+    },
+    "53": {
+      "id": 53,
+      "name": "Persian",
+      "types": [
+        "normal"
+      ],
+      "baseExp": 154
+    },
+    "54": {
+      "id": 54,
+      "name": "Psyduck",
+      "types": [
+        "water"
+      ],
+      "baseExp": 64
+    },
+    "55": {
+      "id": 55,
+      "name": "Golduck",
+      "types": [
+        "water"
+      ],
+      "baseExp": 175
+    },
+    "56": {
+      "id": 56,
+      "name": "Mankey",
+      "types": [
+        "fighting"
+      ],
+      "baseExp": 61
+    },
+    "57": {
+      "id": 57,
+      "name": "Primeape",
+      "types": [
+        "fighting"
+      ],
+      "baseExp": 159
+    },
+    "58": {
+      "id": 58,
+      "name": "Growlithe",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 70
+    },
+    "59": {
+      "id": 59,
+      "name": "Arcanine",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 194
+    },
+    "6": {
+      "id": 6,
+      "name": "Charizard",
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "baseExp": 240
+    },
+    "60": {
+      "id": 60,
+      "name": "Poliwag",
+      "types": [
+        "water"
+      ],
+      "baseExp": 60
+    },
+    "61": {
+      "id": 61,
+      "name": "Poliwhirl",
+      "types": [
+        "water"
+      ],
+      "baseExp": 135
+    },
+    "62": {
+      "id": 62,
+      "name": "Poliwrath",
+      "types": [
+        "water",
+        "fighting"
+      ],
+      "baseExp": 230
+    },
+    "63": {
+      "id": 63,
+      "name": "Abra",
+      "types": [
+        "psychic"
+      ],
+      "baseExp": 62
+    },
+    "64": {
+      "id": 64,
+      "name": "Kadabra",
+      "types": [
+        "psychic"
+      ],
+      "baseExp": 140
+    },
+    "65": {
+      "id": 65,
+      "name": "Alakazam",
+      "types": [
+        "psychic"
+      ],
+      "baseExp": 225
+    },
+    "66": {
+      "id": 66,
+      "name": "Machop",
+      "types": [
+        "fighting"
+      ],
+      "baseExp": 61
+    },
+    "67": {
+      "id": 67,
+      "name": "Machoke",
+      "types": [
+        "fighting"
+      ],
+      "baseExp": 142
+    },
+    "68": {
+      "id": 68,
+      "name": "Machamp",
+      "types": [
+        "fighting"
+      ],
+      "baseExp": 227
+    },
+    "69": {
+      "id": 69,
+      "name": "Bellsprout",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "baseExp": 60
+    },
+    "7": {
+      "id": 7,
+      "name": "Squirtle",
+      "types": [
+        "water"
+      ],
+      "baseExp": 63
+    },
+    "70": {
+      "id": 70,
+      "name": "Weepinbell",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "baseExp": 137
+    },
+    "71": {
+      "id": 71,
+      "name": "Victreebel",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "baseExp": 221
+    },
+    "72": {
+      "id": 72,
+      "name": "Tentacool",
+      "types": [
+        "water",
+        "poison"
+      ],
+      "baseExp": 67
+    },
+    "73": {
+      "id": 73,
+      "name": "Tentacruel",
+      "types": [
+        "water",
+        "poison"
+      ],
+      "baseExp": 180
+    },
+    "74": {
+      "id": 74,
+      "name": "Geodude",
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "baseExp": 60
+    },
+    "75": {
+      "id": 75,
+      "name": "Graveler",
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "baseExp": 137
+    },
+    "76": {
+      "id": 76,
+      "name": "Golem",
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "baseExp": 223
+    },
+    "77": {
+      "id": 77,
+      "name": "Ponyta",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 82
+    },
+    "78": {
+      "id": 78,
+      "name": "Rapidash",
+      "types": [
+        "fire"
+      ],
+      "baseExp": 175
+    },
+    "79": {
+      "id": 79,
+      "name": "Slowpoke",
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "baseExp": 63
+    },
+    "8": {
+      "id": 8,
+      "name": "Wartortle",
+      "types": [
+        "water"
+      ],
+      "baseExp": 142
+    },
+    "80": {
+      "id": 80,
+      "name": "Slowbro",
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "baseExp": 172
+    },
+    "81": {
+      "id": 81,
+      "name": "Magnemite",
+      "types": [
+        "electric",
+        "steel"
+      ],
+      "baseExp": 65
+    },
+    "82": {
+      "id": 82,
+      "name": "Magneton",
+      "types": [
+        "electric",
+        "steel"
+      ],
+      "baseExp": 163
+    },
+    "83": {
+      "id": 83,
+      "name": "Farfetch’d",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 132
+    },
+    "84": {
+      "id": 84,
+      "name": "Doduo",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 62
+    },
+    "85": {
+      "id": 85,
+      "name": "Dodrio",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "baseExp": 165
+    },
+    "86": {
+      "id": 86,
+      "name": "Seel",
+      "types": [
+        "water"
+      ],
+      "baseExp": 65
+    },
+    "87": {
+      "id": 87,
+      "name": "Dewgong",
+      "types": [
+        "water",
+        "ice"
+      ],
+      "baseExp": 166
+    },
+    "88": {
+      "id": 88,
+      "name": "Grimer",
+      "types": [
+        "poison"
+      ],
+      "baseExp": 65
+    },
+    "89": {
+      "id": 89,
+      "name": "Muk",
+      "types": [
+        "poison"
+      ],
+      "baseExp": 175
+    },
+    "9": {
+      "id": 9,
+      "name": "Blastoise",
+      "types": [
+        "water"
+      ],
+      "baseExp": 239
+    },
+    "90": {
+      "id": 90,
+      "name": "Shellder",
+      "types": [
+        "water"
+      ],
+      "baseExp": 61
+    },
+    "91": {
+      "id": 91,
+      "name": "Cloyster",
+      "types": [
+        "water",
+        "ice"
+      ],
+      "baseExp": 184
+    },
+    "92": {
+      "id": 92,
+      "name": "Gastly",
+      "types": [
+        "ghost",
+        "poison"
+      ],
+      "baseExp": 62
+    },
+    "93": {
+      "id": 93,
+      "name": "Haunter",
+      "types": [
+        "ghost",
+        "poison"
+      ],
+      "baseExp": 142
+    },
+    "94": {
+      "id": 94,
+      "name": "Gengar",
+      "types": [
+        "ghost",
+        "poison"
+      ],
+      "baseExp": 225
+    },
+    "95": {
+      "id": 95,
+      "name": "Onix",
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "baseExp": 77
+    },
+    "96": {
+      "id": 96,
+      "name": "Drowzee",
+      "types": [
+        "psychic"
+      ],
+      "baseExp": 66
+    },
+    "97": {
+      "id": 97,
+      "name": "Hypno",
+      "types": [
+        "psychic"
+      ],
+      "baseExp": 169
+    },
+    "98": {
+      "id": 98,
+      "name": "Krabby",
+      "types": [
+        "water"
+      ],
+      "baseExp": 65
+    },
+    "99": {
+      "id": 99,
+      "name": "Kingler",
+      "types": [
+        "water"
+      ],
+      "baseExp": 166
+    }
+  },
+  "spots": [
+    {
+      "id": "kanto_campos_de_pallet",
+      "name": "Campos de Pallet",
+      "region": "",
+      "unlock": 1,
+      "typeGroup": "normal",
+      "species": [
+        19,
+        52
+      ]
+    },
+    {
+      "id": "kanto_jardim_de_viridian",
+      "name": "Jardim de Viridian",
+      "region": "",
+      "unlock": 3,
+      "typeGroup": "grass",
+      "species": [
+        43,
+        69,
+        1
+      ]
+    },
+    {
+      "id": "kanto_poleiro",
+      "name": "Poleiro",
+      "region": "",
+      "unlock": 4,
+      "typeGroup": "flying",
+      "species": [
+        16,
+        21,
+        84
+      ]
+    },
+    {
+      "id": "kanto_floresta_de_viridian",
+      "name": "Floresta de Viridian",
+      "region": "",
+      "unlock": 6,
+      "typeGroup": "bug",
+      "species": [
+        10,
+        11,
+        46
+      ]
+    },
+    {
+      "id": "kanto_bosque_das_teias",
+      "name": "Bosque das Teias",
+      "region": "",
+      "unlock": 8,
+      "typeGroup": "poison",
+      "species": [
+        13,
+        14,
+        41
+      ]
+    },
+    {
+      "id": "kanto_lagoa_rasa",
+      "name": "Lagoa Rasa",
+      "region": "",
+      "unlock": 10,
+      "typeGroup": "water",
+      "species": [
+        54,
+        79,
+        7
+      ]
+    },
+    {
+      "id": "kanto_toca_rasa",
+      "name": "Toca Rasa",
+      "region": "",
+      "unlock": 12,
+      "typeGroup": "ground",
+      "species": [
+        50,
+        27,
+        104
+      ]
+    },
+    {
+      "id": "kanto_gramado_venenoso",
+      "name": "Gramado Venenoso",
+      "region": "",
+      "unlock": 14,
+      "typeGroup": "poison",
+      "species": [
+        23,
+        29,
+        32
+      ]
+    },
+    {
+      "id": "kanto_canion_rochoso",
+      "name": "Cânion Rochoso",
+      "region": "",
+      "unlock": 16,
+      "typeGroup": "rock",
+      "species": [
+        74,
+        111
+      ]
+    },
+    {
+      "id": "kanto_campo_eletrico",
+      "name": "Campo Elétrico",
+      "region": "",
+      "unlock": 18,
+      "typeGroup": "electric",
+      "species": [
+        81,
+        100
+      ]
+    },
+    {
+      "id": "kanto_esgoto",
+      "name": "Esgoto",
+      "region": "",
+      "unlock": 20,
+      "typeGroup": "poison",
+      "species": [
+        88,
+        109,
+        48
+      ]
+    },
+    {
+      "id": "kanto_colina_dos_clefairy",
+      "name": "Colina dos Clefairy",
+      "region": "",
+      "unlock": 24,
+      "typeGroup": "fairy",
+      "species": [
+        35,
+        39
+      ]
+    },
+    {
+      "id": "kanto_trilha_quente",
+      "name": "Trilha Quente",
+      "region": "",
+      "unlock": 26,
+      "typeGroup": "fire",
+      "species": [
+        37,
+        4,
+        58
+      ]
+    },
+    {
+      "id": "kanto_ruinas_do_pendulo",
+      "name": "Ruínas do Pêndulo",
+      "region": "",
+      "unlock": 28,
+      "typeGroup": "psychic",
+      "species": [
+        63,
+        96
+      ]
+    },
+    {
+      "id": "kanto_prado_florido",
+      "name": "Prado Florido",
+      "region": "",
+      "unlock": 30,
+      "typeGroup": "grass",
+      "species": [
+        44,
+        70,
+        102
+      ]
+    },
+    {
+      "id": "kanto_mare_baixa",
+      "name": "Maré Baixa",
+      "region": "",
+      "unlock": 38,
+      "typeGroup": "water",
+      "species": [
+        86,
+        61,
+        119
+      ]
+    },
+    {
+      "id": "kanto_ceu_aberto",
+      "name": "Céu Aberto",
+      "region": "",
+      "unlock": 42,
+      "typeGroup": "flying",
+      "species": [
+        17,
+        22,
+        83
+      ]
+    },
+    {
+      "id": "kanto_dojo",
+      "name": "Dojo",
+      "region": "",
+      "unlock": 45,
+      "typeGroup": "fighting",
+      "species": [
+        57,
+        56,
+        66
+      ]
+    },
+    {
+      "id": "kanto_beco_dos_vira_latas",
+      "name": "Beco dos Vira-latas",
+      "region": "",
+      "unlock": 46,
+      "typeGroup": "normal",
+      "species": [
+        20,
+        53,
+        108
+      ]
+    },
+    {
+      "id": "kanto_toca_venenosa",
+      "name": "Toca Venenosa",
+      "region": "",
+      "unlock": 48,
+      "typeGroup": "poison",
+      "species": [
+        30,
+        33,
+        42
+      ]
+    },
+    {
+      "id": "kanto_recife_fossil",
+      "name": "Recife Fóssil",
+      "region": "",
+      "unlock": 50,
+      "typeGroup": "water",
+      "species": [
+        138,
+        139
+      ]
+    },
+    {
+      "id": "kanto_pedreira_fossil",
+      "name": "Pedreira Fóssil",
+      "region": "",
+      "unlock": 52,
+      "typeGroup": "rock",
+      "species": [
+        140,
+        141
+      ]
+    },
+    {
+      "id": "kanto_dunas_de_kanto",
+      "name": "Dunas de Kanto",
+      "region": "",
+      "unlock": 55,
+      "typeGroup": "ground",
+      "species": [
+        51,
+        105,
+        28
+      ]
+    },
+    {
+      "id": "kanto_mata_densa",
+      "name": "Mata Densa",
+      "region": "",
+      "unlock": 62,
+      "typeGroup": "grass",
+      "species": [
+        2,
+        47,
+        114
+      ]
+    },
+    {
+      "id": "kanto_ravina_das_brasas",
+      "name": "Ravina das Brasas",
+      "region": "",
+      "unlock": 64,
+      "typeGroup": "fire",
+      "species": [
+        5,
+        77
+      ]
+    },
+    {
+      "id": "kanto_correnteza_de_kanto",
+      "name": "Correnteza de Kanto",
+      "region": "",
+      "unlock": 65,
+      "typeGroup": "water",
+      "species": [
+        8,
+        117,
+        99
+      ]
+    },
+    {
+      "id": "kanto_escavacao_de_kanto",
+      "name": "Escavação de Kanto",
+      "region": "",
+      "unlock": 68,
+      "typeGroup": "rock",
+      "species": [
+        75,
+        95
+      ]
+    },
+    {
+      "id": "kanto_charco",
+      "name": "Charco",
+      "region": "",
+      "unlock": 70,
+      "typeGroup": "poison",
+      "species": [
+        24,
+        110,
+        89
+      ]
+    },
+    {
+      "id": "kanto_fazenda_de_kanto",
+      "name": "Fazenda de Kanto",
+      "region": "",
+      "unlock": 75,
+      "typeGroup": "normal",
+      "species": [
+        128,
+        115,
+        113
+      ]
+    },
+    {
+      "id": "kanto_geleira_de_kanto",
+      "name": "Geleira de Kanto",
+      "region": "",
+      "unlock": 80,
+      "typeGroup": "ice",
+      "species": [
+        87,
+        124
+      ]
+    },
+    {
+      "id": "kanto_templo_psiquico",
+      "name": "Templo Psíquico",
+      "region": "",
+      "unlock": 82,
+      "typeGroup": "psychic",
+      "species": [
+        64,
+        97,
+        122
+      ]
+    },
+    {
+      "id": "kanto_usina_abandonada",
+      "name": "Usina Abandonada",
+      "region": "",
+      "unlock": 85,
+      "typeGroup": "electric",
+      "species": [
+        25,
+        101,
+        82
+      ]
+    },
+    {
+      "id": "kanto_lago_profundo",
+      "name": "Lago Profundo",
+      "region": "",
+      "unlock": 88,
+      "typeGroup": "water",
+      "species": [
+        55,
+        80,
+        73
+      ]
+    },
+    {
+      "id": "kanto_tatame_dos_punhos",
+      "name": "Tatame dos Punhos",
+      "region": "",
+      "unlock": 90,
+      "typeGroup": "fighting",
+      "species": [
+        67,
+        106,
+        107
+      ]
+    },
+    {
+      "id": "kanto_torre_assombrada",
+      "name": "Torre Assombrada",
+      "region": "",
+      "unlock": 95,
+      "typeGroup": "ghost",
+      "species": [
+        92,
+        93,
+        94
+      ]
+    },
+    {
+      "id": "kanto_jardim_encantado",
+      "name": "Jardim Encantado",
+      "region": "",
+      "unlock": 95,
+      "typeGroup": "grass",
+      "species": [
+        45,
+        71
+      ]
+    },
+    {
+      "id": "kanto_mata_dos_insetos",
+      "name": "Mata dos Insetos",
+      "region": "",
+      "unlock": 98,
+      "typeGroup": "bug",
+      "species": [
+        12,
+        123,
+        127
+      ]
+    },
+    {
+      "id": "kanto_enxame_venenoso",
+      "name": "Enxame Venenoso",
+      "region": "",
+      "unlock": 100,
+      "typeGroup": "poison",
+      "species": [
+        15,
+        49
+      ]
+    },
+    {
+      "id": "kanto_encosta_vulcanica",
+      "name": "Encosta Vulcânica",
+      "region": "",
+      "unlock": 105,
+      "typeGroup": "fire",
+      "species": [
+        78,
+        126
+      ]
+    },
+    {
+      "id": "kanto_monte_lunar",
+      "name": "Monte Lunar",
+      "region": "",
+      "unlock": 112,
+      "typeGroup": "fairy",
+      "species": [
+        36,
+        40
+      ]
+    },
+    {
+      "id": "kanto_ninho_real",
+      "name": "Ninho Real",
+      "region": "",
+      "unlock": 115,
+      "typeGroup": "poison",
+      "species": [
+        31,
+        34
+      ]
+    },
+    {
+      "id": "kanto_pico_primitivo",
+      "name": "Pico Primitivo",
+      "region": "",
+      "unlock": 122,
+      "typeGroup": "rock",
+      "species": [
+        76,
+        112
+      ]
+    },
+    {
+      "id": "kanto_trono_da_floresta",
+      "name": "Trono da Floresta",
+      "region": "",
+      "unlock": 125,
+      "typeGroup": "grass",
+      "species": [
+        3,
+        103
+      ]
+    },
+    {
+      "id": "kanto_cidadela_submersa",
+      "name": "Cidadela Submersa",
+      "region": "",
+      "unlock": 128,
+      "typeGroup": "water",
+      "species": [
+        9,
+        130
+      ]
+    },
+    {
+      "id": "kanto_reator",
+      "name": "Reator",
+      "region": "",
+      "unlock": 130,
+      "typeGroup": "electric",
+      "species": [
+        26,
+        125
+      ]
+    },
+    {
+      "id": "kanto_santuario_mental",
+      "name": "Santuário Mental",
+      "region": "",
+      "unlock": 132,
+      "typeGroup": "psychic",
+      "species": [
+        65,
+        121
+      ]
+    },
+    {
+      "id": "kanto_baia_gelada",
+      "name": "Baía Gelada",
+      "region": "",
+      "unlock": 135,
+      "typeGroup": "ice",
+      "species": [
+        91,
+        131
+      ]
+    },
+    {
+      "id": "kanto_pico_dos_lutadores",
+      "name": "Pico dos Lutadores",
+      "region": "",
+      "unlock": 138,
+      "typeGroup": "fighting",
+      "species": [
+        68,
+        62
+      ]
+    },
+    {
+      "id": "kanto_cratera",
+      "name": "Cratera",
+      "region": "",
+      "unlock": 140,
+      "typeGroup": "fire",
+      "species": [
+        6,
+        59,
+        38
+      ]
+    },
+    {
+      "id": "kanto_colina_do_sono",
+      "name": "Colina do Sono",
+      "region": "",
+      "unlock": 145,
+      "typeGroup": "normal",
+      "species": [
+        143,
+        137
+      ]
+    },
+    {
+      "id": "kanto_pico_dos_ventos",
+      "name": "Pico dos Ventos",
+      "region": "",
+      "unlock": 150,
+      "typeGroup": "flying",
+      "species": [
+        18,
+        85,
+        149
+      ]
+    },
+    {
+      "id": "johto_campos_de_new_bark",
+      "name": "Campos de New Bark",
+      "region": "",
+      "unlock": 1,
+      "typeGroup": "normal",
+      "species": [
+        161,
+        163,
+        216
+      ]
+    },
+    {
+      "id": "johto_campina_dos_brotos",
+      "name": "Campina dos Brotos",
+      "region": "",
+      "unlock": 2,
+      "typeGroup": "grass",
+      "species": [
+        191,
+        187,
+        152
+      ]
+    },
+    {
+      "id": "johto_lagoa_de_johto",
+      "name": "Lagoa de Johto",
+      "region": "",
+      "unlock": 8,
+      "typeGroup": "water",
+      "species": [
+        194,
+        183,
+        158
+      ]
+    },
+    {
+      "id": "johto_bosque_de_ilex",
+      "name": "Bosque de Ilex",
+      "region": "",
+      "unlock": 10,
+      "typeGroup": "bug",
+      "species": [
+        165,
+        204
+      ]
+    },
+    {
+      "id": "johto_ninhada_feerica",
+      "name": "Ninhada Feérica",
+      "region": "",
+      "unlock": 15,
+      "typeGroup": "fairy",
+      "species": [
+        175,
+        173,
+        174
+      ]
+    },
+    {
+      "id": "johto_campo_eletrico",
+      "name": "Campo Elétrico",
+      "region": "",
+      "unlock": 18,
+      "typeGroup": "electric",
+      "species": [
+        172,
+        179
+      ]
+    },
+    {
+      "id": "johto_campo_nevado",
+      "name": "Campo Nevado",
+      "region": "",
+      "unlock": 22,
+      "typeGroup": "ice",
+      "species": [
+        220,
+        238
+      ]
+    },
+    {
+      "id": "johto_trilha_das_brasas",
+      "name": "Trilha das Brasas",
+      "region": "",
+      "unlock": 25,
+      "typeGroup": "fire",
+      "species": [
+        218,
+        155,
+        240
+      ]
+    },
+    {
+      "id": "johto_ruinas_dos_unown",
+      "name": "Ruínas dos Unown",
+      "region": "",
+      "unlock": 30,
+      "typeGroup": "psychic",
+      "species": [
+        177,
+        201
+      ]
+    },
+    {
+      "id": "johto_prado_alto",
+      "name": "Prado Alto",
+      "region": "",
+      "unlock": 35,
+      "typeGroup": "grass",
+      "species": [
+        188,
+        153,
+        192
+      ]
+    },
+    {
+      "id": "johto_matilha_sombria",
+      "name": "Matilha Sombria",
+      "region": "",
+      "unlock": 38,
+      "typeGroup": "dark",
+      "species": [
+        228,
+        198
+      ]
+    },
+    {
+      "id": "johto_vila_dos_comuns",
+      "name": "Vila dos Comuns",
+      "region": "",
+      "unlock": 40,
+      "typeGroup": "normal",
+      "species": [
+        162,
+        190,
+        206
+      ]
+    },
+    {
+      "id": "johto_toca_de_johto",
+      "name": "Toca de Johto",
+      "region": "",
+      "unlock": 45,
+      "typeGroup": "ground",
+      "species": [
+        231,
+        207,
+        232
+      ]
+    },
+    {
+      "id": "johto_teias_de_johto",
+      "name": "Teias de Johto",
+      "region": "",
+      "unlock": 48,
+      "typeGroup": "poison",
+      "species": [
+        167,
+        168
+      ]
+    },
+    {
+      "id": "johto_recife_pedregoso",
+      "name": "Recife Pedregoso",
+      "region": "",
+      "unlock": 50,
+      "typeGroup": "rock",
+      "species": [
+        222,
+        213
+      ]
+    },
+    {
+      "id": "johto_pradaria_estatica",
+      "name": "Pradaria Estática",
+      "region": "",
+      "unlock": 55,
+      "typeGroup": "electric",
+      "species": [
+        180,
+        239
+      ]
+    },
+    {
+      "id": "johto_correnteza_de_johto",
+      "name": "Correnteza de Johto",
+      "region": "",
+      "unlock": 60,
+      "typeGroup": "water",
+      "species": [
+        159,
+        195
+      ]
+    },
+    {
+      "id": "johto_floresta_ancestral",
+      "name": "Floresta Ancestral",
+      "region": "",
+      "unlock": 65,
+      "typeGroup": "bug",
+      "species": [
+        166,
+        193
+      ]
+    },
+    {
+      "id": "johto_planicie_de_johto",
+      "name": "Planície de Johto",
+      "region": "",
+      "unlock": 78,
+      "typeGroup": "normal",
+      "species": [
+        234,
+        203,
+        241
+      ]
+    },
+    {
+      "id": "johto_fortaleza_de_aco",
+      "name": "Fortaleza de Aço",
+      "region": "",
+      "unlock": 85,
+      "typeGroup": "steel",
+      "species": [
+        205,
+        227
+      ]
+    },
+    {
+      "id": "johto_jardim_encantado",
+      "name": "Jardim Encantado",
+      "region": "",
+      "unlock": 88,
+      "typeGroup": "grass",
+      "species": [
+        189,
+        182,
+        154
+      ]
+    },
+    {
+      "id": "johto_tatame_de_johto",
+      "name": "Tatame de Johto",
+      "region": "",
+      "unlock": 90,
+      "typeGroup": "fighting",
+      "species": [
+        237,
+        214
+      ]
+    },
+    {
+      "id": "johto_santuario_feerico",
+      "name": "Santuário Feérico",
+      "region": "",
+      "unlock": 92,
+      "typeGroup": "fairy",
+      "species": [
+        209,
+        176,
+        210
+      ]
+    },
+    {
+      "id": "johto_fornalha_de_johto",
+      "name": "Fornalha de Johto",
+      "region": "",
+      "unlock": 95,
+      "typeGroup": "fire",
+      "species": [
+        156,
+        219,
+        157
+      ]
+    },
+    {
+      "id": "johto_ceu_de_johto",
+      "name": "Céu de Johto",
+      "region": "",
+      "unlock": 100,
+      "typeGroup": "flying",
+      "species": [
+        164,
+        226
+      ]
+    },
+    {
+      "id": "johto_mar_de_johto",
+      "name": "Mar de Johto",
+      "region": "",
+      "unlock": 100,
+      "typeGroup": "water",
+      "species": [
+        184,
+        224,
+        186
+      ]
+    },
+    {
+      "id": "johto_covil_sombrio",
+      "name": "Covil Sombrio",
+      "region": "",
+      "unlock": 105,
+      "typeGroup": "dark",
+      "species": [
+        215,
+        229
+      ]
+    },
+    {
+      "id": "johto_geleira_de_johto",
+      "name": "Geleira de Johto",
+      "region": "",
+      "unlock": 108,
+      "typeGroup": "ice",
+      "species": [
+        225,
+        221
+      ]
+    },
+    {
+      "id": "johto_torre_dos_sussurros",
+      "name": "Torre dos Sussurros",
+      "region": "",
+      "unlock": 110,
+      "typeGroup": "ghost",
+      "species": [
+        200
+      ]
+    },
+    {
+      "id": "johto_brejo_de_johto",
+      "name": "Brejo de Johto",
+      "region": "",
+      "unlock": 115,
+      "typeGroup": "poison",
+      "species": [
+        211,
+        169
+      ]
+    },
+    {
+      "id": "johto_santuario_mental",
+      "name": "Santuário Mental",
+      "region": "",
+      "unlock": 118,
+      "typeGroup": "psychic",
+      "species": [
+        178,
+        202,
+        199
+      ]
+    },
+    {
+      "id": "johto_usina_de_johto",
+      "name": "Usina de Johto",
+      "region": "",
+      "unlock": 120,
+      "typeGroup": "electric",
+      "species": [
+        181,
+        171
+      ]
+    },
+    {
+      "id": "johto_colinas_selvagens",
+      "name": "Colinas Selvagens",
+      "region": "",
+      "unlock": 125,
+      "typeGroup": "normal",
+      "species": [
+        217,
+        235,
+        242
+      ]
+    },
+    {
+      "id": "johto_abismo_marinho",
+      "name": "Abismo Marinho",
+      "region": "",
+      "unlock": 140,
+      "typeGroup": "water",
+      "species": [
+        160,
+        230
+      ]
+    },
+    {
+      "id": "johto_nucleo_metalico",
+      "name": "Núcleo Metálico",
+      "region": "",
+      "unlock": 142,
+      "typeGroup": "steel",
+      "species": [
+        212,
+        208
+      ]
+    },
+    {
+      "id": "johto_pico_primitivo",
+      "name": "Pico Primitivo",
+      "region": "",
+      "unlock": 145,
+      "typeGroup": "rock",
+      "species": [
+        185,
+        248
+      ]
+    },
+    {
+      "id": "hoenn_charco_de_petalburg",
+      "name": "Charco de Petalburg",
+      "region": "",
+      "unlock": 100,
+      "typeGroup": "water",
+      "species": [
+        340,
+        258,
+        270,
+        370
+      ]
+    },
+    {
+      "id": "hoenn_ninhal_de_hoenn",
+      "name": "Ninhal de Hoenn",
+      "region": "",
+      "unlock": 100,
+      "typeGroup": "bug",
+      "species": [
+        267,
+        265,
+        266,
+        268
+      ]
+    },
+    {
+      "id": "hoenn_matilha_de_route_101",
+      "name": "Matilha de Route 101",
+      "region": "",
+      "unlock": 100,
+      "typeGroup": "dark",
+      "species": [
+        262,
+        261,
+        318
+      ]
+    },
+    {
+      "id": "hoenn_ceu_de_hoenn",
+      "name": "Céu de Hoenn",
+      "region": "",
+      "unlock": 100,
+      "typeGroup": "flying",
+      "species": [
+        277,
+        276,
+        278,
+        333
+      ]
+    },
+    {
+      "id": "hoenn_clareira_feerica",
+      "name": "Clareira Feérica",
+      "region": "",
+      "unlock": 100,
+      "typeGroup": "fairy",
+      "species": [
+        281,
+        280,
+        298
+      ]
+    },
+    {
+      "id": "hoenn_campos_de_littleroot",
+      "name": "Campos de Littleroot",
+      "region": "",
+      "unlock": 102,
+      "typeGroup": "normal",
+      "species": [
+        264,
+        263,
+        293,
+        300
+      ]
+    },
+    {
+      "id": "hoenn_fornalha_de_hoenn",
+      "name": "Fornalha de Hoenn",
+      "region": "",
+      "unlock": 102,
+      "typeGroup": "fire",
+      "species": [
+        323,
+        255,
+        322
+      ]
+    },
+    {
+      "id": "hoenn_bosque_de_hoenn",
+      "name": "Bosque de Hoenn",
+      "region": "",
+      "unlock": 104,
+      "typeGroup": "grass",
+      "species": [
+        286,
+        252,
+        273,
+        285
+      ]
+    },
+    {
+      "id": "hoenn_brejo_de_hoenn",
+      "name": "Brejo de Hoenn",
+      "region": "",
+      "unlock": 104,
+      "typeGroup": "poison",
+      "species": [
+        269,
+        316,
+        315
+      ]
+    },
+    {
+      "id": "hoenn_dojo_de_hoenn",
+      "name": "Dojo de Hoenn",
+      "region": "",
+      "unlock": 105,
+      "typeGroup": "fighting",
+      "species": [
+        308,
+        296,
+        307
+      ]
+    },
+    {
+      "id": "hoenn_ruinas_de_hoenn",
+      "name": "Ruínas de Hoenn",
+      "region": "",
+      "unlock": 106,
+      "typeGroup": "psychic",
+      "species": [
+        326,
+        325,
+        360
+      ]
+    },
+    {
+      "id": "hoenn_pradaria_de_mauville",
+      "name": "Pradaria de Mauville",
+      "region": "",
+      "unlock": 106,
+      "typeGroup": "electric",
+      "species": [
+        309,
+        311,
+        312
+      ]
+    },
+    {
+      "id": "hoenn_canion_de_hoenn",
+      "name": "Cânion de Hoenn",
+      "region": "",
+      "unlock": 108,
+      "typeGroup": "rock",
+      "species": [
+        345,
+        347,
+        299
+      ]
+    },
+    {
+      "id": "hoenn_campo_nevado_de_hoenn",
+      "name": "Campo Nevado de Hoenn",
+      "region": "",
+      "unlock": 110,
+      "typeGroup": "ice",
+      "species": [
+        362,
+        361,
+        363
+      ]
+    },
+    {
+      "id": "hoenn_enseada_de_dewford",
+      "name": "Enseada de Dewford",
+      "region": "",
+      "unlock": 114,
+      "typeGroup": "water",
+      "species": [
+        342,
+        341,
+        339,
+        366
+      ]
+    },
+    {
+      "id": "hoenn_cemiterio_de_hoenn",
+      "name": "Cemitério de Hoenn",
+      "region": "",
+      "unlock": 115,
+      "typeGroup": "ghost",
+      "species": [
+        354,
+        355,
+        353,
+        292
+      ]
+    },
+    {
+      "id": "hoenn_mina_de_ferro",
+      "name": "Mina de Ferro",
+      "region": "",
+      "unlock": 118,
+      "typeGroup": "steel",
+      "species": [
+        303,
+        304
+      ]
+    },
+    {
+      "id": "hoenn_lagoa_dos_insetos",
+      "name": "Lagoa dos Insetos",
+      "region": "",
+      "unlock": 118,
+      "typeGroup": "bug",
+      "species": [
+        313,
+        314,
+        283,
+        290
+      ]
+    },
+    {
+      "id": "hoenn_vila_de_rustboro",
+      "name": "Vila de Rustboro",
+      "region": "",
+      "unlock": 122,
+      "typeGroup": "normal",
+      "species": [
+        301,
+        352,
+        294
+      ]
+    },
+    {
+      "id": "hoenn_bosque_sombrio",
+      "name": "Bosque Sombrio",
+      "region": "",
+      "unlock": 125,
+      "typeGroup": "dark",
+      "species": [
+        275,
+        274,
+        332,
+        331
+      ]
+    },
+    {
+      "id": "hoenn_correnteza_de_hoenn",
+      "name": "Correnteza de Hoenn",
+      "region": "",
+      "unlock": 130,
+      "typeGroup": "water",
+      "species": [
+        259,
+        271,
+        320
+      ]
+    },
+    {
+      "id": "hoenn_deserto_de_hoenn",
+      "name": "Deserto de Hoenn",
+      "region": "",
+      "unlock": 135,
+      "typeGroup": "ground",
+      "species": [
+        344,
+        329,
+        328,
+        343
+      ]
+    },
+    {
+      "id": "hoenn_vulcao_de_hoenn",
+      "name": "Vulcão de Hoenn",
+      "region": "",
+      "unlock": 138,
+      "typeGroup": "fire",
+      "species": [
+        256,
+        324
+      ]
+    },
+    {
+      "id": "hoenn_mata_verde",
+      "name": "Mata Verde",
+      "region": "",
+      "unlock": 140,
+      "typeGroup": "grass",
+      "species": [
+        253,
+        357
+      ]
+    },
+    {
+      "id": "hoenn_bosque_dos_preguicosos",
+      "name": "Bosque dos Preguiçosos",
+      "region": "",
+      "unlock": 145,
+      "typeGroup": "normal",
+      "species": [
+        351,
+        288,
+        287,
+        327
+      ]
+    },
+    {
+      "id": "hoenn_vale_dos_dragoes",
+      "name": "Vale dos Dragões",
+      "region": "",
+      "unlock": 145,
+      "typeGroup": "dragon",
+      "species": [
+        334
+      ]
+    },
+    {
+      "id": "hoenn_ruinas_celestes",
+      "name": "Ruínas Celestes",
+      "region": "",
+      "unlock": 148,
+      "typeGroup": "rock",
+      "species": [
+        337,
+        338
+      ]
+    },
+    {
+      "id": "hoenn_fossa_de_hoenn",
+      "name": "Fossa de Hoenn",
+      "region": "",
+      "unlock": 150,
+      "typeGroup": "water",
+      "species": [
+        367,
+        368
+      ]
+    },
+    {
+      "id": "hoenn_copa_zumbidora",
+      "name": "Copa Zumbidora",
+      "region": "",
+      "unlock": 155,
+      "typeGroup": "bug",
+      "species": [
+        284
+      ]
+    },
+    {
+      "id": "hoenn_litoral_alto",
+      "name": "Litoral Alto",
+      "region": "",
+      "unlock": 158,
+      "typeGroup": "flying",
+      "species": [
+        279
+      ]
+    },
+    {
+      "id": "hoenn_aguas_negras",
+      "name": "Águas Negras",
+      "region": "",
+      "unlock": 160,
+      "typeGroup": "dark",
+      "species": [
+        319
+      ]
+    },
+    {
+      "id": "hoenn_arena_de_hoenn",
+      "name": "Arena de Hoenn",
+      "region": "",
+      "unlock": 162,
+      "typeGroup": "fighting",
+      "species": [
+        297
+      ]
+    },
+    {
+      "id": "hoenn_templo_de_hoenn",
+      "name": "Templo de Hoenn",
+      "region": "",
+      "unlock": 165,
+      "typeGroup": "psychic",
+      "species": [
+        358
+      ]
+    },
+    {
+      "id": "hoenn_savana_de_hoenn",
+      "name": "Savana de Hoenn",
+      "region": "",
+      "unlock": 168,
+      "typeGroup": "normal",
+      "species": [
+        335
+      ]
+    },
+    {
+      "id": "hoenn_charco_toxico",
+      "name": "Charco Tóxico",
+      "region": "",
+      "unlock": 168,
+      "typeGroup": "poison",
+      "species": [
+        317,
+        336
+      ]
+    },
+    {
+      "id": "hoenn_cripta_de_hoenn",
+      "name": "Cripta de Hoenn",
+      "region": "",
+      "unlock": 172,
+      "typeGroup": "ghost",
+      "species": [
+        356,
+        302
+      ]
+    },
+    {
+      "id": "hoenn_mar_de_hoenn",
+      "name": "Mar de Hoenn",
+      "region": "",
+      "unlock": 175,
+      "typeGroup": "water",
+      "species": [
+        260,
+        272
+      ]
+    },
+    {
+      "id": "hoenn_geleira_de_hoenn",
+      "name": "Geleira de Hoenn",
+      "region": "",
+      "unlock": 175,
+      "typeGroup": "ice",
+      "species": [
+        365,
+        364
+      ]
+    },
+    {
+      "id": "hoenn_santuario_feerico",
+      "name": "Santuário Feérico",
+      "region": "",
+      "unlock": 176,
+      "typeGroup": "fairy",
+      "species": [
+        282
+      ]
+    },
+    {
+      "id": "hoenn_escavacao_antiga",
+      "name": "Escavação Antiga",
+      "region": "",
+      "unlock": 178,
+      "typeGroup": "rock",
+      "species": [
+        346,
+        348
+      ]
+    },
+    {
+      "id": "hoenn_copa_ancestral",
+      "name": "Copa Ancestral",
+      "region": "",
+      "unlock": 180,
+      "typeGroup": "grass",
+      "species": [
+        254
+      ]
+    },
+    {
+      "id": "hoenn_usina_de_hoenn",
+      "name": "Usina de Hoenn",
+      "region": "",
+      "unlock": 180,
+      "typeGroup": "electric",
+      "species": [
+        310
+      ]
+    },
+    {
+      "id": "hoenn_caldeira_de_hoenn",
+      "name": "Caldeira de Hoenn",
+      "region": "",
+      "unlock": 182,
+      "typeGroup": "fire",
+      "species": [
+        257
+      ]
+    },
+    {
+      "id": "hoenn_enxame_veloz",
+      "name": "Enxame Veloz",
+      "region": "",
+      "unlock": 185,
+      "typeGroup": "bug",
+      "species": [
+        291
+      ]
+    },
+    {
+      "id": "hoenn_nucleo_metalico",
+      "name": "Núcleo Metálico",
+      "region": "",
+      "unlock": 186,
+      "typeGroup": "steel",
+      "species": [
+        305,
+        306,
+        376
+      ]
+    },
+    {
+      "id": "hoenn_covil_sombrio",
+      "name": "Covil Sombrio",
+      "region": "",
+      "unlock": 188,
+      "typeGroup": "dark",
+      "species": [
+        359
+      ]
+    },
+    {
+      "id": "hoenn_refugio_dos_gigantes",
+      "name": "Refúgio dos Gigantes",
+      "region": "",
+      "unlock": 192,
+      "typeGroup": "normal",
+      "species": [
+        295,
+        289
+      ]
+    },
+    {
+      "id": "hoenn_santuario_da_cascata",
+      "name": "Santuário da Cascata",
+      "region": "",
+      "unlock": 195,
+      "typeGroup": "water",
+      "species": [
+        369,
+        350
+      ]
+    },
+    {
+      "id": "hoenn_trono_dos_dragoes",
+      "name": "Trono dos Dragões",
+      "region": "",
+      "unlock": 198,
+      "typeGroup": "dragon",
+      "species": [
+        330,
+        373
+      ]
+    },
+    {
+      "id": "hoenn_abismo_gelado",
+      "name": "Abismo Gelado",
+      "region": "",
+      "unlock": 208,
+      "typeGroup": "ice",
+      "species": [
+        131,
+        230,
+        149
+      ]
+    },
+    {
+      "id": "hoenn_arena_dos_titas",
+      "name": "Arena dos Titãs",
+      "region": "",
+      "unlock": 218,
+      "typeGroup": "rock",
+      "species": [
+        376,
+        373,
+        248
+      ]
+    }
+  ]
+}

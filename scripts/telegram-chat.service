@@ -1,0 +1,16 @@
+[Unit]
+Description=Telegram Agent Go - Native Ultra-Light Daemon
+After=network.target agent-go.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu
+ExecStart=/home/ubuntu/telegram-agent-linux
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

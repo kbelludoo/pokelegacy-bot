@@ -1,0 +1,32 @@
+# Binários gerados
+bot-app
+bot-app-linux
+*-linux
+*.exe
+*.dll
+*.so
+*.dylib
+sync-vps-hub
+
+# Credenciais e Dados Sensíveis (NUNCA SUBIR NO GIT)
+accounts.json
+session.json
+.secrets.json
+secrets.json
+.env
+*.key
+*.pem
+*.tok
+tokens.tok
+oci-manager
+data/
+bin/
+
+# Logs e arquivos temporários
+*.log
+tmp/
+temp/
+
+# OS artifacts
+.DS_Store
+Thumbs.db

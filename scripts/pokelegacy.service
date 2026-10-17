@@ -1,0 +1,21 @@
+[Unit]
+Description=PokeLegacy Online Autonomous Bot (Native Go)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/pokelegacybot
+ExecStart=/home/ubuntu/pokelegacybot/pokelegacy-linux
+Restart=always
+RestartSec=5s
+LimitNOFILE=65535
+StandardOutput=journal
+StandardError=journal
+
+# Otimizações de Memória Go (< 15 MB RAM)
+Environment=GOGC=50
+Environment=PORT=3005
+
+[Install]
+WantedBy=multi-user.target
