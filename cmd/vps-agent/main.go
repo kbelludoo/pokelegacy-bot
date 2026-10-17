@@ -78,6 +78,7 @@ var allBots = []BotProbe{
 	{ID: "kickminer", Name: "🟢 Kick Miner Go", Port: 3009, URL: "http://127.0.0.1:3009/api/status", RestartCmd: "sudo systemctl restart kick-miner.service", Type: "systemd"},
 	{ID: "twitchminer", Name: "🟣 Twitch Miner Go", Port: 3010, URL: "http://127.0.0.1:3010/api/status", RestartCmd: "sudo systemctl restart twitch-miner.service", Type: "systemd"},
 	{ID: "baiak", Name: "🏰 Baiak Idle Go", Port: 8090, URL: "http://127.0.0.1:8090/api/fleet", RestartCmd: "sudo systemctl restart baiak-fleet.service", Type: "systemd"},
+	{ID: "pokelegacy", Name: "⚔️ PokeLegacy Online", Port: 3005, URL: "http://127.0.0.1:3005/api/status", RestartCmd: "sudo systemctl restart pokelegacy.service", Type: "systemd"},
 	{ID: "lolidle", Name: "⚔️ LoL Idle Multi-Bot", Port: 3011, URL: "http://127.0.0.1:3011/api/status", RestartCmd: "sudo systemctl restart lolidle.service", Type: "systemd"},
 }
 
@@ -352,6 +353,7 @@ func syncIndividual() {
 		{repo: "leveling-bot", port: 3003, label: "Party"},
 		{repo: "pokeidle-go", port: 3006, label: "Treinador"},
 		{repo: "pokeidleworld-bot", port: 3007, label: "Treinador"},
+		{repo: "pokelegacy-bot", port: 3005, label: "Treinador"},
 		{repo: "twitch-miner-go", port: 3010, label: "Minerador"},
 		{repo: "lolidle-bot", port: 3011, label: "Campeão"},
 	}
@@ -470,6 +472,7 @@ func syncHub() {
 		"kickminer":     {"Kick Channel Points Miner", "Kick.com", "Go Native (Zero-Video WS)", 3009, "https://kbelludoo.github.io/kick-miner-go/", nil},
 		"twitchminer":   {"Twitch Channel Points Miner", "Twitch.tv", "Go Native (Zero-Video WS)", 3010, "https://kbelludoo.github.io/twitch-miner-go/", nil},
 		"baiak":         {"Baiak Idle Multi-Account", "Baiak Idle", "Go Native Engine", 8090, "https://kbelludoo.github.io/baiak-idle-bot/", nil},
+		"pokelegacy":    {"PokeLegacy Online", "PokeLegacy Online", "Go Native Engine (Socket.IO v4, Party 5x)", 3005, "https://kbelludoo.github.io/pokelegacy-bot/", nil},
 		"lolidle":       {"LoL Idle Multi-Bot", "LoL Idle", "Go Native Engine (Runeterra 4x Party)", 3011, "https://kbelludoo.github.io/lolidle-bot/", nil},
 	}
 
@@ -566,7 +569,7 @@ func syncHub() {
 							}
 						}
 					}
-				case "pokeidle", "pokeidleworld":
+				case "pokelegacy", "pokeidle", "pokeidleworld":
 					if accs, ok := stMap["accounts"].([]interface{}); ok {
 						for i, a := range accs {
 							if am, ok := a.(map[string]interface{}); ok {
