@@ -49,8 +49,12 @@ type AccountStatus struct {
 	CurrentArea string         `json:"currentArea"`
 	DurationSec int            `json:"durationSec"`
 	Logs        []string       `json:"logs"`
-	UpdatedAt   int64          `json:"updatedAt"`
-	Extra       map[string]any `json:"extra,omitempty"` // Campos extras específicos do jogo (ex: pokemons, charms, stamina)
+	UpdatedAt        int64          `json:"updatedAt"`
+	StaminaMs        int64          `json:"staminaMs,omitempty"`
+	MaxStaminaMs     int64          `json:"maxStaminaMs,omitempty"`
+	StaminaPct       int            `json:"staminaPct,omitempty"`
+	StaminaFormatted string         `json:"staminaFormatted,omitempty"`
+	Extra            map[string]any `json:"extra,omitempty"` // Campos extras específicos do jogo (ex: pokemons, charms, stamina)
 }
 
 // NewStatus inicializa um status limpo

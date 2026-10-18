@@ -90,6 +90,7 @@
     .progress-inner { height: 100%; transition: width 0.3s; }
     .hp-bar { background: linear-gradient(90deg, #ff3366, #ff6b8b); }
     .mana-bar { background: linear-gradient(90deg, #00d2ff, #0077ff); }
+    .stamina-bar { background: linear-gradient(90deg, #10b981, #34d399); }
     .info-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -146,6 +147,10 @@
     <div class="stat-card">
       <div class="label">Total Inimigos Derrotados</div>
       <div class="val" id="totalKills" style="color: var(--accent-green);">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">⚡ Stamina Média</div>
+      <div class="val" id="avgStamina" style="color: #fbbf24;">100%</div>
     </div>
     <div class="stat-card">
       <div class="label">Memória RAM</div>
@@ -205,6 +210,11 @@
               <div class="progress"><div class="progress-inner mana-bar" style="width: ${manaPct}%"></div></div>
             </div>
 
+            <div class="bar-wrap">
+              <div class="bar-label"><span style="color: #fbbf24;">⚡ Stamina (${acc.staminaFormatted || '12h 00m'})</span><span>${acc.staminaPct !== undefined ? acc.staminaPct : 100}%</span></div>
+              <div class="progress"><div class="progress-inner stamina-bar" style="width: ${acc.staminaPct !== undefined ? acc.staminaPct : 100}%"></div></div>
+            </div>
+
             <div class="info-grid">
               <div><strong>Ouro:</strong> ${(acc.gold || 0).toLocaleString()}</div>
               <div><strong>Kills:</strong> ${(acc.kills || 0).toLocaleString()}</div>
@@ -225,9 +235,16 @@
           grid.appendChild(card);
         });
 
+        let totalStaminaPct = 0;
+        accounts.forEach(acc => {
+          totalStaminaPct += (acc.staminaPct !== undefined ? acc.staminaPct : 100);
+        });
+        const avgStamina = accounts.length ? Math.round(totalStaminaPct / accounts.length) : 100;
+
         document.getElementById('totalActive').textContent = activeCount + '/' + accounts.length;
         document.getElementById('totalGold').textContent = totalGold.toLocaleString();
         document.getElementById('totalKills').textContent = totalKills.toLocaleString();
+        document.getElementById('avgStamina').textContent = avgStamina + '%';
 
       } catch (e) {
         console.error('Falha ao atualizar dashboard:', e);

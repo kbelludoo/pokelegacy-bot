@@ -148,7 +148,7 @@ func main() {
 					}
 
 					fmt.Printf("▸ [%s] %s (Lv. %d %s) | Status: %s\n", st.ID, st.Name, st.Level, st.Vocation, st.Status)
-					fmt.Printf("  HP: %d/%d (%d%%) | Mana: %d/%d (%d%%) | Ouro: %s | Kills: %d\n", st.HP, st.MaxHP, hpPct, st.Mana, st.MaxMana, manaPct, formatNumber(st.Gold), st.Kills)
+					fmt.Printf("  HP: %d/%d (%d%%) | Mana: %d/%d (%d%%) | ⚡ Stamina: %s (%d%%) | Ouro: %s | Kills: %d\n", st.HP, st.MaxHP, hpPct, st.Mana, st.MaxMana, manaPct, st.StaminaFormatted, st.StaminaPct, formatNumber(st.Gold), st.Kills)
 					if st.CurrentArea != "" {
 						fmt.Printf("  Área: %s | EXP/H: %.0f | Duração: %ds\n", st.CurrentArea, st.ExpPerHour, st.DurationSec)
 					}

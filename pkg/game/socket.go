@@ -53,6 +53,13 @@ func NewSocketClient(baseURL, token, deviceID, bindIP, proxyURL, accID string, o
 	}
 }
 
+// SetToken atualiza o token da conexão WebSocket
+func (sc *SocketClient) SetToken(token string) {
+	sc.mu.Lock()
+	defer sc.mu.Unlock()
+	sc.token = token
+}
+
 // StartLoop mantém a conexão Socket.IO ativa em segundo plano com reconexão automática
 func (sc *SocketClient) StartLoop(ctx context.Context) {
 	go func() {

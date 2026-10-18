@@ -368,6 +368,12 @@
       transition: width 0.3s ease;
     }
 
+    .bar-fill-stamina {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.3s ease;
+    }
+
     /* STATS CHIPS */
     .stats-chips {
       display: grid;
@@ -501,6 +507,11 @@
         <div class="kpi-sub">Entradas de Bestiário ativas</div>
       </div>
       <div class="kpi-card">
+        <div class="kpi-label">⚡ Stamina da Frota</div>
+        <div class="kpi-value" id="valAvgStamina" style="color: #10b981;">100%</div>
+        <div class="kpi-sub" id="valStaminaState">Operação Nominal (12h)</div>
+      </div>
+      <div class="kpi-card">
         <div class="kpi-label">👥 Party Coletiva</div>
         <div class="kpi-value" id="valPartyBonus" style="color: #38bdf8;">+40% EXP</div>
         <div class="kpi-sub" id="valPartyMembers">5 Treinadores em Cluster</div>
@@ -574,12 +585,27 @@
       let totalExp = 0;
       let totalGold = 0;
       let totalKills = 0;
+      let totalStaminaPct = 0;
 
       const grid = document.getElementById('trainersGrid');
       grid.innerHTML = accounts.map((acc, idx) => {
         totalExp += (acc.expPerHour || 0);
         totalGold += (acc.gold || 0);
         totalKills += (acc.kills || 0);
+
+        const staminaPct = acc.staminaPct !== undefined ? acc.staminaPct : 100;
+        const staminaFormatted = acc.staminaFormatted || '12h 00m';
+        totalStaminaPct += staminaPct;
+
+        let staminaColor = '#10b981';
+        let staminaGradient = 'linear-gradient(90deg, #10b981, #34d399)';
+        if (staminaPct <= 20) {
+          staminaColor = '#ef4444';
+          staminaGradient = 'linear-gradient(90deg, #ef4444, #f87171)';
+        } else if (staminaPct <= 50) {
+          staminaColor = '#f59e0b';
+          staminaGradient = 'linear-gradient(90deg, #d97706, #fbbf24)';
+        }
 
         const label = `Treinador #${idx + 1}`;
         const maxHp = acc.maxHp || 150;
@@ -626,6 +652,16 @@
                   <div class="bar-fill-mana" style="width: ${manaPct}%;"></div>
                 </div>
               </div>
+
+              <div class="bar-item">
+                <div class="bar-labels">
+                  <span style="color: ${staminaColor};">⚡ STAMINA: ${staminaFormatted}</span>
+                  <span style="color: ${staminaColor};">${staminaPct}%</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill-stamina" style="width: ${staminaPct}%; background: ${staminaGradient};"></div>
+                </div>
+              </div>
             </div>
 
             <div class="stats-chips">
@@ -660,6 +696,23 @@
       document.getElementById('valTotalExp').textContent = fmtNum(totalExp) + ' /h';
       document.getElementById('valTotalGold').textContent = fmtNum(totalGold);
       document.getElementById('valTotalKills').textContent = fmtNum(totalKills);
+
+      const avgStamina = accounts.length ? Math.round(totalStaminaPct / accounts.length) : 100;
+      const elAvgStamina = document.getElementById('valAvgStamina');
+      const elStaminaState = document.getElementById('valStaminaState');
+      if (elAvgStamina && elStaminaState) {
+        elAvgStamina.textContent = avgStamina + '%';
+        if (avgStamina <= 20) {
+          elAvgStamina.style.color = '#ef4444';
+          elStaminaState.textContent = '⚠️ Descanso na Cidade';
+        } else if (avgStamina <= 50) {
+          elAvgStamina.style.color = '#f59e0b';
+          elStaminaState.textContent = 'Consumo Moderado';
+        } else {
+          elAvgStamina.style.color = '#10b981';
+          elStaminaState.textContent = 'Operação Nominal (12h)';
+        }
+      }
 
       if (data.ramAllocMB) {
         document.getElementById('ramStat').textContent = Number(data.ramAllocMB).toFixed(1) + ' MB';

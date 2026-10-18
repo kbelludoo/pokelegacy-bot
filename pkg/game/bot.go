@@ -5,11 +5,15 @@ import (
 	"fmt"
 	"log"
 	"math/rand"
+	"strings"
 	"sync"
 	"time"
 
 	"bot-template-go/pkg/engine"
 )
+
+// MaxStaminaMs limite máximo de stamina diária no PokeLegacy (12 horas = 43.200.000 ms)
+const MaxStaminaMs int64 = 43200000
 
 // Bot implementa a interface engine.GameBot para o PokeLegacy Online
 type Bot struct {
@@ -29,6 +33,7 @@ type Bot struct {
 
 	// Lógica de jogo e combate
 	trainerLevel  int
+	trainerExp    int64
 	trainerName   string
 	money         int64
 	totalKills    int
@@ -39,6 +44,7 @@ type Bot struct {
 	currentRoute  string
 	isHunting     bool
 	inCity        bool
+	isResting     bool
 	staminaMs     int64
 	pokedexCaught map[int]bool
 
@@ -307,6 +313,12 @@ func (b *Bot) Run(ctx context.Context) error {
 			b.addLog("Modo HALF-OPEN: testando integridade com GET /api/me...")
 			me, err := b.client.FetchMe(ctx)
 			if err != nil {
+				if strings.Contains(err.Error(), "401") || strings.Contains(err.Error(), "não autenticado") {
+					_ = b.relogin(ctx)
+					me, err = b.client.FetchMe(ctx)
+				}
+			}
+			if err != nil {
 				b.cb.RecordFailure("Falha no teste canário /api/me: " + err.Error())
 				continue
 			}
@@ -320,8 +332,8 @@ func (b *Bot) Run(ctx context.Context) error {
 			b.addLog("Teste canário bem-sucedido. Retomando caça normal.")
 		}
 
-		// Executa passo de simulação do jogo
-		b.performGameStep(ctx)
+		// Executa passo de simulação do jogo com tempo decorrido para consumo de stamina
+		b.performGameStep(ctx, sleepMs)
 
 		// Verifica se é hora de salvar o progresso no servidor
 		if time.Since(b.lastSaveAt) >= saveInterval {
@@ -341,12 +353,63 @@ func (b *Bot) Run(ctx context.Context) error {
 }
 
 // performGameStep simula uma rodada de caça, cálculo de dano e abates
-func (b *Bot) performGameStep(ctx context.Context) {
+func (b *Bot) performGameStep(ctx context.Context, elapsedMs int) {
 	b.mu.Lock()
 	defer b.mu.Unlock()
 
 	if !b.isHunting {
 		return
+	}
+
+	// 0. Gestão Inteligente de Stamina & Auto-Recuperação (Pilar Anti-Ban & Auto-Sustentabilidade)
+	todayStr := time.Now().Format("2006-01-02")
+	if refillMap, ok := b.rawSave["staminaRefill"].(map[string]any); ok {
+		lastDate, _ := refillMap["dailyDate"].(string)
+		uses := int(toFloat(refillMap["dailyUses"]))
+		if lastDate != todayStr || uses == 0 {
+			if b.staminaMs < MaxStaminaMs/2 || b.isResting {
+				b.staminaMs = MaxStaminaMs
+				refillMap["dailyUses"] = 1
+				refillMap["dailyDate"] = todayStr
+				b.isResting = false
+				b.inCity = false
+				b.addLog("⚡ STAMINA: Refill diário gratuito ativado automaticamente (+12h)!")
+			}
+		}
+	}
+
+	if b.staminaMs <= 0 || b.isResting {
+		b.inCity = true
+		b.isResting = true
+		b.status.Status = "DESCANSO (Cidade)"
+
+		// Regenera stamina enquanto descansa na cidade (1s de stamina a cada 3s de descanso real)
+		b.staminaMs += int64(elapsedMs) / 3
+		if b.staminaMs >= MaxStaminaMs {
+			b.staminaMs = MaxStaminaMs
+			b.isResting = false
+			b.inCity = false
+			b.addLog("⚡ STAMINA: Recuperação total concluída (12h). Retomando caça.")
+		} else if b.staminaMs >= 7200000 { // Margem de segurança de pelo menos 2 horas
+			b.isResting = false
+			b.inCity = false
+			b.addLog("⚡ STAMINA: Margem de segurança restabelecida (2h+). Retomando caça.")
+		}
+
+		b.status.StaminaMs = b.staminaMs
+		b.status.MaxStaminaMs = MaxStaminaMs
+		b.status.StaminaPct = int((float64(b.staminaMs) / float64(MaxStaminaMs)) * 100)
+		totalSec := b.staminaMs / 1000
+		hours := totalSec / 3600
+		mins := (totalSec % 3600) / 60
+		b.status.StaminaFormatted = fmt.Sprintf("%dh %02dm", hours, mins)
+		return
+	} else {
+		b.inCity = false
+		b.staminaMs -= int64(elapsedMs)
+		if b.staminaMs < 0 {
+			b.staminaMs = 0
+		}
 	}
 
 	// 1. Verificação de Saúde / AutoHeal
@@ -430,6 +493,9 @@ func (b *Bot) performGameStep(ctx context.Context) {
 	if expGain <= 0 {
 		expGain = 45
 	}
+	if b.staminaMs <= 0 {
+		expGain = 0 // Stamina esgotada: 0% de ganho de EXP
+	}
 
 	goldGain := int64(12 + rand.Intn(25) + (b.trainerLevel * 2))
 
@@ -437,6 +503,7 @@ func (b *Bot) performGameStep(ctx context.Context) {
 	b.totalKills++
 	b.sessionKills++
 	b.sessionExp += expGain
+	b.trainerExp += expGain
 	b.money += goldGain
 	b.activeMon.Exp += expGain
 
@@ -482,7 +549,7 @@ func (b *Bot) performGameStep(ctx context.Context) {
 
 	// Atualiza nível do treinador e recálculo dinâmico de rota (Pilar 1)
 	expForNextLevel := int64(b.trainerLevel * b.trainerLevel * 120)
-	if b.sessionExp >= expForNextLevel {
+	if b.sessionExp >= expForNextLevel || b.trainerExp >= expForNextLevel {
 		b.trainerLevel++
 		b.status.Logs = append(b.status.Logs, fmt.Sprintf("🌟 SUBIU DE NÍVEL! Nível de Treinador: %d", b.trainerLevel))
 		b.selectOptimalRouteLocked()
@@ -507,9 +574,44 @@ func (b *Bot) performGameStep(ctx context.Context) {
 	b.status.DurationSec = duration
 	b.status.UpdatedAt = time.Now().UnixMilli()
 
+	b.status.StaminaMs = b.staminaMs
+	b.status.MaxStaminaMs = MaxStaminaMs
+	b.status.StaminaPct = int((float64(b.staminaMs) / float64(MaxStaminaMs)) * 100)
+	totalSec := b.staminaMs / 1000
+	hours := totalSec / 3600
+	mins := (totalSec % 3600) / 60
+	b.status.StaminaFormatted = fmt.Sprintf("%dh %02dm", hours, mins)
+
 	if len(b.status.Logs) > 10 {
 		b.status.Logs = b.status.Logs[len(b.status.Logs)-10:]
 	}
+}
+
+// relogin reautentica a conta caso o Bearer token expire (ex: após 12h de sessão)
+func (b *Bot) relogin(ctx context.Context) error {
+	loginTarget := b.config.Credentials.Email
+	if loginTarget == "" {
+		loginTarget = b.config.Credentials.Username
+	}
+	if loginTarget == "" || b.config.Credentials.Password == "" {
+		return fmt.Errorf("credenciais ausentes para relogin")
+	}
+
+	res, err := b.client.Login(ctx, loginTarget, b.config.Credentials.Password)
+	if err != nil {
+		return fmt.Errorf("falha ao renovar login: %w", err)
+	}
+
+	b.mu.Lock()
+	b.client.SetToken(res.Token)
+	b.config.Credentials.Token = res.Token
+	if b.socket != nil {
+		b.socket.SetToken(res.Token)
+	}
+	b.mu.Unlock()
+
+	b.addLog("🔑 Sessão renovada com sucesso via /api/login (sessão de 12h estendida).")
+	return nil
 }
 
 // flushSave realiza o envio do save com o envelope estrito e Dynamic Overlay
@@ -524,7 +626,9 @@ func (b *Bot) flushSave(ctx context.Context) {
 	// Atualiza o RawSave existente preservando 100% das chaves desconhecidas do servidor
 	b.rawSave["money"] = b.money
 	b.rawSave["trainerLevel"] = b.trainerLevel
-	b.rawSave["inCity"] = false
+	b.rawSave["trainerExp"] = b.trainerExp
+	b.rawSave["staminaMs"] = b.staminaMs
+	b.rawSave["inCity"] = b.inCity
 	b.rawSave["currentRoute"] = b.currentSpot.ID
 	b.rawSave["lastSave"] = time.Now().UnixMilli()
 
@@ -559,6 +663,30 @@ func (b *Bot) flushSave(ctx context.Context) {
 	go func(env SaveEnvelope) {
 		res, err := b.client.PushSave(ctx, env)
 		if err != nil {
+			// Se o erro for 401 ("não autenticado" ou token expirado após 12h)
+			if strings.Contains(err.Error(), "401") || strings.Contains(err.Error(), "não autenticado") {
+				log.Printf("[%s] 🔑 Token expirado (12h). Renovando sessão...", b.ID())
+				if rErr := b.relogin(ctx); rErr == nil {
+					res2, err2 := b.client.PushSave(ctx, env)
+					if err2 == nil {
+						b.mu.Lock()
+						if res2.Version > 0 {
+							b.saveVersion = res2.Version
+						}
+						if res2.ClientVersion > 0 {
+							b.clientVersion = res2.ClientVersion
+						}
+						if res2.Save != nil && len(res2.Save) > 0 {
+							b.rawSave = res2.Save
+							b.extractGameStateLocked()
+						}
+						b.mu.Unlock()
+						b.cb.RecordSuccess()
+						return
+					}
+				}
+			}
+
 			log.Printf("[%s] Erro ao salvar progresso em /api/save: %v", b.ID(), err)
 			b.cb.RecordFailure("Erro ao salvar progresso: " + err.Error())
 			return
@@ -591,6 +719,16 @@ func (b *Bot) extractGameStateLocked() {
 		b.trainerLevel = int(lv)
 	} else if b.trainerLevel <= 0 {
 		b.trainerLevel = 1
+	}
+
+	if exp := toFloat(b.rawSave["trainerExp"]); exp > 0 {
+		b.trainerExp = int64(exp)
+	}
+
+	if val, exists := b.rawSave["staminaMs"]; exists {
+		b.staminaMs = int64(toFloat(val))
+	} else if b.staminaMs <= 0 {
+		b.staminaMs = MaxStaminaMs
 	}
 
 	if m := toFloat(b.rawSave["money"]); m > 0 {
