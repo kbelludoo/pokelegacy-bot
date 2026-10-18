@@ -1,19 +1,18 @@
 {
   "accounts": [
     {
-      "currentArea": "Poleiro",
+      "currentArea": "Jardim de Viridian",
       "durationSec": 4,
       "expPerHour": 778500,
-      "gold": 1267,
-      "hp": 1662,
+      "gold": 1264,
+      "hp": 1657,
       "id": "acc-1",
       "kills": 560,
       "level": 72,
       "logs": [
         "Autenticando em /api/login para Treinador #1...",
         "Autenticado com sucesso via /api/login.",
-        "Pronto. Treinador Lv. 72 | Time: 3 Pokémon | Rota: Jardim de Viridian",
-        "✨ REGISTRADO NO BESTIÁRIO: Oddish (#43)! (+1 Entrada)"
+        "Pronto. Treinador Lv. 72 | Time: 3 Pokémon | Rota: Jardim de Viridian"
       ],
       "mana": 100,
       "maxHp": 1664,
@@ -21,17 +20,17 @@
       "maxStaminaMs": 43200000,
       "name": "Treinador #1",
       "staminaFormatted": "5h 59m",
-      "staminaMs": 21596067,
+      "staminaMs": 21596388,
       "staminaPct": 49,
       "status": "hunting",
-      "updatedAt": 1792361772378,
+      "updatedAt": 1792361891762,
       "vocation": "Treinador"
     },
     {
       "currentArea": "Jardim de Viridian",
       "durationSec": 4,
       "expPerHour": 254700,
-      "gold": 1350,
+      "gold": 1349,
       "hp": 1626,
       "id": "acc-2",
       "kills": 114,
@@ -47,17 +46,17 @@
       "maxStaminaMs": 43200000,
       "name": "Treinador #2",
       "staminaFormatted": "5h 59m",
-      "staminaMs": 21596554,
+      "staminaMs": 21596457,
       "staminaPct": 49,
       "status": "hunting",
-      "updatedAt": 1792361772029,
+      "updatedAt": 1792361891388,
       "vocation": "Treinador"
     },
     {
       "currentArea": "Jardim de Viridian",
-      "durationSec": 5,
-      "expPerHour": 56880,
-      "gold": 722,
+      "durationSec": 4,
+      "expPerHour": 71100,
+      "gold": 732,
       "hp": 387,
       "id": "acc-3",
       "kills": 4,
@@ -65,7 +64,8 @@
       "logs": [
         "Autenticando em /api/login para Treinador #3...",
         "Autenticado com sucesso via /api/login.",
-        "Pronto. Treinador Lv. 3 | Time: 2 Pokémon | Rota: Jardim de Viridian"
+        "Pronto. Treinador Lv. 3 | Time: 2 Pokémon | Rota: Jardim de Viridian",
+        "📖 Alvo do Bestiário avistado: Oddish (#43)! Jogando Pokébola..."
       ],
       "mana": 100,
       "maxHp": 394,
@@ -73,18 +73,18 @@
       "maxStaminaMs": 43200000,
       "name": "Treinador #3",
       "staminaFormatted": "5h 59m",
-      "staminaMs": 21595886,
+      "staminaMs": 21596022,
       "staminaPct": 49,
       "status": "hunting",
-      "updatedAt": 1792361772697,
+      "updatedAt": 1792361891865,
       "vocation": "Treinador"
     },
     {
-      "currentArea": "Jardim de Viridian",
+      "currentArea": "Poleiro",
       "durationSec": 4,
-      "expPerHour": 93600,
-      "gold": 1145,
-      "hp": 386,
+      "expPerHour": 88200,
+      "gold": 1139,
+      "hp": 391,
       "id": "acc-4",
       "kills": 14,
       "level": 8,
@@ -92,7 +92,7 @@
         "Autenticando em /api/login para Treinador #4...",
         "Autenticado com sucesso via /api/login.",
         "Pronto. Treinador Lv. 8 | Time: 2 Pokémon | Rota: Jardim de Viridian",
-        "📖 Alvo do Bestiário avistado: Bulbasaur (#1)! Jogando Pokébola..."
+        "✨ REGISTRADO NO BESTIÁRIO: Bellsprout (#69)! (+1 Entrada)"
       ],
       "mana": 100,
       "maxHp": 394,
@@ -100,17 +100,17 @@
       "maxStaminaMs": 43200000,
       "name": "Treinador #4",
       "staminaFormatted": "5h 59m",
-      "staminaMs": 21595875,
+      "staminaMs": 21596248,
       "staminaPct": 49,
       "status": "hunting",
-      "updatedAt": 1792361772411,
+      "updatedAt": 1792361891602,
       "vocation": "Treinador"
     },
     {
       "currentArea": "Poleiro",
-      "durationSec": 5,
-      "expPerHour": 334800,
-      "gold": 13380,
+      "durationSec": 4,
+      "expPerHour": 392400,
+      "gold": 13382,
       "hp": 1696,
       "id": "acc-5",
       "kills": 45,
@@ -119,7 +119,8 @@
         "Autenticando em /api/login para Treinador #5...",
         "Autenticado com sucesso via /api/login.",
         "Pronto. Treinador Lv. 33 | Time: 3 Pokémon | Rota: Jardim de Viridian",
-        "✨ REGISTRADO NO BESTIÁRIO: Oddish (#43)! (+1 Entrada)"
+        "📖 Alvo do Bestiário avistado: Bellsprout (#69)! Jogando Pokébola...",
+        "✨ REGISTRADO NO BESTIÁRIO: Bellsprout (#69)! (+1 Entrada)"
       ],
       "mana": 100,
       "maxHp": 1698,
@@ -127,15 +128,15 @@
       "maxStaminaMs": 43200000,
       "name": "Treinador #5",
       "staminaFormatted": "5h 59m",
-      "staminaMs": 21595570,
+      "staminaMs": 21596152,
       "staminaPct": 49,
       "status": "hunting",
-      "updatedAt": 1792361772820,
+      "updatedAt": 1792361891851,
       "vocation": "Treinador"
     }
   ],
   "goroutines": 27,
-  "ramAllocMB": 2.2775955200195312,
+  "ramAllocMB": 1.7057113647460938,
   "ramSysMB": 13.099861145019531,
-  "uptime": "8s"
+  "uptime": "7s"
 }
