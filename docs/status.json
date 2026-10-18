@@ -2,10 +2,10 @@
   "accounts": [
     {
       "currentArea": "Poleiro",
-      "durationSec": 3,
-      "expPerHour": 1037999.9999999999,
-      "gold": 1278,
-      "hp": 1657,
+      "durationSec": 4,
+      "expPerHour": 729900,
+      "gold": 1261,
+      "hp": 1656,
       "id": "acc-1",
       "kills": 560,
       "level": 72,
@@ -13,8 +13,9 @@
         "Autenticando em /api/login para Treinador #1...",
         "Autenticado com sucesso via /api/login.",
         "Pronto. Treinador Lv. 72 | Time: 3 Pokémon | Rota: Jardim de Viridian",
-        "💥 Super Efetivo (2.0x)! Charmander explorou a fraqueza de Bulbasaur (grass).",
-        "✨ REGISTRADO NO BESTIÁRIO: Bulbasaur (#1)! (+1 Entrada)"
+        "💥 Super Efetivo (2.0x)! Charmander explorou a fraqueza de Bellsprout (grass).",
+        "📖 Alvo do Bestiário avistado: Bellsprout (#69)! Jogando Pokébola...",
+        "✨ REGISTRADO NO BESTIÁRIO: Bellsprout (#69)! (+1 Entrada)"
       ],
       "mana": 100,
       "maxHp": 1664,
@@ -22,17 +23,17 @@
       "maxStaminaMs": 43200000,
       "name": "Treinador #1",
       "staminaFormatted": "5h 59m",
-      "staminaMs": 21596550,
+      "staminaMs": 21596200,
       "staminaPct": 49,
       "status": "hunting",
-      "updatedAt": 1792359611289,
+      "updatedAt": 1792359850677,
       "vocation": "Treinador"
     },
     {
       "currentArea": "Poleiro",
-      "durationSec": 4,
-      "expPerHour": 254700,
-      "gold": 1363,
+      "durationSec": 3,
+      "expPerHour": 339600,
+      "gold": 1358,
       "hp": 1625,
       "id": "acc-2",
       "kills": 114,
@@ -41,6 +42,7 @@
         "Autenticando em /api/login para Treinador #2...",
         "Autenticado com sucesso via /api/login.",
         "Pronto. Treinador Lv. 17 | Time: 3 Pokémon | Rota: Jardim de Viridian",
+        "💥 Super Efetivo (2.0x)! Cyndaquil explorou a fraqueza de Bellsprout (grass).",
         "✨ REGISTRADO NO BESTIÁRIO: Bellsprout (#69)! (+1 Entrada)"
       ],
       "mana": 100,
@@ -49,18 +51,18 @@
       "maxStaminaMs": 43200000,
       "name": "Treinador #2",
       "staminaFormatted": "5h 59m",
-      "staminaMs": 21596145,
+      "staminaMs": 21596707,
       "staminaPct": 49,
       "status": "hunting",
-      "updatedAt": 1792359611736,
+      "updatedAt": 1792359850166,
       "vocation": "Treinador"
     },
     {
-      "currentArea": "Jardim de Viridian",
+      "currentArea": "Campos de New Bark",
       "durationSec": 4,
-      "expPerHour": 66600,
-      "gold": 718,
-      "hp": 390,
+      "expPerHour": 71100,
+      "gold": 722,
+      "hp": 387,
       "id": "acc-3",
       "kills": 4,
       "level": 3,
@@ -68,7 +70,7 @@
         "Autenticando em /api/login para Treinador #3...",
         "Autenticado com sucesso via /api/login.",
         "Pronto. Treinador Lv. 3 | Time: 2 Pokémon | Rota: Jardim de Viridian",
-        "📖 Alvo do Bestiário avistado: Bellsprout (#69)! Jogando Pokébola..."
+        "✨ REGISTRADO NO BESTIÁRIO: Bulbasaur (#1)! (+1 Entrada)"
       ],
       "mana": 100,
       "maxHp": 394,
@@ -76,17 +78,17 @@
       "maxStaminaMs": 43200000,
       "name": "Treinador #3",
       "staminaFormatted": "5h 59m",
-      "staminaMs": 21595675,
+      "staminaMs": 21596195,
       "staminaPct": 49,
       "status": "hunting",
-      "updatedAt": 1792359612214,
+      "updatedAt": 1792359850678,
       "vocation": "Treinador"
     },
     {
       "currentArea": "Poleiro",
       "durationSec": 4,
       "expPerHour": 93600,
-      "gold": 1142,
+      "gold": 1146,
       "hp": 384,
       "id": "acc-4",
       "kills": 14,
@@ -95,8 +97,7 @@
         "Autenticando em /api/login para Treinador #4...",
         "Autenticado com sucesso via /api/login.",
         "Pronto. Treinador Lv. 8 | Time: 2 Pokémon | Rota: Jardim de Viridian",
-        "📖 Alvo do Bestiário avistado: Oddish (#43)! Jogando Pokébola...",
-        "✨ REGISTRADO NO BESTIÁRIO: Oddish (#43)! (+1 Entrada)"
+        "✨ REGISTRADO NO BESTIÁRIO: Bulbasaur (#1)! (+1 Entrada)"
       ],
       "mana": 100,
       "maxHp": 394,
@@ -104,26 +105,25 @@
       "maxStaminaMs": 43200000,
       "name": "Treinador #4",
       "staminaFormatted": "5h 59m",
-      "staminaMs": 21596072,
+      "staminaMs": 21596091,
       "staminaPct": 49,
       "status": "hunting",
-      "updatedAt": 1792359611908,
+      "updatedAt": 1792359851088,
       "vocation": "Treinador"
     },
     {
-      "currentArea": "Poleiro",
+      "currentArea": "Jardim de Viridian",
       "durationSec": 4,
       "expPerHour": 418500,
-      "gold": 13394,
-      "hp": 1687,
+      "gold": 13390,
+      "hp": 1689,
       "id": "acc-5",
       "kills": 45,
       "level": 33,
       "logs": [
         "Autenticando em /api/login para Treinador #5...",
         "Autenticado com sucesso via /api/login.",
-        "Pronto. Treinador Lv. 33 | Time: 3 Pokémon | Rota: Jardim de Viridian",
-        "✨ REGISTRADO NO BESTIÁRIO: Oddish (#43)! (+1 Entrada)"
+        "Pronto. Treinador Lv. 33 | Time: 3 Pokémon | Rota: Jardim de Viridian"
       ],
       "mana": 100,
       "maxHp": 1698,
@@ -131,15 +131,15 @@
       "maxStaminaMs": 43200000,
       "name": "Treinador #5",
       "staminaFormatted": "5h 59m",
-      "staminaMs": 21596177,
+      "staminaMs": 21595973,
       "staminaPct": 49,
       "status": "hunting",
-      "updatedAt": 1792359611708,
+      "updatedAt": 1792359851010,
       "vocation": "Treinador"
     }
   ],
   "goroutines": 27,
-  "ramAllocMB": 2.0272674560546875,
+  "ramAllocMB": 1.7180633544921875,
   "ramSysMB": 12.849861145019531,
-  "uptime": "8s"
+  "uptime": "7s"
 }
