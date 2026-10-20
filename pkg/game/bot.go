@@ -54,6 +54,8 @@ type Bot struct {
 	sessionExp      int64
 	lastSaveAt      time.Time
 	lastDailyCheck  time.Time
+	lastMaintenance time.Time
+	lastDonationAt  time.Time
 	lastSellCheck   time.Time
 
 	// Gestão de Party (Grupo Cooperativo)
@@ -179,15 +181,11 @@ func (b *Bot) Init(ctx context.Context) error {
 
 	b.cb.RecordSuccess()
 
-	// 3. Resgate de recompensa diária (Pilar 7 / AutoDaily)
-	if b.config.Settings.AutoDaily {
-		go func() {
-			time.Sleep(3 * time.Second)
-			if _, err := b.client.ClaimDailyReward(ctx); err == nil {
-				b.addLog("🎁 Recompensa diária resgatada com sucesso.")
-			}
-		}()
-	}
+	// 3. Manutenção inicial (Recompensas, Jornada, Missões, Consumíveis)
+	go func() {
+		time.Sleep(5 * time.Second)
+		b.runMaintenance(ctx)
+	}()
 
 	b.addLog(fmt.Sprintf("Pronto. Treinador Lv. %d | Time: %d Pokémon | Rota: %s",
 		b.trainerLevel, len(b.team), b.currentSpot.Name))
@@ -204,6 +202,19 @@ func (b *Bot) Init(ctx context.Context) error {
 			b.cb.RecordFailure("Sessão tomada por outro cliente (outraAba)")
 		},
 	)
+
+	// Consolidação de caça oficial retornada via Socket.IO
+	b.socket.On("hunt:resumeResponse", func(payload any) {
+		if pMap, ok := payload.(map[string]any); ok {
+			off, _ := pMap["official"].(map[string]any)
+			v, _ := pMap["version"].(int)
+			b.mu.Lock()
+			defer b.mu.Unlock()
+			b.mergeOfficialLocked(off, v)
+			b.addLogLocked(fmt.Sprintf("🔄 Sincronizado com servidor: Nível %d (%d EXP) | Ouro: %d",
+				b.trainerLevel, b.trainerExp, b.money))
+		}
+	})
 
 	// Registra ouvinte para atualizações de estado da Party
 	b.socket.On("party:state", func(payload any) {
@@ -230,6 +241,74 @@ func (b *Bot) Init(ctx context.Context) error {
 			}
 			b.status.Logs = append(b.status.Logs, fmt.Sprintf("👥 Party ativa (%d membros, Líder: %s)", len(b.partyMembers), b.partyLeaderID))
 		}
+	})
+
+	// Auto-accept de proposta de caçada em grupo enviada pelo líder
+	b.socket.On("party:huntProposal", func(payload any) {
+		b.mu.Lock()
+		teamUids := make([]string, 0, len(b.team))
+		for _, m := range b.team {
+			if m.UID != "" && m.UID != "<nil>" {
+				teamUids = append(teamUids, m.UID)
+			}
+		}
+		b.mu.Unlock()
+
+		b.addLog("👥 Proposta de caçada em grupo recebida. Aceitando...")
+		_ = b.socket.Emit("party:huntAnswer", map[string]any{
+			"accept":   true,
+			"teamUids": teamUids,
+		})
+	})
+
+	// Caçada em party iniciada com sucesso
+	b.socket.On("party:huntStart", func(payload any) {
+		b.mu.Lock()
+		defer b.mu.Unlock()
+		b.status.Logs = append(b.status.Logs, "⚔️ CAÇADA EM PARTY INICIADA! Compartilhando EXP e bônus de grupo.")
+	})
+
+	// Abate compartilhado em party (recebimento de EXP bônus de grupo)
+	b.socket.On("party:killShare", func(payload any) {
+		if pMap, ok := payload.(map[string]any); ok {
+			share := int64(toFloat(pMap["share"]))
+			fromName := fmt.Sprintf("%v", pMap["fromName"])
+			if share > 0 {
+				b.mu.Lock()
+				b.sessionExp += share
+				b.trainerExp += share
+				b.totalKills++
+				b.status.Logs = append(b.status.Logs, fmt.Sprintf("💥 Abate compartilhado por %s! +%d EXP", fromName, share))
+				newLevel := ExpToLevel(b.trainerExp)
+				if newLevel > b.trainerLevel {
+					b.trainerLevel = newLevel
+					b.status.Logs = append(b.status.Logs, fmt.Sprintf("🌟 SUBIU DE NÍVEL! Nível de Treinador: %d", b.trainerLevel))
+					b.selectOptimalRouteLocked()
+				}
+				b.mu.Unlock()
+			}
+		}
+	})
+
+	// Aviso de nível incompatível / barrado
+	b.socket.On("party:huntBarred", func(payload any) {
+		reason := "Você ficou de fora da hunt da party (diferença de nível > 25)."
+		if pMap, ok := payload.(map[string]any); ok {
+			if r, ok := pMap["reason"].(string); ok && r != "" {
+				reason = r
+			}
+		}
+		b.addLog("⚠️ " + reason)
+	})
+
+	b.socket.On("party:levelNotice", func(payload any) {
+		reason := "Níveis incompatíveis para caçar em party (máx 25 níveis de diferença)."
+		if pMap, ok := payload.(map[string]any); ok {
+			if r, ok := pMap["reason"].(string); ok && r != "" {
+				reason = r
+			}
+		}
+		b.addLog("⚠️ " + reason)
 	})
 
 	b.socket.StartLoop(ctx)
@@ -340,14 +419,10 @@ func (b *Bot) Run(ctx context.Context) error {
 			b.flushSave(ctx)
 		}
 
-		// Auto-Sell a cada 5 minutos
-		if b.config.Settings.AutoSell && time.Since(b.lastSellCheck) >= 5*time.Minute {
-			b.lastSellCheck = time.Now()
-			go func() {
-				if _, err := b.client.StashAll(ctx); err == nil {
-					b.addLog("🎒 Itens depositados no depósito com sucesso.")
-				}
-			}()
+		// Manutenção Automática Periódica (Missões, Jornada, Consumíveis, Loja, Sell/Stash, Oficina, Buffs)
+		if time.Since(b.lastMaintenance) >= 3*time.Minute {
+			b.lastMaintenance = time.Now()
+			go b.runMaintenance(ctx)
 		}
 	}
 }
@@ -373,7 +448,7 @@ func (b *Bot) performGameStep(ctx context.Context, elapsedMs int) {
 				refillMap["dailyDate"] = todayStr
 				b.isResting = false
 				b.inCity = false
-				b.addLog("⚡ STAMINA: Refill diário gratuito ativado automaticamente (+12h)!")
+				b.addLogLocked("⚡ STAMINA: Refill diário gratuito ativado automaticamente (+12h)!")
 			}
 		}
 	}
@@ -389,11 +464,11 @@ func (b *Bot) performGameStep(ctx context.Context, elapsedMs int) {
 			b.staminaMs = MaxStaminaMs
 			b.isResting = false
 			b.inCity = false
-			b.addLog("⚡ STAMINA: Recuperação total concluída (12h). Retomando caça.")
+			b.addLogLocked("⚡ STAMINA: Recuperação total concluída (12h). Retomando caça.")
 		} else if b.staminaMs >= 7200000 { // Margem de segurança de pelo menos 2 horas
 			b.isResting = false
 			b.inCity = false
-			b.addLog("⚡ STAMINA: Margem de segurança restabelecida (2h+). Retomando caça.")
+			b.addLogLocked("⚡ STAMINA: Margem de segurança restabelecida (2h+). Retomando caça.")
 		}
 
 		b.status.StaminaMs = b.staminaMs
@@ -406,6 +481,7 @@ func (b *Bot) performGameStep(ctx context.Context, elapsedMs int) {
 		return
 	} else {
 		b.inCity = false
+		b.status.Status = "hunting"
 		b.staminaMs -= int64(elapsedMs)
 		if b.staminaMs < 0 {
 			b.staminaMs = 0
@@ -547,10 +623,10 @@ func (b *Bot) performGameStep(ctx context.Context, elapsedMs int) {
 		}
 	}
 
-	// Atualiza nível do treinador e recálculo dinâmico de rota (Pilar 1)
-	expForNextLevel := int64(b.trainerLevel * b.trainerLevel * 120)
-	if b.sessionExp >= expForNextLevel || b.trainerExp >= expForNextLevel {
-		b.trainerLevel++
+	// Atualiza nível do treinador e recálculo dinâmico de rota usando curva canônica oficial (Pilar 1)
+	newLevel := ExpToLevel(b.trainerExp)
+	if newLevel > b.trainerLevel {
+		b.trainerLevel = newLevel
 		b.status.Logs = append(b.status.Logs, fmt.Sprintf("🌟 SUBIU DE NÍVEL! Nível de Treinador: %d", b.trainerLevel))
 		b.selectOptimalRouteLocked()
 	}
@@ -952,13 +1028,17 @@ func (b *Bot) updateStatus(fn func(s *engine.AccountStatus)) {
 	b.status.UpdatedAt = time.Now().UnixMilli()
 }
 
-func (b *Bot) addLog(msg string) {
-	b.mu.Lock()
-	defer b.mu.Unlock()
+func (b *Bot) addLogLocked(msg string) {
 	b.status.Logs = append(b.status.Logs, msg)
 	if len(b.status.Logs) > 10 {
 		b.status.Logs = b.status.Logs[1:]
 	}
+}
+
+func (b *Bot) addLog(msg string) {
+	b.mu.Lock()
+	defer b.mu.Unlock()
+	b.addLogLocked(msg)
 }
 
 // UserID retorna o ID oficial da conta no PokeLegacy
@@ -1014,3 +1094,44 @@ func (b *Bot) LeaveParty() error {
 	}
 	return b.socket.Emit("party:leave", nil)
 }
+
+// TeamUIDs retorna a lista de identificadores únicos dos pokémons no time
+func (b *Bot) TeamUIDs() []string {
+	b.mu.RLock()
+	defer b.mu.RUnlock()
+	uids := make([]string, 0, len(b.team))
+	for _, m := range b.team {
+		if m.UID != "" && m.UID != "<nil>" {
+			uids = append(uids, m.UID)
+		}
+	}
+	return uids
+}
+
+// IsPartyLeader indica se o bot é o líder da party ativa
+func (b *Bot) IsPartyLeader() bool {
+	b.mu.RLock()
+	defer b.mu.RUnlock()
+	return b.isInParty && b.partyLeaderID == b.user.GetID()
+}
+
+// PartyMembersCount retorna a quantidade de membros no grupo
+func (b *Bot) PartyMembersCount() int {
+	b.mu.RLock()
+	defer b.mu.RUnlock()
+	return len(b.partyMembers)
+}
+
+// ProposeHunt propõe uma caçada coletiva na rota indicada
+func (b *Bot) ProposeHunt(huntID string) error {
+	if b.socket == nil {
+		return fmt.Errorf("socket offline")
+	}
+	uids := b.TeamUIDs()
+	b.addLog(fmt.Sprintf("🗺 Propondo caçada em grupo na rota %s...", huntID))
+	return b.socket.Emit("party:huntPropose", map[string]any{
+		"huntId":   huntID,
+		"teamUids": uids,
+	})
+}
+

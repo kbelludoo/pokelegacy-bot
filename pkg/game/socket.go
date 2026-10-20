@@ -188,7 +188,41 @@ func (sc *SocketClient) connectAndListen(ctx context.Context) error {
 
 		// 3. Autenticado com sucesso no Socket.IO: '40{"sid":...}'
 		if strings.HasPrefix(msg, "40") {
-			log.Printf("%s Conectado ao Socket.IO! Sessão do navegador desconectada com sucesso.", sc.logPrefix)
+
+			// Emite hunt:resume com ackId 0 imediatamente para computar o progresso oficial
+			sc.mu.Lock()
+			_ = conn.WriteMessage(websocket.TextMessage, []byte(`420["hunt:resume",{"depotDelta":1}]`))
+			sc.mu.Unlock()
+			continue
+		}
+
+		// 3.5. Respostas de confirmação (Acks) do Socket.IO: '43<ackId>[payload]'
+		if strings.HasPrefix(msg, "43") {
+			idx := strings.Index(msg, "[")
+			if idx != -1 {
+				var arr []any
+				if err := json.Unmarshal([]byte(msg[idx:]), &arr); err == nil && len(arr) >= 1 {
+					if resMap, ok := arr[0].(map[string]any); ok {
+						if okVal, _ := resMap["ok"].(bool); okVal {
+							if off, ok := resMap["official"].(map[string]any); ok {
+								var v int
+								if vAny, exists := resMap["version"]; exists {
+									switch n := vAny.(type) {
+									case float64:
+										v = int(n)
+									case int:
+										v = n
+									}
+								}
+								sc.dispatch("hunt:resumeResponse", map[string]any{
+									"official": off,
+									"version":  v,
+								})
+							}
+						}
+					}
+				}
+			}
 			continue
 		}
 
@@ -264,6 +298,16 @@ func (sc *SocketClient) Emit(event string, payload any) error {
 
 	packet := "42" + string(data)
 	return sc.conn.WriteMessage(websocket.TextMessage, []byte(packet))
+}
+
+// ResumeHunt solicita ao servidor a consolidação e retorno do progresso oficial da caçada
+func (sc *SocketClient) ResumeHunt() error {
+	sc.mu.Lock()
+	defer sc.mu.Unlock()
+	if sc.conn == nil || sc.isClosed {
+		return fmt.Errorf("websocket não conectado")
+	}
+	return sc.conn.WriteMessage(websocket.TextMessage, []byte(`420["hunt:resume",{"depotDelta":1}]`))
 }
 
 func (sc *SocketClient) Close() {

@@ -30,3 +30,9 @@ temp/
 # OS artifacts
 .DS_Store
 Thumbs.db
+
+# Test scripts and temporary inspections
+cmd/check_save/
+cmd/inspect_assets/
+cmd/test_ws/
+*.js

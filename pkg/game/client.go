@@ -215,9 +215,17 @@ func (c *LegacyClient) ClaimDailyReward(ctx context.Context) (map[string]any, er
 }
 
 // StashAll deposita o excesso de itens no depósito
-func (c *LegacyClient) StashAll(ctx context.Context) (map[string]any, error) {
+func (c *LegacyClient) StashAll(ctx context.Context, itemIDs []string) (map[string]any, error) {
+	if len(itemIDs) == 0 {
+		return nil, nil
+	}
+	body := map[string]any{
+		"itemIds":     itemIDs,
+		"operationId": generateUUIDv4(),
+		"depotDelta":  1,
+	}
 	var res map[string]any
-	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/depot/stash-all", map[string]any{}, &res)
+	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/depot/stash-all", body, &res)
 	return res, err
 }
 
@@ -226,7 +234,150 @@ func (c *LegacyClient) SellAll(ctx context.Context, itemIDs []string) (map[strin
 	if len(itemIDs) == 0 {
 		return nil, nil
 	}
+	body := map[string]any{
+		"itemIds":     itemIDs,
+		"operationId": generateUUIDv4(),
+	}
 	var res map[string]any
-	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/shop/sell-all", map[string]any{"items": itemIDs}, &res)
+	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/shop/sell-all", body, &res)
 	return res, err
 }
+
+// BuyShopItem compra itens na loja oficial (ex: poke_ball)
+func (c *LegacyClient) BuyShopItem(ctx context.Context, productId string, qty int) (map[string]any, error) {
+	body := map[string]any{
+		"productId":   productId,
+		"quantity":    qty,
+		"operationId": generateUUIDv4(),
+	}
+	var res map[string]any
+	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/shop/buy", body, &res)
+	return res, err
+}
+
+// FetchDailyMissions consulta o status das missões diárias
+func (c *LegacyClient) FetchDailyMissions(ctx context.Context) (map[string]any, error) {
+	var res map[string]any
+	_, _, err := c.doRequest(ctx, http.MethodGet, "/api/missao-diaria", nil, &res)
+	return res, err
+}
+
+// ChooseDailyMission escolhe a dificuldade da missão diária
+func (c *LegacyClient) ChooseDailyMission(ctx context.Context, objetivo, dificuldade string) (map[string]any, error) {
+	body := map[string]any{
+		"objetivo":    objetivo,
+		"dificuldade": dificuldade,
+	}
+	var res map[string]any
+	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/missao-diaria/escolher", body, &res)
+	return res, err
+}
+
+// ClaimDailyMission resgata o prêmio de uma missão diária concluída
+func (c *LegacyClient) ClaimDailyMission(ctx context.Context, objetivo string) (map[string]any, error) {
+	body := map[string]any{
+		"objetivo":    objetivo,
+		"operationId": generateUUIDv4(),
+	}
+	var res map[string]any
+	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/missao-diaria/resgatar", body, &res)
+	return res, err
+}
+
+// FetchJornada consulta o progresso atual da Jornada do Treinador
+func (c *LegacyClient) FetchJornada(ctx context.Context) (map[string]any, error) {
+	var res map[string]any
+	_, _, err := c.doRequest(ctx, http.MethodGet, "/api/jornada", nil, &res)
+	return res, err
+}
+
+// ClaimJornada resgata a recompensa de um marco da Jornada
+func (c *LegacyClient) ClaimJornada(ctx context.Context, id string) (map[string]any, error) {
+	body := map[string]any{"id": id}
+	var res map[string]any
+	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/jornada/resgatar", body, &res)
+	return res, err
+}
+
+// MarkJornadaSeen marca como visto um marco da Jornada
+func (c *LegacyClient) MarkJornadaSeen(ctx context.Context, id string) (map[string]any, error) {
+	body := map[string]any{"id": id}
+	var res map[string]any
+	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/jornada/visto", body, &res)
+	return res, err
+}
+
+// UseXpBoostTicket ativa 1 bilhete de XP Boost da mochila (+50% EXP por 1h)
+func (c *LegacyClient) UseXpBoostTicket(ctx context.Context) (map[string]any, error) {
+	var res map[string]any
+	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/daily-reward/use-xp-boost", nil, &res)
+	return res, err
+}
+
+// UseShinyTicket ativa 1 bilhete de Shiny Boost da mochila (+75% shiny por 1h)
+func (c *LegacyClient) UseShinyTicket(ctx context.Context) (map[string]any, error) {
+	var res map[string]any
+	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/items/shiny-ticket/use", nil, &res)
+	return res, err
+}
+
+// OpenPokeBag abre bolsa misteriosa de itens/pokemons
+func (c *LegacyClient) OpenPokeBag(ctx context.Context) (map[string]any, error) {
+	var res map[string]any
+	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/pokebag/open", nil, &res)
+	return res, err
+}
+
+// UseRareCandy usa doce raro para aumentar nível do treinador/pokémon
+func (c *LegacyClient) UseRareCandy(ctx context.Context) (map[string]any, error) {
+	body := map[string]any{"operationId": generateUUIDv4()}
+	var res map[string]any
+	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/items/rare-candy/use", body, &res)
+	return res, err
+}
+
+// FetchGlobalBuffs consulta as campanhas de buffs globais ativas/arrecadando
+func (c *LegacyClient) FetchGlobalBuffs(ctx context.Context) (map[string]any, error) {
+	var res map[string]any
+	_, _, err := c.doRequest(ctx, http.MethodGet, "/api/global-buffs", nil, &res)
+	return res, err
+}
+
+// DonateGlobalBuff doa moedas para uma campanha de buff global do servidor
+func (c *LegacyClient) DonateGlobalBuff(ctx context.Context, buff string, amount int, campaignId int) (map[string]any, error) {
+	body := map[string]any{
+		"buff":        buff,
+		"amount":      amount,
+		"campaignId":  campaignId,
+		"operationId": generateUUIDv4(),
+	}
+	var res map[string]any
+	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/global-buffs/donate", body, &res)
+	return res, err
+}
+
+// CollectOficina coleta itens prontos na oficina artesanal
+func (c *LegacyClient) CollectOficina(ctx context.Context) (map[string]any, error) {
+	var res map[string]any
+	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/oficina/coletar", map[string]any{}, &res)
+	return res, err
+}
+
+// AcknowledgeWelcomeVip confirma o aviso de VIP de boas-vindas
+func (c *LegacyClient) AcknowledgeWelcomeVip(ctx context.Context) error {
+	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/welcome-vip/ack", nil, nil)
+	return err
+}
+
+// EquipHeld equipa um Held Item em um Pokémon
+func (c *LegacyClient) EquipHeld(ctx context.Context, uid, itemId string) (map[string]any, error) {
+	body := map[string]any{
+		"uid":         uid,
+		"itemId":      itemId,
+		"operationId": generateUUIDv4(),
+	}
+	var res map[string]any
+	_, _, err := c.doRequest(ctx, http.MethodPost, "/api/held/equip", body, &res)
+	return res, err
+}
+
