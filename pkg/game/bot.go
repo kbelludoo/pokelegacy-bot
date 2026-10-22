@@ -48,6 +48,11 @@ type Bot struct {
 	staminaMs     int64
 	pokedexCaught map[int]bool
 
+	// Sessão de combate oficial em tempo real via WebSocket
+	serverSessionID string
+	serverRoster    []map[string]any
+	lastRosterReq   time.Time
+
 	// Métricas de sessão
 	sessionStart    time.Time
 	sessionKills    int
@@ -405,10 +410,18 @@ func (b *Bot) Run(ctx context.Context) error {
 			b.rawSave = me.Save
 			b.saveVersion = me.SaveVersion
 			b.clientVersion = me.ClientVersion
+			if len(me.SaveOwnedFields) > 0 {
+				b.saveOwnedFields = me.SaveOwnedFields
+			}
 			b.extractGameStateLocked()
 			b.mu.Unlock()
 			b.cb.RecordSuccess()
 			b.addLog("Teste canário bem-sucedido. Retomando caça normal.")
+		}
+
+		// Executa combate oficial no servidor via WebSocket
+		if b.socket != nil && b.socket.IsConnected() {
+			b.performServerHuntStep(ctx)
 		}
 
 		// Executa passo de simulação do jogo com tempo decorrido para consumo de stamina
@@ -425,6 +438,156 @@ func (b *Bot) Run(ctx context.Context) error {
 			go b.runMaintenance(ctx)
 		}
 	}
+}
+
+// performServerHuntStep executa o combate oficial diretamente nos servidores do PokeLegacy via WebSocket
+func (b *Bot) performServerHuntStep(ctx context.Context) {
+	if b.socket == nil || !b.socket.IsConnected() {
+		return
+	}
+
+	b.mu.Lock()
+	if !b.isHunting || b.inCity || b.isResting || b.staminaMs <= 0 {
+		b.mu.Unlock()
+		return
+	}
+
+	routeID := b.currentSpot.ID
+	if routeID == "" {
+		routeID = "kanto_campos_de_pallet"
+	}
+
+	// 1. Se não tiver sessão ou roster ativo, solicita novo hunt:roster
+	if b.serverSessionID == "" || len(b.serverRoster) == 0 {
+		if time.Since(b.lastRosterReq) < 3*time.Second {
+			b.mu.Unlock()
+			return
+		}
+		b.lastRosterReq = time.Now()
+
+		teamUids := make([]string, 0, len(b.team))
+		for _, m := range b.team {
+			if m.UID != "" {
+				teamUids = append(teamUids, m.UID)
+			}
+		}
+
+		rosterPayload := map[string]any{
+			"routeId":     routeID,
+			"count":       10,
+			"teamUids":    teamUids,
+			"controlMode": "auto",
+			"depotDelta":  1,
+		}
+		b.mu.Unlock()
+
+		_ = b.socket.EmitAck("hunt:roster", rosterPayload, func(resp []any) {
+			if len(resp) == 0 {
+				return
+			}
+			rMap, ok := resp[0].(map[string]any)
+			if !ok {
+				return
+			}
+
+			if okVal, _ := rMap["ok"].(bool); okVal {
+				b.mu.Lock()
+				defer b.mu.Unlock()
+				b.serverSessionID, _ = rMap["sessionId"].(string)
+				if rosterRaw, ok := rMap["roster"].([]any); ok {
+					b.serverRoster = make([]map[string]any, 0, len(rosterRaw))
+					for _, raw := range rosterRaw {
+						if m, ok := raw.(map[string]any); ok {
+							b.serverRoster = append(b.serverRoster, m)
+						}
+					}
+				}
+				if off, ok := rMap["official"].(map[string]any); ok {
+					b.mergeOfficialLocked(off, int(toFloat(rMap["version"])))
+				}
+			} else if code, _ := rMap["code"].(string); code == "AFK_SETTLEMENT_PENDING" {
+				_ = b.socket.ResumeHunt()
+			}
+		})
+		return
+	}
+
+	// 2. Se temos monstro no roster, executa hit com golpe válido
+	firstWild := b.serverRoster[0]
+	wildID := firstWild["wildId"]
+	sessID := b.serverSessionID
+
+	moveID := "tackle"
+	if len(b.activeMon.Moves) > 0 {
+		moveID = b.activeMon.Moves[0]
+	}
+
+	var ballID any = nil
+	spID := int(toFloat(firstWild["speciesId"]))
+	if b.config.Settings.AutoCatch || (b.config.Settings.FocusPokedex && !b.pokedexCaught[spID]) {
+		ballID = "poke_ball"
+		if b.config.Settings.PreferredBall != "" {
+			ballID = b.config.Settings.PreferredBall
+		}
+	}
+
+	activeMonUID := b.activeMon.UID
+	castID := fmt.Sprintf("cast:%d", time.Now().UnixNano())
+
+	hitsPayload := map[string]any{
+		"sessionId":     sessID,
+		"castId":        castID,
+		"moveId":        moveID,
+		"activeMonUid":  activeMonUID,
+		"primaryWildId": wildID,
+		"hits": []map[string]any{
+			{
+				"wildId": wildID,
+				"ballId": ballID,
+			},
+		},
+	}
+	b.mu.Unlock()
+
+	_ = b.socket.EmitAck("hunt:rosterHits", hitsPayload, func(resp []any) {
+		if len(resp) == 0 {
+			return
+		}
+		rMap, ok := resp[0].(map[string]any)
+		if !ok {
+			return
+		}
+
+		b.mu.Lock()
+		defer b.mu.Unlock()
+
+		if okVal, _ := rMap["ok"].(bool); okVal {
+			if results, ok := rMap["results"].([]any); ok && len(results) > 0 {
+				if res0, ok := results[0].(map[string]any); ok {
+					if res0["killed"] == true {
+						if len(b.serverRoster) > 0 {
+							b.serverRoster = b.serverRoster[1:]
+						}
+						if respawn, ok := res0["respawn"].(map[string]any); ok {
+							b.serverRoster = append(b.serverRoster, respawn)
+						}
+					}
+					if off, ok := res0["official"].(map[string]any); ok {
+						v := int(toFloat(res0["version"]))
+						b.mergeOfficialLocked(off, v)
+					}
+				}
+			}
+		} else {
+			code, _ := rMap["code"].(string)
+			if code == "AFK_SETTLEMENT_PENDING" {
+				_ = b.socket.ResumeHunt()
+				b.serverSessionID = ""
+			} else if code == "NO_SESSION" || code == "STALE_SESSION" || code == "ROSTER_TIMEOUT" || code == "MOVE_NOT_ALLOWED" {
+				b.serverSessionID = ""
+			}
+		}
+	})
 }
 
 // performGameStep simula uma rodada de caça, cálculo de dano e abates
@@ -739,6 +902,43 @@ func (b *Bot) flushSave(ctx context.Context) {
 	go func(env SaveEnvelope) {
 		res, err := b.client.PushSave(ctx, env)
 		if err != nil {
+			// Se for 409 SAVE_CONTRACT_STALE, reconcilia contrato sem disparar o Circuit Breaker
+			if strings.Contains(err.Error(), "SAVE_CONTRACT_STALE") {
+				log.Printf("[%s] 🔄 Detectado SAVE_CONTRACT_STALE no erro. Reconciliando com /api/me...", b.ID())
+				me, errMe := b.client.FetchMe(ctx)
+				if errMe == nil && me != nil {
+					b.mu.Lock()
+					b.rawSave = me.Save
+					b.saveVersion = me.SaveVersion
+					b.clientVersion = me.ClientVersion
+					if len(me.SaveOwnedFields) > 0 {
+						b.saveOwnedFields = me.SaveOwnedFields
+					}
+					b.extractGameStateLocked()
+					env.Save = b.rawSave
+					env.BaseVersion = me.SaveVersion
+					env.BaseClientVersion = me.ClientVersion
+					env.Omitted = b.saveOwnedFields
+					b.mu.Unlock()
+
+					res2, err2 := b.client.PushSave(ctx, env)
+					if err2 == nil && res2 != nil && res2.Code != "SAVE_CONTRACT_STALE" {
+						b.mu.Lock()
+						if res2.Version > 0 {
+							b.saveVersion = res2.Version
+						}
+						if res2.ClientVersion > 0 {
+							b.clientVersion = res2.ClientVersion
+						}
+						b.mu.Unlock()
+						b.cb.RecordSuccess()
+						log.Printf("[%s] ✅ Save re-enviado com sucesso após reconciliação de contrato!", b.ID())
+						return
+					}
+				}
+				return
+			}
+
 			// Se o erro for 401 ("não autenticado" ou token expirado após 12h)
 			if strings.Contains(err.Error(), "401") || strings.Contains(err.Error(), "não autenticado") {
 				log.Printf("[%s] 🔑 Token expirado (12h). Renovando sessão...", b.ID())
@@ -765,6 +965,48 @@ func (b *Bot) flushSave(ctx context.Context) {
 
 			log.Printf("[%s] Erro ao salvar progresso em /api/save: %v", b.ID(), err)
 			b.cb.RecordFailure("Erro ao salvar progresso: " + err.Error())
+			return
+		}
+
+		if res != nil && res.Code == "SAVE_CONTRACT_STALE" {
+			log.Printf("[%s] 🔄 Resposta SAVE_CONTRACT_STALE recebida. Reconciliando com /api/me...", b.ID())
+			b.mu.Lock()
+			if len(res.SaveOwnedFields) > 0 {
+				b.saveOwnedFields = res.SaveOwnedFields
+			}
+			b.mu.Unlock()
+
+			me, errMe := b.client.FetchMe(ctx)
+			if errMe == nil && me != nil {
+				b.mu.Lock()
+				b.rawSave = me.Save
+				b.saveVersion = me.SaveVersion
+				b.clientVersion = me.ClientVersion
+				if len(me.SaveOwnedFields) > 0 {
+					b.saveOwnedFields = me.SaveOwnedFields
+				}
+				b.extractGameStateLocked()
+				env.Save = b.rawSave
+				env.BaseVersion = me.SaveVersion
+				env.BaseClientVersion = me.ClientVersion
+				env.Omitted = b.saveOwnedFields
+				b.mu.Unlock()
+
+				res2, err2 := b.client.PushSave(ctx, env)
+				if err2 == nil && res2 != nil && res2.Code != "SAVE_CONTRACT_STALE" {
+					b.mu.Lock()
+					if res2.Version > 0 {
+						b.saveVersion = res2.Version
+					}
+					if res2.ClientVersion > 0 {
+						b.clientVersion = res2.ClientVersion
+					}
+					b.mu.Unlock()
+					b.cb.RecordSuccess()
+					log.Printf("[%s] ✅ Save re-enviado com sucesso após reconciliação de contrato!", b.ID())
+					return
+				}
+			}
 			return
 		}
 
@@ -864,6 +1106,7 @@ func (b *Bot) extractGameStateLocked() {
 					monHP = maxHP
 				}
 
+				monMoves := GetSpeciesMoves(int(toFloat(monMap["speciesId"])))
 				mon := Pokemon{
 					UID:       fmt.Sprintf("%v", monMap["uid"]),
 					Name:      monName,
@@ -871,6 +1114,7 @@ func (b *Bot) extractGameStateLocked() {
 					Level:     monLevel,
 					HP:        monHP,
 					MaxHP:     maxHP,
+					Moves:     monMoves,
 				}
 				b.team = append(b.team, mon)
 			}

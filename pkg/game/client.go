@@ -10,6 +10,8 @@ import (
 	"net"
 	"net/http"
 	"net/url"
+	"regexp"
+	"sync"
 	"time"
 
 	"bot-template-go/pkg/engine"
@@ -17,9 +19,84 @@ import (
 
 const (
 	DefaultBaseURL       = "https://pokelegacyonline.com.br"
-	DefaultClientRelease = "3b7b9e0c2ed34385984484fbf0c180aec317fc4a"
+	DefaultClientRelease = "64b3cbb920d113d0df6e8532699493e762b1332c"
 	DefaultUserAgent     = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 )
+
+var (
+	currentClientRelease = DefaultClientRelease
+	releaseMu            sync.RWMutex
+)
+
+// GetClientRelease retorna a release atual ativa do jogo
+func GetClientRelease() string {
+	releaseMu.RLock()
+	defer releaseMu.RUnlock()
+	return currentClientRelease
+}
+
+// SetClientRelease define a release atual
+func SetClientRelease(rel string) {
+	if rel == "" {
+		return
+	}
+	releaseMu.Lock()
+	defer releaseMu.Unlock()
+	currentClientRelease = rel
+}
+
+// DiscoverClientRelease busca dinamicamente a versão da release no frontend do jogo
+func DiscoverClientRelease(ctx context.Context, baseURL string) string {
+	if baseURL == "" {
+		baseURL = DefaultBaseURL
+	}
+	client := &http.Client{Timeout: 10 * time.Second}
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, baseURL+"/jogar", nil)
+	if err != nil {
+		return GetClientRelease()
+	}
+	req.Header.Set("User-Agent", DefaultUserAgent)
+	resp, err := client.Do(req)
+	if err != nil {
+		return GetClientRelease()
+	}
+	defer resp.Body.Close()
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return GetClientRelease()
+	}
+
+	reApp := regexp.MustCompile(`/assets/app-release-[a-zA-Z0-9_\-]+\.js`)
+	appMatch := reApp.FindString(string(body))
+	if appMatch == "" {
+		return GetClientRelease()
+	}
+
+	req2, err := http.NewRequestWithContext(ctx, http.MethodGet, baseURL+appMatch, nil)
+	if err != nil {
+		return GetClientRelease()
+	}
+	req2.Header.Set("User-Agent", DefaultUserAgent)
+	resp2, err := client.Do(req2)
+	if err != nil {
+		return GetClientRelease()
+	}
+	defer resp2.Body.Close()
+	body2, err := io.ReadAll(resp2.Body)
+	if err != nil {
+		return GetClientRelease()
+	}
+
+	reHash := regexp.MustCompile(`"([0-9a-f]{40})"`)
+	hashMatch := reHash.FindStringSubmatch(string(body2))
+	if len(hashMatch) >= 2 {
+		found := hashMatch[1]
+		SetClientRelease(found)
+		return found
+	}
+
+	return GetClientRelease()
+}
 
 // LegacyClient encapsula as chamadas HTTP para o backend do PokeLegacy Online
 type LegacyClient struct {
@@ -78,7 +155,7 @@ func NewLegacyClient(baseURL string, bindIP string, proxyURL string, deviceID st
 		baseURL:       baseURL,
 		client:        &http.Client{Transport: transport, Timeout: timeout},
 		deviceID:      deviceID,
-		clientRelease: DefaultClientRelease,
+		clientRelease: GetClientRelease(),
 	}
 }
 
@@ -200,6 +277,10 @@ func (c *LegacyClient) PushSave(ctx context.Context, env SaveEnvelope) (*SaveRes
 	if err != nil {
 		if status == 409 && (res.Version > 0 || res.ClientVersion > 0) {
 			// Servidor retornou a versão atualizada para reconciliação otimista imediata
+			return &res, nil
+		}
+		if status == 409 && res.Code == "SAVE_CONTRACT_STALE" {
+			// Servidor retornou contrato desatualizado com novos saveOwnedFields
 			return &res, nil
 		}
 		return nil, err

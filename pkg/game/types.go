@@ -106,8 +106,10 @@ type SaveEnvelope struct {
 
 // SaveResponse retorno de POST /api/save
 type SaveResponse struct {
-	Version       int            `json:"version"`
-	ClientVersion int            `json:"clientVersion"`
-	Save          map[string]any `json:"save,omitempty"`
-	Error         string         `json:"error,omitempty"`
+	Version         int            `json:"version"`
+	ClientVersion   int            `json:"clientVersion"`
+	Save            map[string]any `json:"save,omitempty"`
+	Error           string         `json:"error,omitempty"`
+	Code            string         `json:"code,omitempty"`
+	SaveOwnedFields []string       `json:"saveOwnedFields,omitempty"`
 }

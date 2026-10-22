@@ -1,0 +1,3238 @@
+{
+  "1": [
+    "tackle",
+    "razor-leaf",
+    "vine-whip",
+    "bullet-seed",
+    "solar-beam"
+  ],
+  "10": [
+    "headbutt",
+    "bug-bite"
+  ],
+  "100": [
+    "thunder-shock",
+    "spark",
+    "rollout",
+    "selfdestruct",
+    "discharge"
+  ],
+  "101": [
+    "thunder-shock",
+    "spark",
+    "rollout",
+    "electro-ball",
+    "charge-beam",
+    "discharge",
+    "selfdestruct",
+    "thunderbolt"
+  ],
+  "102": [
+    "egg-bomb",
+    "confusion",
+    "giga-drain"
+  ],
+  "103": [
+    "seed-bomb",
+    "leaf-blade",
+    "egg-bomb",
+    "confusion",
+    "psyshock",
+    "wood-hammer",
+    "solar-beam",
+    "psychic"
+  ],
+  "104": [
+    "bonemerang",
+    "headbutt",
+    "bone-club",
+    "bone-rush",
+    "rage"
+  ],
+  "105": [
+    "mud-shot",
+    "bonemerang",
+    "bone-club",
+    "bone-rush",
+    "earth-power",
+    "bulldoze",
+    "rage",
+    "smack-down",
+    "mud-slap"
+  ],
+  "106": [
+    "triple-kick-lee",
+    "mega-kick",
+    "high-jump-kick",
+    "furious-legs",
+    "low-kick",
+    "jump-kick",
+    "triple-kick"
+  ],
+  "107": [
+    "triple-punch",
+    "mega-punch",
+    "focus-punch",
+    "revenge",
+    "drain-punch",
+    "thunder-punch",
+    "ice-punch"
+  ],
+  "108": [
+    "lick",
+    "shadow-ball",
+    "squishy-licking",
+    "knock-off",
+    "creepy-lick",
+    "power-whip",
+    "body-slam"
+  ],
+  "109": [
+    "mud-shot",
+    "acid",
+    "headbutt",
+    "mud-bomb",
+    "poison-bomb",
+    "selfdestruct"
+  ],
+  "11": [
+    "headbutt",
+    "bug-bite"
+  ],
+  "110": [
+    "acid",
+    "sludge",
+    "sludge-bomb",
+    "venoshock",
+    "mortal-gas",
+    "smog",
+    "clear-smog",
+    "selfdestruct"
+  ],
+  "111": [
+    "horn-attack",
+    "stone-edge",
+    "rock-throw",
+    "bulldoze",
+    "dig",
+    "drill-run"
+  ],
+  "112": [
+    "horn-drill",
+    "horn-burst",
+    "earth-power",
+    "ground-collapse",
+    "bulldoze",
+    "fissure",
+    "mud-shot",
+    "sand-tomb",
+    "rock-throw"
+  ],
+  "113": [
+    "double-slap",
+    "egg-bomb",
+    "great-love",
+    "disarming-voice",
+    "egg-rain",
+    "heal-pulse"
+  ],
+  "114": [
+    "vine-whip",
+    "seed-bomb",
+    "power-whip",
+    "energy-ball",
+    "giga-drain",
+    "leaf-storm",
+    "ancient-power"
+  ],
+  "115": [
+    "bite",
+    "dizzy-punch",
+    "mega-punch",
+    "crunch",
+    "sucker-punch",
+    "comet-punch",
+    "epicenter",
+    "rage",
+    "mega-kick"
+  ],
+  "116": [
+    "mud-shot",
+    "bubbles",
+    "bubble-beam",
+    "water-gun",
+    "water-ball"
+  ],
+  "117": [
+    "water-gun",
+    "bubble",
+    "bubble-beam",
+    "water-pulse",
+    "dragon-pulse",
+    "hydro-cannon",
+    "twister"
+  ],
+  "118": [
+    "horn-attack",
+    "aqua-tail",
+    "water-pulse",
+    "water-gun",
+    "horn-drill"
+  ],
+  "119": [
+    "horn-attack",
+    "aqua-tail",
+    "water-pulse",
+    "soak",
+    "waterfall",
+    "horn-drill",
+    "bubble",
+    "water-gun"
+  ],
+  "12": [
+    "silver-wind",
+    "air-slash",
+    "confusion",
+    "psybeam",
+    "air-cutter",
+    "bug-bite"
+  ],
+  "120": [
+    "swift",
+    "water-gun",
+    "bubble-beam",
+    "psyshock",
+    "psychic"
+  ],
+  "121": [
+    "psy-ball",
+    "bubble-beam",
+    "psyshock",
+    "psychic",
+    "rapid-spin",
+    "hydro-pump",
+    "confusion"
+  ],
+  "122": [
+    "play-rough",
+    "dazzling-gleam",
+    "confusion",
+    "psychic",
+    "synchronoise",
+    "psyusion",
+    "expanding-force",
+    "disarming-voice"
+  ],
+  "123": [
+    "x-scissor",
+    "fury-cutter",
+    "wing-attack",
+    "air-slash",
+    "agility",
+    "team-slice",
+    "swords-dance",
+    "slash",
+    "compass-slash"
+  ],
+  "124": [
+    "draining-kiss",
+    "psywave",
+    "psy-pulse",
+    "ice-punch",
+    "ice-beam",
+    "psyshock",
+    "psychic",
+    "blizzard",
+    "heart-stamp"
+  ],
+  "125": [
+    "thunderbolt",
+    "thunder-punch",
+    "thunder-shock",
+    "thunder-wrath",
+    "electrify",
+    "discharge",
+    "mamaragan",
+    "vital-spirit"
+  ],
+  "126": [
+    "fire-punch",
+    "ember",
+    "flame-circle",
+    "lava-plume",
+    "hellfire-storm",
+    "burning-jealousy",
+    "flamethrower",
+    "fire-ball"
+  ],
+  "127": [
+    "fury-cutter",
+    "focus-blast",
+    "revenge",
+    "brick-break",
+    "swords-dance",
+    "quick-guard",
+    "hammer-arm",
+    "x-scissor"
+  ],
+  "128": [
+    "thrash",
+    "rage",
+    "thunderbolt",
+    "shock-wave",
+    "thunder",
+    "wild-charge"
+  ],
+  "129": [
+    "splash"
+  ],
+  "13": [
+    "horn-attack",
+    "poison-sting"
+  ],
+  "130": [
+    "ice-fang",
+    "dragon-tail",
+    "aqua-tail",
+    "splash",
+    "dragon-breath",
+    "hydro-cannon",
+    "surf",
+    "hydro-pump",
+    "twister"
+  ],
+  "131": [
+    "ice-shards",
+    "ice-beam",
+    "powder-snow",
+    "frost-power",
+    "ice-storm",
+    "blizzard",
+    "icicle-spear",
+    "frost-breath"
+  ],
+  "132": [
+    "tackle"
+  ],
+  "133": [
+    "quick-attack",
+    "bite",
+    "headbutt",
+    "iron-tail",
+    "great-love"
+  ],
+  "134": [
+    "water-pulse",
+    "bubble-beam",
+    "water-ball",
+    "muddy-water",
+    "hydro-pump",
+    "aurora-beam",
+    "blizzard",
+    "ice-beam"
+  ],
+  "135": [
+    "thunder-shock",
+    "shock-wave",
+    "discharge",
+    "electrify",
+    "thunder",
+    "electro-ball",
+    "thunderbolt",
+    "charge-beam"
+  ],
+  "136": [
+    "ember",
+    "incinerate",
+    "blaze-kick",
+    "flame-circle",
+    "lava-plume",
+    "burning-jealousy",
+    "hellfire-storm"
+  ],
+  "137": [
+    "cyber-wave",
+    "cyber-pulse",
+    "psychic",
+    "cyber-world",
+    "confusion",
+    "psy-pulse",
+    "tri-attack"
+  ],
+  "138": [
+    "bite",
+    "rock-throw",
+    "rock-blast",
+    "water-gun",
+    "mud-shot",
+    "brine",
+    "ancient-power"
+  ],
+  "139": [
+    "ancient-power",
+    "falling-rocks",
+    "rock-wrecker",
+    "bubbles",
+    "bubble-beam",
+    "water-gun",
+    "water-pulse",
+    "hydro-pump"
+  ],
+  "14": [
+    "headbutt",
+    "bug-bite"
+  ],
+  "140": [
+    "scratch",
+    "rock-throw",
+    "slash",
+    "stone-edge",
+    "mud-shot",
+    "liquidation",
+    "ancient-power"
+  ],
+  "141": [
+    "aqua-jet",
+    "rock-throw",
+    "stone-edge",
+    "ancient-power",
+    "rock-blast",
+    "stealth-rock",
+    "liquidation",
+    "rock-tomb"
+  ],
+  "142": [
+    "rock-throw",
+    "rock-slide",
+    "stone-edge",
+    "wing-attack",
+    "ancient-power",
+    "falling-rocks",
+    "tornado",
+    "hurricane"
+  ],
+  "143": [
+    "lick",
+    "bite",
+    "crunch",
+    "giga-impact",
+    "crusher-stomp",
+    "shadow-ball",
+    "earthquake",
+    "stomping-tantrum"
+  ],
+  "144": [
+    "peck",
+    "ice-shard",
+    "ice-beam",
+    "drill-peck",
+    "ancient-power",
+    "frost-breath",
+    "air-cutter",
+    "pluck",
+    "powder-snow",
+    "aerial-ace",
+    "aurora-beam",
+    "blizzard"
+  ],
+  "145": [
+    "peck",
+    "thunder-shock",
+    "thunderbolt",
+    "drill-peck",
+    "ancient-power",
+    "wing-attack",
+    "charge-beam",
+    "electro-ball",
+    "aerial-ace",
+    "thunder",
+    "electric-storm"
+  ],
+  "146": [
+    "peck",
+    "ember",
+    "flamethrower",
+    "drill-peck",
+    "ancient-power",
+    "air-slash",
+    "eruption",
+    "solar-beam",
+    "aerial-ace",
+    "fire-blast",
+    "blast-burn",
+    "magma-storm"
+  ],
+  "147": [
+    "aqua-tail",
+    "slam",
+    "twister",
+    "hyper-beam",
+    "dragon-breath"
+  ],
+  "148": [
+    "twister",
+    "slam",
+    "dragon-rage",
+    "dragon-breath",
+    "hyper-beam"
+  ],
+  "149": [
+    "scale-shot",
+    "dragon-tail",
+    "dragon-claw",
+    "hurricane",
+    "dragon-pulse",
+    "draco-meteor",
+    "outrage",
+    "tornado"
+  ],
+  "15": [
+    "poison-jab",
+    "poison-sting",
+    "fury-cutter",
+    "pin-missile",
+    "toxic-spikes",
+    "rage",
+    "x-scissor"
+  ],
+  "150": [
+    "swift",
+    "shadow-ball",
+    "psybeam",
+    "psywave",
+    "confusion",
+    "psychic",
+    "psystrike"
+  ],
+  "151": [
+    "shadow-ball",
+    "brine",
+    "flamethrower",
+    "thunderbolt",
+    "psychic",
+    "solar-beam",
+    "hydro-cannon",
+    "ancient-power"
+  ],
+  "152": [
+    "razor-leaf",
+    "magical-leaf",
+    "headbutt",
+    "solar-beam"
+  ],
+  "153": [
+    "razor-leaf",
+    "magical-leaf",
+    "body-slam",
+    "petal-dance"
+  ],
+  "154": [
+    "razor-leaf",
+    "magical-leaf",
+    "petal-bullets",
+    "petal-dance",
+    "body-slam",
+    "energy-ball",
+    "petal-blizzard"
+  ],
+  "155": [
+    "quick-attack",
+    "swift",
+    "ember",
+    "flamethrower",
+    "overheat"
+  ],
+  "156": [
+    "quick-attack",
+    "swift",
+    "ember",
+    "flamethrower",
+    "flame-circle",
+    "lava-plume",
+    "overheat"
+  ],
+  "157": [
+    "ember",
+    "fire-punch",
+    "flame-circle",
+    "eruption",
+    "lava-plume",
+    "inferno",
+    "flamethrower",
+    "fire-ball"
+  ],
+  "158": [
+    "crunch",
+    "aqua-tail",
+    "water-gun",
+    "ice-fang",
+    "waterfall",
+    "hydro-cannon",
+    "agility"
+  ],
+  "159": [
+    "crunch",
+    "bubble",
+    "water-gun",
+    "ice-fang",
+    "water-pulse",
+    "waterfall",
+    "agility",
+    "aqua-tail",
+    "hydro-cannon"
+  ],
+  "16": [
+    "quick-attack",
+    "wing-attack",
+    "drill-peck"
+  ],
+  "160": [
+    "bubble",
+    "liquidation",
+    "ice-fang",
+    "water-pulse",
+    "aqua-fang",
+    "waterfall",
+    "aqua-tail",
+    "water-spout",
+    "rage"
+  ],
+  "161": [
+    "quick-attack",
+    "scratch",
+    "fury-swipes",
+    "hyper-voice",
+    "headbutt"
+  ],
+  "162": [
+    "quick-attack",
+    "scratch",
+    "fury-swipes",
+    "hyper-voice",
+    "sucker-punch",
+    "headbutt"
+  ],
+  "163": [
+    "quick-attack",
+    "peck",
+    "drill-peck",
+    "confusion",
+    "dream-eater"
+  ],
+  "164": [
+    "extrasensory",
+    "peck",
+    "feather-dance",
+    "confusion",
+    "sky-attack",
+    "air-slash",
+    "dream-eater"
+  ],
+  "165": [
+    "swift",
+    "silver-wind",
+    "struggle-bug",
+    "agility",
+    "signal-beam"
+  ],
+  "166": [
+    "triple-punch",
+    "hammer-arm",
+    "revenge",
+    "mega-punch",
+    "drain-punch",
+    "focus-punch",
+    "bug-buzz"
+  ],
+  "167": [
+    "poison-sting",
+    "fury-swipes",
+    "poison-jab"
+  ],
+  "168": [
+    "bug-bite",
+    "poison-sting",
+    "poison-jab",
+    "cross-poison",
+    "pin-missile",
+    "spider-web",
+    "poison-fang"
+  ],
+  "169": [
+    "wind-swirl",
+    "toxic",
+    "air-slash",
+    "wing-attack",
+    "dual-wingbeat",
+    "fly",
+    "sky-attack",
+    "cross-poison"
+  ],
+  "17": [
+    "quick-attack",
+    "drill-peck",
+    "wing-attack",
+    "gust",
+    "tornado"
+  ],
+  "170": [
+    "bubbles",
+    "spark",
+    "water-gun"
+  ],
+  "171": [
+    "soak",
+    "bubble",
+    "bubble-beam",
+    "spark",
+    "thunderbolt",
+    "discharge",
+    "surf",
+    "thunder"
+  ],
+  "172": [
+    "quick-attack",
+    "thunder-shock",
+    "thunderbolt",
+    "thunder",
+    "agility"
+  ],
+  "173": [
+    "dazzling-gleam",
+    "double-slap",
+    "multi-slap",
+    "heart-pound"
+  ],
+  "174": [
+    "dazzling-gleam",
+    "play-rough",
+    "disarming-voice",
+    "swift"
+  ],
+  "175": [
+    "doubleslap",
+    "last-resort",
+    "disarming-voice",
+    "dazzling-gleam"
+  ],
+  "176": [
+    "dazzling-gleam",
+    "play-rough",
+    "draining-kiss",
+    "great-love",
+    "heart-pound",
+    "floral-storm",
+    "last-resort"
+  ],
+  "177": [
+    "peck",
+    "feather-dance",
+    "psy-pulse",
+    "night-shade",
+    "psychic"
+  ],
+  "178": [
+    "peck",
+    "psy-pulse",
+    "psychic",
+    "stored-power",
+    "expanding-force",
+    "feather-dance",
+    "aerial-ace",
+    "air-slash"
+  ],
+  "179": [
+    "tackle",
+    "thunder-shock",
+    "electro-ball",
+    "thunderbolt",
+    "thunder"
+  ],
+  "18": [
+    "drill-peck",
+    "feather-dance",
+    "whirlwind",
+    "wing-attack",
+    "tornado",
+    "hurricane",
+    "air-slash",
+    "agility",
+    "gust"
+  ],
+  "180": [
+    "thunder-punch",
+    "thunderbolt",
+    "thunder-shock",
+    "fire-punch",
+    "thunder",
+    "discharge"
+  ],
+  "181": [
+    "thunder-punch",
+    "thunderbolt",
+    "thunder-wrath",
+    "thunder",
+    "discharge",
+    "thunder-shock",
+    "charge-beam"
+  ],
+  "182": [
+    "magical-leaf",
+    "petal-bullets",
+    "petal-dance",
+    "petal-blizzard",
+    "energy-ball",
+    "dazzling-gleam",
+    "leaf-storm"
+  ],
+  "183": [
+    "tackle",
+    "bubble",
+    "bubble-beam",
+    "waterfall",
+    "aqua-tail",
+    "slam"
+  ],
+  "184": [
+    "play-rough",
+    "bubble-beam",
+    "aqua-tail",
+    "waterfall",
+    "water-pulse",
+    "surf",
+    "whirlpool"
+  ],
+  "185": [
+    "rock-slide",
+    "stone-edge",
+    "head-smash",
+    "rock-blast",
+    "rock-wrecker",
+    "hammer-arm",
+    "falling-rocks",
+    "low-kick",
+    "rock-tomb"
+  ],
+  "186": [
+    "water-pulse",
+    "bubble-beam",
+    "hydro-pump",
+    "tongue-grap",
+    "muddy-water",
+    "ice-punch",
+    "ice-beam"
+  ],
+  "187": [
+    "tackle",
+    "u-turn",
+    "leafage"
+  ],
+  "188": [
+    "bullet-seed",
+    "leafage",
+    "u-turn",
+    "magical-leaf",
+    "aerial-ace"
+  ],
+  "189": [
+    "bullet-seed",
+    "u-turn",
+    "giga-drain",
+    "magical-leaf",
+    "aerial-ace"
+  ],
+  "19": [
+    "quick-attack",
+    "bite",
+    "scratch",
+    "super-fang"
+  ],
+  "190": [
+    "scratch",
+    "swift",
+    "fury-swipes",
+    "last-resort",
+    "double-hit",
+    "agility"
+  ],
+  "191": [
+    "razor-leaf",
+    "absorb",
+    "grass-knot"
+  ],
+  "192": [
+    "razor-leaf",
+    "petal-dance",
+    "bullet-seed",
+    "solar-beam",
+    "giga-drain"
+  ],
+  "193": [
+    "bug-bite",
+    "struggle-bug",
+    "wing-attack",
+    "air-slash",
+    "bug-buzz",
+    "air-cutter"
+  ],
+  "194": [
+    "slam",
+    "mud-shot",
+    "aqua-tail",
+    "water-gun",
+    "stomping-tantrum",
+    "muddy-water",
+    "earthquake"
+  ],
+  "195": [
+    "aqua-tail",
+    "water-gun",
+    "muddy-water",
+    "surf",
+    "earthquake",
+    "mud-shot",
+    "mud-slap"
+  ],
+  "196": [
+    "psy-pulse",
+    "psywave",
+    "psyshock",
+    "psychic",
+    "trick-room",
+    "expanding-force",
+    "confusion",
+    "psy-ball"
+  ],
+  "197": [
+    "bite",
+    "dark-pulse",
+    "crunch",
+    "feint-attack",
+    "night-daze"
+  ],
+  "198": [
+    "peck",
+    "pursuit",
+    "flatter",
+    "wing-attack",
+    "dark-pulse",
+    "sucker-punch",
+    "assurance"
+  ],
+  "199": [
+    "psy-pulse",
+    "confusion",
+    "psy-ball",
+    "psybeam",
+    "psychic",
+    "psy-noise",
+    "psy-impact",
+    "surf",
+    "water-pulse",
+    "water-gun"
+  ],
+  "2": [
+    "tackle",
+    "razor-leaf",
+    "vine-whip",
+    "sludge",
+    "bullet-seed",
+    "solar-beam",
+    "giga-drain"
+  ],
+  "20": [
+    "quick-attack",
+    "bite",
+    "scratch",
+    "pursuit",
+    "super-fang"
+  ],
+  "200": [
+    "hex",
+    "shadow-ball",
+    "ominous-wind",
+    "shadow-storm",
+    "pain-split",
+    "shadow-sphere"
+  ],
+  "201": [
+    "hidden-power"
+  ],
+  "202": [
+    "mirror-coat",
+    "psychic",
+    "couterstrike",
+    "stunning-confusion",
+    "dream-eater",
+    "confusion"
+  ],
+  "203": [
+    "psychic-fangs",
+    "crunch",
+    "shadow-ball",
+    "astonish",
+    "assurance",
+    "psychic",
+    "bite"
+  ],
+  "204": [
+    "tackle",
+    "bug-bite",
+    "toxic-spikes",
+    "pin-missile",
+    "selfdestruct"
+  ],
+  "205": [
+    "iron-head",
+    "heavy-slam",
+    "selfdestruct",
+    "scrap-throw",
+    "meteor-mash",
+    "gyro-ball"
+  ],
+  "206": [
+    "pursuit",
+    "take-down",
+    "ancient-power",
+    "rage"
+  ],
+  "207": [
+    "slash",
+    "dual-wingbeat",
+    "guillotine",
+    "aerial-ace",
+    "dig"
+  ],
+  "208": [
+    "iron-tail",
+    "iron-head",
+    "sand-tomb",
+    "rock-tomb",
+    "stone-edge",
+    "earth-power",
+    "fissure",
+    "sand-eruption",
+    "falling-rocks"
+  ],
+  "209": [
+    "lick",
+    "bite",
+    "crunch",
+    "play-rough",
+    "fire-fang",
+    "ice-fang",
+    "rage"
+  ],
+  "21": [
+    "peck",
+    "drill-peck",
+    "wing-attack",
+    "agility"
+  ],
+  "210": [
+    "tackle",
+    "dazzling-gleam",
+    "play-rough",
+    "take-down",
+    "hyper-beam",
+    "heart-pound",
+    "great-love"
+  ],
+  "211": [
+    "bubble",
+    "bubble-beam",
+    "toxic-spikes",
+    "poison-tail",
+    "toxic",
+    "barb-barrage"
+  ],
+  "212": [
+    "iron-head",
+    "red-fury",
+    "compass-slash",
+    "metal-claw",
+    "team-claw",
+    "swords-dance",
+    "quick-guard",
+    "bullet-punch",
+    "x-scissor",
+    "steel-wing"
+  ],
+  "213": [
+    "bug-bite",
+    "shell-attack",
+    "struggle-bug",
+    "compass-slash",
+    "ancient-power",
+    "rock-blast"
+  ],
+  "214": [
+    "low-kick",
+    "arm-thrust",
+    "mega-punch",
+    "close-combat",
+    "revenge",
+    "megahorn",
+    "x-scissor",
+    "pin-missile"
+  ],
+  "215": [
+    "scratch",
+    "ice-shard",
+    "feint-attack",
+    "icy-wind",
+    "pursuit",
+    "metal-claw",
+    "shadow-claw",
+    "agility"
+  ],
+  "216": [
+    "scratch",
+    "slash",
+    "hammer-arm",
+    "fury-swipes",
+    "cross-chop",
+    "body-slam"
+  ],
+  "217": [
+    "scratch",
+    "slash",
+    "hammer-arm",
+    "fury-swipes",
+    "secret-power",
+    "focus-blast",
+    "magnitude",
+    "hyper-beam",
+    "cross-chop"
+  ],
+  "218": [
+    "ember",
+    "rock-throw",
+    "rock-slide",
+    "flamethrower"
+  ],
+  "219": [
+    "ember",
+    "rock-throw",
+    "rock-slide",
+    "flamethrower",
+    "flame-burst",
+    "incinerate",
+    "fire-blast",
+    "inferno"
+  ],
+  "22": [
+    "peck",
+    "drill-peck",
+    "gust",
+    "air-cutter",
+    "wing-attack",
+    "aerial-ace"
+  ],
+  "220": [
+    "tackle",
+    "mud-slap",
+    "mud-bomb",
+    "ice-fang",
+    "icy-wind",
+    "frost-breath"
+  ],
+  "221": [
+    "mud-sport",
+    "ice-fang",
+    "icy-wind",
+    "powder-snow",
+    "frost-breath",
+    "stomping-tantrum",
+    "bulldoze",
+    "earthquake",
+    "fissure"
+  ],
+  "222": [
+    "bubble",
+    "bubble-beam",
+    "ancient-power",
+    "power-gem",
+    "rock-blast",
+    "rock-throw",
+    "water-gun"
+  ],
+  "223": [
+    "water-gun",
+    "bubble",
+    "bubble-beam",
+    "water-ball",
+    "ice-beam"
+  ],
+  "224": [
+    "swift",
+    "bubble",
+    "bubble-beam",
+    "water-pulse",
+    "muddy-water",
+    "giant-water-gun",
+    "octazooka",
+    "ice-beam",
+    "hydro-pump"
+  ],
+  "225": [
+    "drill-peck",
+    "present",
+    "pluck",
+    "ice-shard",
+    "frost-breath",
+    "ice-beam",
+    "blizzard",
+    "agility"
+  ],
+  "226": [
+    "wind-swirl",
+    "bubble-beam",
+    "wing-attack",
+    "air-cutter",
+    "air-slash",
+    "bounce",
+    "aerial-ace",
+    "hydro-pump"
+  ],
+  "227": [
+    "drill-peck",
+    "iron-head",
+    "metal-burst",
+    "metal-claw",
+    "air-slash",
+    "sky-attack",
+    "steel-wing",
+    "flash-cannon",
+    "brave-bird"
+  ],
+  "228": [
+    "bite",
+    "crunch",
+    "ember",
+    "feint-attack",
+    "shadowave",
+    "flamethrower",
+    "incinerate"
+  ],
+  "229": [
+    "bite",
+    "crunch",
+    "ember",
+    "feint-attack",
+    "shadowave",
+    "flamethrower",
+    "incinerate",
+    "fire-blast",
+    "inferno"
+  ],
+  "23": [
+    "bite",
+    "poison-fang",
+    "gunk-shot",
+    "acid"
+  ],
+  "230": [
+    "bubbles",
+    "bubble-beam",
+    "water-gun",
+    "water-pulse",
+    "surf",
+    "twister",
+    "dragon-pulse",
+    "draco-meteor"
+  ],
+  "231": [
+    "tackle",
+    "stomping-tantrum",
+    "take-down",
+    "rollout"
+  ],
+  "232": [
+    "mud-slap",
+    "bulldoze",
+    "earthquake",
+    "sand-tomb",
+    "stomping-tantrum",
+    "earth-power",
+    "rollout"
+  ],
+  "233": [
+    "thunderbolt",
+    "electroweb",
+    "zap-cannon",
+    "lock-on",
+    "ice-beam",
+    "discharge",
+    "blizzard",
+    "icy-wind",
+    "tri-attack"
+  ],
+  "234": [
+    "shadow-ball",
+    "tackle",
+    "stomp",
+    "take-down",
+    "astonish",
+    "last-resort"
+  ],
+  "235": [
+    "quick-attack",
+    "headbutt",
+    "swift",
+    "slam",
+    "take-down",
+    "body-slam",
+    "agility"
+  ],
+  "236": [
+    "triple-kick",
+    "low-kick",
+    "focus-punch",
+    "mega-punch",
+    "mega-kick",
+    "high-jump-kick"
+  ],
+  "237": [
+    "triple-kick",
+    "low-kick",
+    "rock-smash",
+    "close-combat",
+    "upper-hand",
+    "jump-kick",
+    "superpower",
+    "counter-spin"
+  ],
+  "238": [
+    "draining-kiss",
+    "psywave",
+    "frost-breath",
+    "ice-punch",
+    "icy-wind",
+    "ice-beam"
+  ],
+  "239": [
+    "quick-attack",
+    "thunder-punch",
+    "thunder-shock",
+    "thunderbolt",
+    "thunder"
+  ],
+  "24": [
+    "bite",
+    "poison-fang",
+    "gunk-shot",
+    "toxic",
+    "poison-tail",
+    "wrap",
+    "poison-jab"
+  ],
+  "240": [
+    "scratch",
+    "fire-punch",
+    "ember",
+    "flamethrower",
+    "fire-ball",
+    "fire-blast"
+  ],
+  "241": [
+    "rollout",
+    "rock-slide",
+    "rock-tomb",
+    "stomp",
+    "bulldoze",
+    "stealth-rock",
+    "earthquake",
+    "cannon-ball"
+  ],
+  "242": [
+    "doubleslap",
+    "egg-bomb",
+    "great-love",
+    "disarming-voice",
+    "egg-rain",
+    "heal-pulse"
+  ],
+  "243": [],
+  "244": [],
+  "245": [],
+  "246": [
+    "bite",
+    "crunch",
+    "dark-pulse",
+    "rock-slide",
+    "stone-edge",
+    "hyper-beam"
+  ],
+  "247": [
+    "bite",
+    "crunch",
+    "dark-pulse",
+    "rock-slide",
+    "stone-edge",
+    "earthquake",
+    "ancient-power"
+  ],
+  "248": [
+    "bite",
+    "rock-tomb",
+    "rock-slide",
+    "rock-throw",
+    "rock-blast",
+    "crunch",
+    "knock-off",
+    "falling-rocks",
+    "rock-wrecker"
+  ],
+  "249": [],
+  "25": [
+    "quick-attack",
+    "thunder-shock",
+    "electro-ball",
+    "thunderbolt",
+    "thunder-punch",
+    "thunder",
+    "electric-storm",
+    "agility"
+  ],
+  "250": [],
+  "251": [],
+  "252": [
+    "quick-attack",
+    "leaf-blade",
+    "fury-cutter",
+    "x-scissor",
+    "giga-drain",
+    "agility",
+    "grass-knot",
+    "magical-leaf",
+    "leafage"
+  ],
+  "253": [
+    "quick-attack",
+    "leaf-blade",
+    "magical-leaf",
+    "fury-cutter",
+    "night-slash",
+    "x-scissor",
+    "giga-drain",
+    "agility",
+    "leafage",
+    "leaf-storm"
+  ],
+  "254": [
+    "quick-attack",
+    "leaf-blade",
+    "magical-leaf",
+    "fury-cutter",
+    "night-slash",
+    "x-scissor",
+    "dual-chop",
+    "frenzy-plant",
+    "agility",
+    "leafage"
+  ],
+  "255": [
+    "quick-attack",
+    "ember",
+    "flamethrower",
+    "drill-peck",
+    "overheat",
+    "feather-dance",
+    "agility"
+  ],
+  "256": [
+    "quick-attack",
+    "ember",
+    "mega-kick",
+    "fire-punch",
+    "blaze-kick",
+    "flare-blitz",
+    "sky-uppercut",
+    "flamethrower",
+    "overheat"
+  ],
+  "257": [
+    "ember",
+    "fire-fist",
+    "blaze-kick",
+    "high-jump-kick",
+    "sky-uppercut",
+    "eruption",
+    "flare-blitz",
+    "low-kick",
+    "close-combat"
+  ],
+  "258": [
+    "aqua-tail",
+    "mud-slap",
+    "water-gun",
+    "waterball",
+    "hydro-pump",
+    "water-ball",
+    "water-pulse",
+    "tackle",
+    "earth-power"
+  ],
+  "259": [
+    "mud-slap",
+    "water-gun",
+    "waterball",
+    "aqua-tail",
+    "muddy-water",
+    "hydro-pump",
+    "water-ball"
+  ],
+  "26": [
+    "thunder-shock",
+    "thunderbolt",
+    "volt-tackle",
+    "thunder-wrath",
+    "discharge",
+    "electric-storm",
+    "shockwave",
+    "electro-ball"
+  ],
+  "260": [
+    "aqua-tail",
+    "mud-slap",
+    "water-gun",
+    "waterball",
+    "hammer-arm",
+    "muddy-water",
+    "earth-power",
+    "earthquake",
+    "hydro-pump",
+    "surf"
+  ],
+  "261": [
+    "bite",
+    "crunch",
+    "shadow-claw",
+    "night-slash"
+  ],
+  "262": [
+    "iron-head",
+    "bite",
+    "crunch",
+    "shadow-claw",
+    "astonish",
+    "night-slash",
+    "night-daze",
+    "dark-pulse",
+    "tackle",
+    "take-down"
+  ],
+  "263": [
+    "tackle",
+    "body-slam",
+    "take-down",
+    "stomp",
+    "headbutt"
+  ],
+  "264": [
+    "tackle",
+    "fury-swipes",
+    "take-down",
+    "stomp",
+    "slash",
+    "headbutt"
+  ],
+  "265": [
+    "tackle",
+    "bug-bite",
+    "poison-sting"
+  ],
+  "266": [
+    "tackle",
+    "bug-bite",
+    "poison-sting"
+  ],
+  "267": [
+    "bug-bite",
+    "air-cutter",
+    "bug-buzz",
+    "whirlwind",
+    "gust",
+    "struggle-bug",
+    "silver-wind",
+    "u-turn",
+    "aerial-ace"
+  ],
+  "268": [
+    "tackle",
+    "bug-bite",
+    "poison-sting",
+    "metal-claw",
+    "meteor-mash",
+    "flash-cannon"
+  ],
+  "269": [
+    "confusion",
+    "psychic",
+    "venoshock",
+    "toxic",
+    "bug-buzz",
+    "poison-fang",
+    "poison-jab"
+  ],
+  "27": [
+    "mud-shot",
+    "scratch",
+    "rollout",
+    "bulldoze",
+    "dig"
+  ],
+  "270": [
+    "absorb",
+    "fury-swipes",
+    "bubble-beam",
+    "scald",
+    "surf"
+  ],
+  "271": [
+    "absorb",
+    "fury-swipes",
+    "water-pulse",
+    "bubble-beam",
+    "waterfall",
+    "scald",
+    "blizzard",
+    "surf"
+  ],
+  "272": [
+    "absorb",
+    "water-pulse",
+    "bubble-beam",
+    "waterfall",
+    "hydro-pump",
+    "energy-ball",
+    "chilling-water",
+    "leaf-storm",
+    "bullet-seed"
+  ],
+  "273": [
+    "pound",
+    "razor-leaf",
+    "dark-pulse",
+    "feint-attack"
+  ],
+  "274": [
+    "pound",
+    "razor-leaf",
+    "dark-pulse",
+    "feint-attack",
+    "assurance"
+  ],
+  "275": [
+    "pound",
+    "razor-leaf",
+    "dark-pulse",
+    "feint-attack",
+    "leaf-storm",
+    "knock-off",
+    "sucker-punch",
+    "leaf-blade",
+    "shadow-ball",
+    "payback"
+  ],
+  "276": [
+    "peck",
+    "pluck",
+    "feather-dance",
+    "air-slash"
+  ],
+  "277": [
+    "peck",
+    "feather-dance",
+    "pluck",
+    "wing-attack",
+    "air-slash",
+    "aerial-ace",
+    "sky-attack",
+    "brave-bird"
+  ],
+  "278": [
+    "gust",
+    "bubbles",
+    "wing-attack",
+    "scald",
+    "bubble",
+    "water-ball"
+  ],
+  "279": [
+    "gust",
+    "wing-attack",
+    "bubble-blast",
+    "scald",
+    "feather-dance",
+    "surf",
+    "hurricane"
+  ],
+  "28": [
+    "slashing-blow",
+    "dig",
+    "earth-power",
+    "earthquake",
+    "fissure",
+    "mud-shot",
+    "mud-slap"
+  ],
+  "280": [
+    "dazzling-gleam",
+    "confusion",
+    "psychic",
+    "heart-pound"
+  ],
+  "281": [
+    "dazzling-gleam",
+    "confusion",
+    "psychic",
+    "draining-kiss",
+    "heart-pound"
+  ],
+  "282": [
+    "dazzling-gleam",
+    "confusion",
+    "psychic",
+    "moonblast",
+    "draining-kiss",
+    "heal-pulse",
+    "heart-pound",
+    "floral-storm"
+  ],
+  "283": [
+    "bubbles",
+    "quick-attack",
+    "bubble-beam",
+    "scald",
+    "bug-buzz"
+  ],
+  "284": [
+    "air-cutter",
+    "air-slash",
+    "aerial-ace",
+    "bubble",
+    "bubble-beam",
+    "chilling-water",
+    "hydro-pump"
+  ],
+  "285": [
+    "seed-bomb",
+    "energy-ball",
+    "grass-knot",
+    "leaf-blade"
+  ],
+  "286": [
+    "bullet-seed",
+    "energy-ball",
+    "sky-uppercut",
+    "dynamic-punch",
+    "focus-blast",
+    "giga-drain",
+    "seed-bomb",
+    "grass-knot"
+  ],
+  "287": [
+    "scratch",
+    "feint-attack",
+    "hammer-arm",
+    "fury-swipes",
+    "focus-punch",
+    "focus-blast"
+  ],
+  "288": [
+    "hammer-arm",
+    "dynamic-punch",
+    "focus-punch",
+    "reversal",
+    "triple-punch",
+    "slash"
+  ],
+  "289": [
+    "low-kick",
+    "low-sweep",
+    "hammer-arm",
+    "reversal",
+    "drain-punch",
+    "focus-blast",
+    "focus-punch",
+    "close-combat",
+    "superpower",
+    "body-slam"
+  ],
+  "29": [
+    "quick-attack",
+    "bite",
+    "poison-fang",
+    "horn-attack",
+    "poison-sting"
+  ],
+  "290": [
+    "leech-life",
+    "fury-swipes",
+    "mud-slap",
+    "dig"
+  ],
+  "291": [
+    "bug-bite",
+    "x-scissor",
+    "swords-dance",
+    "leech-life",
+    "dual-wingbeat",
+    "aerial-ace",
+    "air-slash"
+  ],
+  "292": [
+    "leech-life",
+    "silver-wind",
+    "shadow-ball",
+    "bug-buzz",
+    "shadow-claw",
+    "phantom-force",
+    "shadow-sphere",
+    "swords-dance"
+  ],
+  "293": [
+    "tackle",
+    "pound",
+    "hyper-voice",
+    "hyper-beam",
+    "echoed-voice",
+    "bite"
+  ],
+  "294": [
+    "bite",
+    "crunch",
+    "hyper-voice",
+    "hyper-beam",
+    "uproar",
+    "echoed-voice"
+  ],
+  "295": [
+    "pound",
+    "body-slam",
+    "echoed-voice",
+    "hyper-voice",
+    "take-down",
+    "hyper-beam",
+    "boomburst"
+  ],
+  "296": [
+    "tackle",
+    "low-kick",
+    "leap-strike",
+    "cross-chop",
+    "smelling-salts",
+    "close-combat",
+    "arm-thrust"
+  ],
+  "297": [
+    "leap-strike",
+    "rock-tomb",
+    "stone-edge",
+    "close-combat",
+    "hammer-arm",
+    "vital-throw",
+    "smelling-salts",
+    "reversal"
+  ],
+  "298": [
+    "tackle",
+    "water-gun",
+    "bubble",
+    "slam",
+    "bubble-beam"
+  ],
+  "299": [
+    "tackle",
+    "rock-throw",
+    "zap-cannon",
+    "stone-edge",
+    "power-gem",
+    "rock-blast",
+    "thunderbolt",
+    "spark"
+  ],
+  "3": [
+    "razor-leaf",
+    "vine-whip",
+    "sludge",
+    "bullet-seed",
+    "solar-beam",
+    "giga-drain",
+    "petal-blizzard",
+    "acid",
+    "venoshock"
+  ],
+  "30": [
+    "horn-attack",
+    "poison-jab",
+    "stomping-tantrum",
+    "earth-power",
+    "dig",
+    "agility"
+  ],
+  "300": [
+    "tackle",
+    "doubleslap",
+    "slam",
+    "quick-attack"
+  ],
+  "301": [
+    "doubleslap",
+    "feint-attack",
+    "slam",
+    "body-slam",
+    "echoed-voice",
+    "play-rough"
+  ],
+  "302": [
+    "scratch",
+    "fury-swipes",
+    "shadow-sphere",
+    "feint-attack",
+    "night-shade",
+    "shadow-claw",
+    "agility",
+    "shadow-ball",
+    "shadow-sneak"
+  ],
+  "303": [
+    "iron-head",
+    "flash-cannon",
+    "play-rough",
+    "spit-up",
+    "heart-pound",
+    "dazzling-gleam",
+    "iron-tail",
+    "meteor-mash"
+  ],
+  "304": [
+    "iron-head",
+    "mud-slap",
+    "stone-edge",
+    "metal-burst",
+    "metal-claw",
+    "iron-tail"
+  ],
+  "305": [
+    "iron-head",
+    "iron-tail",
+    "mud-slap",
+    "stone-edge",
+    "metal-burst",
+    "metal-claw",
+    "meteor-mash",
+    "flash-cannon"
+  ],
+  "306": [
+    "iron-head",
+    "iron-tail",
+    "stone-edge",
+    "metal-burst",
+    "metal-claw",
+    "meteor-mash",
+    "flash-cannon",
+    "heavy-slam"
+  ],
+  "307": [
+    "low-kick",
+    "mega-kick",
+    "drain-punch",
+    "confusion",
+    "psychic",
+    "high-jump-kick"
+  ],
+  "308": [
+    "low-kick",
+    "mega-kick",
+    "drain-punch",
+    "confusion",
+    "psychic",
+    "high-jump-kick",
+    "zen-headbutt",
+    "low-sweep"
+  ],
+  "309": [
+    "swift",
+    "bite",
+    "spark",
+    "thunder-fang",
+    "thunder"
+  ],
+  "31": [
+    "sand-tomb",
+    "horn-burst",
+    "ground-collapse",
+    "bulldoze",
+    "earthquake",
+    "fissure",
+    "mud-shot",
+    "mud-slap",
+    "dig"
+  ],
+  "310": [
+    "spark",
+    "thunder-fang",
+    "thunder",
+    "discharge",
+    "wild-charge",
+    "thunder-shock",
+    "thunderbolt"
+  ],
+  "311": [
+    "spark",
+    "thunder-wrath",
+    "charge-beam",
+    "thunder",
+    "thunderbolt"
+  ],
+  "312": [
+    "spark",
+    "charge-beam",
+    "electro-ball",
+    "discharge"
+  ],
+  "313": [
+    "signal-beam",
+    "silver-wind",
+    "moonblast",
+    "leech-life",
+    "bug-bite",
+    "struggle-bug"
+  ],
+  "314": [
+    "struggle-bug",
+    "silver-wind",
+    "u-turn",
+    "bug-bite",
+    "zen-headbutt",
+    "dazzling-gleam"
+  ],
+  "315": [
+    "absorb",
+    "razor-leaf",
+    "leaf-storm",
+    "mega-drain",
+    "magical-leaf",
+    "solar-beam",
+    "petal-blizzard"
+  ],
+  "316": [
+    "pound",
+    "acid",
+    "sludge",
+    "gunk-shot",
+    "sludge-bomb",
+    "mortal-gas",
+    "acid-spray"
+  ],
+  "317": [
+    "acid",
+    "smog",
+    "sludge",
+    "swamp-mist",
+    "gunk-shot",
+    "sludge-bomb"
+  ],
+  "318": [
+    "bite",
+    "feint-attack",
+    "assurance",
+    "hydro-pump",
+    "rage",
+    "crunch",
+    "brine",
+    "water-ball",
+    "aqua-jet",
+    "surf"
+  ],
+  "319": [
+    "liquidation",
+    "water-pulse",
+    "brine",
+    "aqua-jet",
+    "surf",
+    "hydro-pump",
+    "bite",
+    "crunch"
+  ],
+  "32": [
+    "quick-attack",
+    "bite",
+    "poison-fang",
+    "horn-attack",
+    "poison-sting"
+  ],
+  "320": [
+    "water-gun",
+    "rollout",
+    "water-pulse",
+    "waterfall"
+  ],
+  "321": [
+    "water-gun",
+    "water-pulse",
+    "hydro-pump",
+    "waterfall",
+    "water-spout",
+    "bubbles",
+    "scald",
+    "aqua-tail"
+  ],
+  "322": [
+    "rock-throw",
+    "ember",
+    "rock-slide",
+    "flame-burst",
+    "lava-plume",
+    "volcano-shot"
+  ],
+  "323": [
+    "ember",
+    "mud-bomb",
+    "flame-burst",
+    "lava-plume",
+    "earthquake",
+    "fissure",
+    "fire-blast",
+    "eruption",
+    "mud-shot"
+  ],
+  "324": [
+    "ember",
+    "flamethrower",
+    "fireball",
+    "eruption",
+    "lava-plume",
+    "heat-wave",
+    "heatzone"
+  ],
+  "325": [
+    "headbutt",
+    "psywave",
+    "psy-pulse",
+    "psychic"
+  ],
+  "326": [
+    "shadowave",
+    "psy-pulse",
+    "psychic",
+    "shadow-ball",
+    "astonish",
+    "confusion"
+  ],
+  "327": [
+    "tackle",
+    "tri-attack",
+    "crabhammer",
+    "dizzy-punch"
+  ],
+  "328": [
+    "bite",
+    "mud-shot",
+    "mud-slap",
+    "dig",
+    "earth-power"
+  ],
+  "329": [
+    "rock-slide",
+    "sand-tomb",
+    "bulldoze",
+    "earthquake",
+    "earth-power"
+  ],
+  "33": [
+    "quick-attack",
+    "poison-fang",
+    "horn-attack",
+    "poison-jab",
+    "toxic-spikes",
+    "dig",
+    "cross-poison",
+    "rage"
+  ],
+  "330": [
+    "rock-slide",
+    "sand-tomb",
+    "dragon-flight",
+    "dragon-breath",
+    "fissure",
+    "bulldoze",
+    "earthquake",
+    "stone-edge",
+    "draco-meteor"
+  ],
+  "331": [
+    "bite",
+    "poison-sting",
+    "toxic-spikes",
+    "earthshock",
+    "night-slash",
+    "absorb",
+    "bullet-seed",
+    "grass-knot",
+    "energy-ball",
+    "sucker-punch"
+  ],
+  "332": [
+    "bite",
+    "dark-ball",
+    "poison-sting",
+    "toxic-spikes",
+    "earthshock",
+    "sand-tomb",
+    "night-slash",
+    "meteor-mash",
+    "frenzy-plant",
+    "dark-pulse"
+  ],
+  "333": [
+    "peck",
+    "pluck",
+    "dragon-breath",
+    "dragon-mist",
+    "dragon-pulse"
+  ],
+  "334": [
+    "peck",
+    "pluck",
+    "dragon-breath",
+    "dragon-mist",
+    "sky-attack",
+    "dragon-pulse",
+    "scale-shot",
+    "draco-meteor"
+  ],
+  "335": [
+    "quick-attack",
+    "slash",
+    "razor-wind",
+    "fury-swipes",
+    "last-resort",
+    "swords-dance",
+    "scratch",
+    "crush-claw",
+    "mud-slap",
+    "dig"
+  ],
+  "336": [
+    "poison-tail",
+    "acid",
+    "venoshock",
+    "poison-fang",
+    "venomous-gale",
+    "acid-rain",
+    "poison-jab",
+    "sludge",
+    "acid-spray"
+  ],
+  "337": [
+    "nasty-splot",
+    "confusion",
+    "psychic",
+    "heal-pulse",
+    "psy-pulse",
+    "psybeam",
+    "psywave"
+  ],
+  "338": [
+    "nasty-splot",
+    "ember",
+    "fire-spin",
+    "flamethrower",
+    "incinerate",
+    "fire-ball",
+    "flare-blitz",
+    "will-o-wisp",
+    "overheat",
+    "rock-slide"
+  ],
+  "339": [
+    "mud-slap",
+    "mud-shot",
+    "aqua-tail",
+    "water-gun",
+    "waterball",
+    "mud-bomb",
+    "muddy-water"
+  ],
+  "34": [
+    "horn-burst",
+    "poison-fang",
+    "poison-jab",
+    "poison-tail",
+    "toxic",
+    "venoshock",
+    "sludge-bomb",
+    "rage",
+    "cross-poison"
+  ],
+  "340": [
+    "mud-slap",
+    "mud-shot",
+    "aqua-tail",
+    "bubbles",
+    "waterball",
+    "earthshock",
+    "muddy-water",
+    "bulldoze",
+    "water-pulse",
+    "earth-power"
+  ],
+  "341": [
+    "bubbles",
+    "bubble-beam",
+    "crabhammer",
+    "dark-pulse",
+    "night-slash",
+    "swords-dance"
+  ],
+  "342": [
+    "bubbles",
+    "bubble-beam",
+    "dark-pulse",
+    "crabhammer",
+    "guillotine",
+    "swords-dance",
+    "crunch",
+    "void-sphere",
+    "night-slash"
+  ],
+  "343": [
+    "mud-slap",
+    "extrasensory",
+    "psybeam",
+    "psychic",
+    "earth-power"
+  ],
+  "344": [
+    "extrasensory",
+    "psybeam",
+    "psyshock",
+    "earth-power",
+    "earthquake",
+    "psychic",
+    "confusion"
+  ],
+  "345": [
+    "bullet-seed",
+    "wrap",
+    "grass-knot",
+    "rock-tomb",
+    "energy-ball",
+    "giga-drain"
+  ],
+  "346": [
+    "bullet-seed",
+    "grass-knot",
+    "ancient-power",
+    "solar-beam",
+    "giga-drain",
+    "frenzy-plant",
+    "energy-ball",
+    "mega-drain",
+    "leaf-storm"
+  ],
+  "347": [
+    "rock-throw",
+    "rock-slide",
+    "stone-edge",
+    "x-scissor",
+    "crush-claw",
+    "fury-cutter",
+    "rock-blast"
+  ],
+  "348": [
+    "struggle-bug",
+    "leech-life",
+    "fury-cutter",
+    "x-scissor",
+    "compass-slash",
+    "crush-claw",
+    "stealth-rock",
+    "falling-rocks",
+    "ancient-power"
+  ],
+  "349": [
+    "tackle",
+    "splash"
+  ],
+  "35": [
+    "dazzling-gleam",
+    "double-slap",
+    "heart-pound",
+    "multi-slap"
+  ],
+  "350": [
+    "scald",
+    "surf",
+    "water-gun",
+    "water-pulse",
+    "muddy-water",
+    "hydro-pump",
+    "brine",
+    "water-spout",
+    "aqua-tail",
+    "waterfall"
+  ],
+  "351": [
+    "ember",
+    "powder-snow",
+    "bubble",
+    "headbutt",
+    "hydro-pump"
+  ],
+  "352": [
+    "lick",
+    "shadow-ball",
+    "sucker-punch",
+    "shadow-sneak",
+    "shadow-claw",
+    "foul-play",
+    "feint-attack",
+    "astonish",
+    "creepy-lick",
+    "fury-swipes"
+  ],
+  "353": [
+    "shadow-ball",
+    "shadow-sphere",
+    "night-shade",
+    "feint-attack"
+  ],
+  "354": [
+    "shadow-ball",
+    "shadow-sphere",
+    "shadow-punch",
+    "shadow-claw",
+    "phantom-force",
+    "hex"
+  ],
+  "355": [
+    "shadow-ball",
+    "ominous-wind",
+    "night-shade",
+    "shadow-punch"
+  ],
+  "356": [
+    "shadow-ball",
+    "shadow-punch",
+    "night-shade",
+    "hex",
+    "ominous-wind",
+    "shadow-blast",
+    "hollow-wind"
+  ],
+  "357": [
+    "seed-bomb",
+    "razor-leaf",
+    "magical-leaf",
+    "air-slash",
+    "petal-tornado",
+    "leaf-storm",
+    "leaf-tornado",
+    "aerial-ace"
+  ],
+  "358": [
+    "confusion",
+    "psyshock",
+    "future-sight",
+    "psy-pulse",
+    "extrasensory",
+    "psychic"
+  ],
+  "359": [
+    "quick-attack",
+    "dark-pulse",
+    "night-slash",
+    "sucker-punch",
+    "razor-wind",
+    "assurance",
+    "swords-dance",
+    "knock-off",
+    "pursuit",
+    "foul-play"
+  ],
+  "36": [
+    "dazzling-gleam",
+    "doubleslap",
+    "multi-slap",
+    "heart-pound",
+    "great-love",
+    "play-rough",
+    "draining-kiss",
+    "moonblast",
+    "floral-storm"
+  ],
+  "360": [
+    "stunning-confusion"
+  ],
+  "361": [
+    "bite",
+    "ice-shards",
+    "ice-fang",
+    "icy-wind",
+    "ice-beam",
+    "frost-power"
+  ],
+  "362": [
+    "ice-shards",
+    "ice-fang",
+    "icy-wind",
+    "powder-snow",
+    "frost-power",
+    "blizzard",
+    "icicle-spear"
+  ],
+  "363": [
+    "ice-shards",
+    "ice-fang",
+    "ice-beam",
+    "ice-ball",
+    "frost-breath",
+    "powder-snow"
+  ],
+  "364": [
+    "ice-shards",
+    "ice-fang",
+    "ice-beam",
+    "ice-ball",
+    "frost-breath",
+    "powder-snow",
+    "aurora-beam"
+  ],
+  "365": [
+    "ice-shards",
+    "ice-fang",
+    "ice-beam",
+    "ice-ball",
+    "frost-breath",
+    "powder-snow",
+    "aurora-beam",
+    "frost-power"
+  ],
+  "366": [
+    "tackle",
+    "bubble-beam",
+    "scald",
+    "water-gun",
+    "waterfall"
+  ],
+  "367": [
+    "tackle",
+    "bubble-beam",
+    "scald",
+    "water-pulse",
+    "aqua-tail",
+    "hydro-pump",
+    "whirlpool",
+    "agility"
+  ],
+  "368": [
+    "tackle",
+    "bubble-beam",
+    "scald",
+    "psychic",
+    "hydro-pump",
+    "whirlpool",
+    "draining-kiss"
+  ],
+  "369": [
+    "rock-throw",
+    "rock-tomb",
+    "bubble-beam",
+    "ancient-power",
+    "waterfall",
+    "water-ball",
+    "head-smash"
+  ],
+  "37": [
+    "quick-attack",
+    "iron-tail",
+    "ember",
+    "flamethrower",
+    "fire-ball",
+    "fire-blast",
+    "agility"
+  ],
+  "370": [
+    "water-pulse",
+    "doubleslap",
+    "dazzling-gleam",
+    "waterfall",
+    "hydro-pump"
+  ],
+  "371": [
+    "bite",
+    "dragon-tail",
+    "crunch",
+    "dragon-claw",
+    "dragon-breath",
+    "dragon-pulse",
+    "headbutt"
+  ],
+  "372": [
+    "bite",
+    "crunch",
+    "dragon-tail",
+    "dragon-claw",
+    "dragon-breath",
+    "dragon-pulse",
+    "draco-meteor",
+    "headbutt"
+  ],
+  "373": [
+    "bite",
+    "dragon-tail",
+    "crunch",
+    "dragon-claw",
+    "dragon-breath",
+    "dragon-pulse",
+    "draco-meteor",
+    "outrage",
+    "dragon-flight"
+  ],
+  "374": [
+    "iron-head",
+    "psy-pulse",
+    "hammer-arm",
+    "psychic",
+    "metal-claw"
+  ],
+  "375": [
+    "iron-head",
+    "psy-pulse",
+    "hammer-arm",
+    "confusion",
+    "psychic",
+    "metal-claw",
+    "heavy-slam",
+    "gyro-ball",
+    "meteor-mash",
+    "heavy-metal"
+  ],
+  "376": [
+    "iron-head",
+    "zen-headbutt",
+    "hammer-arm",
+    "gyro-ball",
+    "psychic",
+    "heavy-slam",
+    "meteor-mash",
+    "flash-cannon",
+    "psychic-fangs"
+  ],
+  "377": [
+    "falling-rocks",
+    "rock-throw",
+    "rock-slide",
+    "rock-tomb",
+    "stone-edge"
+  ],
+  "378": [
+    "blizzard",
+    "icy-wind",
+    "ice-beam",
+    "frost-breath",
+    "aurora-beam"
+  ],
+  "379": [
+    "flash-cannon",
+    "iron-head",
+    "iron-tail",
+    "meteor-mash",
+    "gyro-ball"
+  ],
+  "38": [
+    "ember",
+    "flamethrower",
+    "inferno",
+    "fire-blast",
+    "fire-ball",
+    "burning-jealousy",
+    "flame-wheel",
+    "fire-spin"
+  ],
+  "380": [
+    "dragon-breath",
+    "psyshock",
+    "steel-wing",
+    "zen-headbutt",
+    "outrage",
+    "psychic"
+  ],
+  "381": [
+    "dragon-breath",
+    "psyshock",
+    "steel-wing",
+    "zen-headbutt",
+    "outrage",
+    "psychic"
+  ],
+  "382": [],
+  "383": [],
+  "384": [],
+  "385": [
+    "confusion",
+    "swift",
+    "zen-headbutt",
+    "future-sight",
+    "psyshock",
+    "hyper-beam",
+    "psychic",
+    "meteor-mash"
+  ],
+  "386": [
+    "knock-off",
+    "pursuit",
+    "zen-headbutt",
+    "future-sight",
+    "psyshock",
+    "hyper-beam",
+    "psychic"
+  ],
+  "39": [
+    "dazzling-gleam",
+    "play-rough",
+    "disarming-voice",
+    "heart-pound"
+  ],
+  "4": [
+    "scratch",
+    "ember",
+    "flamethrower",
+    "fire-ball",
+    "fire-fang",
+    "fire-blast",
+    "rage"
+  ],
+  "40": [
+    "dazzling-gleam",
+    "play-rough",
+    "disarming-voice",
+    "heart-pound",
+    "heal-pulse",
+    "body-slam"
+  ],
+  "41": [
+    "bite",
+    "poison-fang",
+    "leech-life",
+    "toxic"
+  ],
+  "42": [
+    "poison-fang",
+    "leech-life",
+    "toxic",
+    "gust",
+    "wing-attack",
+    "air-cutter"
+  ],
+  "43": [
+    "absorb",
+    "acid"
+  ],
+  "44": [
+    "absorb",
+    "acid",
+    "sludge-bomb",
+    "giga-drain"
+  ],
+  "45": [
+    "absorb",
+    "acid",
+    "sludge-bomb",
+    "petal-dance",
+    "solar-beam",
+    "venoshock",
+    "poison-bomb",
+    "mortal-gas",
+    "giga-drain"
+  ],
+  "46": [
+    "scratch",
+    "poison-sting",
+    "slash",
+    "fury-cutter"
+  ],
+  "47": [
+    "absorb",
+    "leech-life",
+    "bullet-seed",
+    "lunge",
+    "fury-cutter",
+    "x-scissor"
+  ],
+  "48": [
+    "leech-life",
+    "silver-wind",
+    "confusion",
+    "psychic"
+  ],
+  "49": [
+    "leech-life",
+    "silver-wind",
+    "toxic",
+    "psychic",
+    "signal-beam",
+    "sludge-bomb",
+    "confusion"
+  ],
+  "5": [
+    "ember",
+    "flamethrower",
+    "fire-ball",
+    "fire-punch",
+    "flame-burst",
+    "fire-blast",
+    "rage"
+  ],
+  "50": [
+    "slash",
+    "mud-shot",
+    "mud-slap",
+    "earth-power"
+  ],
+  "51": [
+    "mud-shot",
+    "mud-slap",
+    "dig",
+    "fissure",
+    "earthquake",
+    "earth-power"
+  ],
+  "52": [
+    "slash",
+    "scratch",
+    "bite",
+    "pay-day",
+    "night-slash"
+  ],
+  "53": [
+    "slash",
+    "scratch",
+    "bite",
+    "night-slash",
+    "pay-day",
+    "crunch",
+    "payback"
+  ],
+  "54": [
+    "water-gun",
+    "aqua-tail",
+    "confusion",
+    "water-ball",
+    "headbutt",
+    "stunning-confusion"
+  ],
+  "55": [
+    "bubble",
+    "water-pulse",
+    "psychic",
+    "surf",
+    "stunning-confusion",
+    "aqua-tail"
+  ],
+  "56": [
+    "scratch",
+    "triple-kick",
+    "karate-chop",
+    "cross-crop",
+    "rage"
+  ],
+  "57": [
+    "low-kick",
+    "mega-kick",
+    "karate-chop",
+    "close-combat",
+    "cross-crop",
+    "leap-strike",
+    "rage"
+  ],
+  "58": [
+    "bite",
+    "ember",
+    "flamethrower",
+    "fire-ball",
+    "fire-fang",
+    "heat-wave"
+  ],
+  "59": [
+    "ember",
+    "fire-ball",
+    "extreme-speed",
+    "flare-blitz",
+    "burn-up",
+    "hellfire-storm",
+    "flamethrower",
+    "fire-fang"
+  ],
+  "6": [
+    "ember",
+    "flamethrower",
+    "fire-ball",
+    "fire-punch",
+    "flame-burst",
+    "fire-blast",
+    "air-slash",
+    "magma-storm",
+    "aerial-ace"
+  ],
+  "60": [
+    "doubleslap",
+    "bubbles",
+    "water-gun",
+    "aqua-tail"
+  ],
+  "61": [
+    "mud-shot",
+    "doubleslap",
+    "bubble-beam",
+    "water-gun",
+    "ice-beam",
+    "brick-break",
+    "dynamic-punch",
+    "aqua-tail"
+  ],
+  "62": [
+    "bubble-beam",
+    "water-gun",
+    "liquidation",
+    "brick-break",
+    "dynamic-punch",
+    "surf",
+    "hydro-pump",
+    "karate-chop",
+    "triple-punch"
+  ],
+  "63": [
+    "psy-pulse",
+    "psychic"
+  ],
+  "64": [
+    "psybeam",
+    "psywave",
+    "psy-pulse",
+    "confusion",
+    "psychic",
+    "psyusion"
+  ],
+  "65": [
+    "psybeam",
+    "psy-pulse",
+    "psy-ball",
+    "confusion",
+    "psychic",
+    "kinesis",
+    "psychokinesis",
+    "psywave"
+  ],
+  "66": [
+    "triple-punch",
+    "karate-chop",
+    "low-kick",
+    "focus-blast",
+    "agility"
+  ],
+  "67": [
+    "triple-punch",
+    "karate-chop",
+    "low-kick",
+    "vital-throw",
+    "focus-blast",
+    "arm-thrust",
+    "agility"
+  ],
+  "68": [
+    "triple-punch",
+    "karate-chop",
+    "low-kick",
+    "close-combat",
+    "revenge",
+    "brick-break",
+    "superpower",
+    "focus-blast",
+    "arm-thrust"
+  ],
+  "69": [
+    "razor-leaf",
+    "vine-whip",
+    "acid",
+    "slash"
+  ],
+  "7": [
+    "headbutt",
+    "bubble",
+    "water-gun",
+    "water-pulse",
+    "water-ball",
+    "aqua-tail"
+  ],
+  "70": [
+    "razor-leaf",
+    "vine-whip",
+    "magical-leaf",
+    "giga-drain",
+    "leaf-storm"
+  ],
+  "71": [
+    "razor-leaf",
+    "vine-whip",
+    "magical-leaf",
+    "giga-drain",
+    "leaf-storm",
+    "leaf-tornado",
+    "leaf-blade",
+    "leafage"
+  ],
+  "72": [
+    "wrap",
+    "bubbles",
+    "poison-jab",
+    "acid",
+    "water-ball"
+  ],
+  "73": [
+    "bubbles",
+    "bubble-beam",
+    "water-pulse",
+    "water-ball",
+    "venomous-sting",
+    "hydro-pump",
+    "acid",
+    "poison-bomb",
+    "venoshock"
+  ],
+  "74": [
+    "tackle",
+    "rock-throw",
+    "rock-slide",
+    "earth-power"
+  ],
+  "75": [
+    "rock-throw",
+    "rock-slide",
+    "stone-edge",
+    "earth-power",
+    "falling-rocks",
+    "selfdestruct"
+  ],
+  "76": [
+    "rock-throw",
+    "rock-slide",
+    "ancient-power",
+    "rock-wrecker",
+    "falling-rocks",
+    "rollout",
+    "selfdestruct",
+    "earth-power"
+  ],
+  "77": [
+    "quick-attack",
+    "ember",
+    "flamethrower",
+    "fire-ball",
+    "stomp",
+    "fire-punch"
+  ],
+  "78": [
+    "ember",
+    "flame-circle",
+    "flame-charge",
+    "flare-blitz",
+    "fire-spin",
+    "flamethrower"
+  ],
+  "79": [
+    "aqua-tail",
+    "headbutt",
+    "iron-tail",
+    "confusion",
+    "water-ball",
+    "water-gun"
+  ],
+  "8": [
+    "headbutt",
+    "bubble",
+    "water-gun",
+    "water-pulse",
+    "water-ball",
+    "aqua-tail",
+    "muddy-water"
+  ],
+  "80": [
+    "aqua-tail",
+    "confusion",
+    "water-pulse",
+    "water-gun",
+    "psychic",
+    "surf",
+    "heal-pulse"
+  ],
+  "81": [
+    "thunder-shock",
+    "spark",
+    "electro-ball",
+    "sonicboom"
+  ],
+  "82": [
+    "iron-spiner",
+    "thunder-shock",
+    "scrap-throw",
+    "gyro-ball",
+    "magnet-pull",
+    "heavy-metal",
+    "electro-ball",
+    "charge-beam",
+    "thunderbolt"
+  ],
+  "83": [
+    "drill-peck",
+    "stickmerang",
+    "stickslash",
+    "stick-throw",
+    "air-slash",
+    "agility",
+    "aerial-ace"
+  ],
+  "84": [
+    "peck",
+    "drill-peck",
+    "rage",
+    "agility"
+  ],
+  "85": [
+    "peck",
+    "drill-peck",
+    "pluck",
+    "tri-attack",
+    "aerial-ace",
+    "rage",
+    "agility",
+    "sky-attack"
+  ],
+  "86": [
+    "headbutt",
+    "aqua-tail",
+    "ice-shard",
+    "icy-wind",
+    "aurora-beam",
+    "ice-beam"
+  ],
+  "87": [
+    "brine",
+    "ice-shard",
+    "ice-beam",
+    "icy-wind",
+    "aurora-beam",
+    "blizzard"
+  ],
+  "88": [
+    "mud-shot",
+    "acid",
+    "sludge",
+    "mud-bomb",
+    "poison-bomb"
+  ],
+  "89": [
+    "acid",
+    "sludge",
+    "toxic",
+    "sludge-bomb",
+    "mortal-gas",
+    "swamp-mist",
+    "poison-touch"
+  ],
+  "9": [
+    "bubbles",
+    "water-gun",
+    "water-ball",
+    "water-pulse",
+    "muddy-water",
+    "hydro-cannon",
+    "hydro-pump",
+    "aqua-tail"
+  ],
+  "90": [
+    "lick",
+    "bubbles",
+    "clamp",
+    "ice-beam",
+    "razor-shell"
+  ],
+  "91": [
+    "icicle-spear",
+    "clamp",
+    "whirlpool",
+    "aurora-beam",
+    "ice-beam",
+    "blizzard",
+    "razor-shell"
+  ],
+  "92": [
+    "lick",
+    "shadow-ball",
+    "night-shade",
+    "shadow-storm"
+  ],
+  "93": [
+    "lick",
+    "shadow-ball",
+    "night-shade",
+    "shadow-storm",
+    "nightmare"
+  ],
+  "94": [
+    "creepy-lick",
+    "shadow-ball",
+    "shadow-punch",
+    "astonish",
+    "shadow-storm",
+    "nightmare",
+    "shadow-claw",
+    "shadow-sphere"
+  ],
+  "95": [
+    "rock-throw",
+    "rock-slide",
+    "earth-power",
+    "falling-rocks",
+    "stone-edge",
+    "earthquake"
+  ],
+  "96": [
+    "headbutt",
+    "psywave",
+    "psybeam",
+    "confusion",
+    "dream-eater",
+    "nasty-splot"
+  ],
+  "97": [
+    "psywave",
+    "psy-pulse",
+    "psybeam",
+    "confusion",
+    "synchronoise",
+    "psychic",
+    "dream-eater",
+    "nasty-splot"
+  ],
+  "98": [
+    "mud-shot",
+    "bubble",
+    "bubble-beam",
+    "crabhammer"
+  ],
+  "99": [
+    "bubble",
+    "bubble-beam",
+    "guillotine",
+    "crabhammer",
+    "razor-shell",
+    "hyper-beam",
+    "swords-dance"
+  ]
+}

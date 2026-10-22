@@ -3,12 +3,35 @@ package game
 import (
 	_ "embed"
 	"encoding/json"
+	"fmt"
 	"log"
 	"sync"
 )
 
 //go:embed catalog.json
 var catalogJSON []byte
+
+//go:embed moves.json
+var movesJSON []byte
+
+var (
+	movesOnce sync.Once
+	movesMap  map[string][]string
+)
+
+// GetSpeciesMoves retorna a lista de golpes válidos da espécie
+func GetSpeciesMoves(speciesID int) []string {
+	movesOnce.Do(func() {
+		movesMap = make(map[string][]string)
+		if len(movesJSON) > 0 {
+			_ = json.Unmarshal(movesJSON, &movesMap)
+		}
+	})
+	if mvs, ok := movesMap[fmt.Sprintf("%d", speciesID)]; ok && len(mvs) > 0 {
+		return mvs
+	}
+	return []string{"tackle"}
+}
 
 type Spot struct {
 	ID        string `json:"id"`

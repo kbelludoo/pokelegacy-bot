@@ -25,10 +25,12 @@ type SocketClient struct {
 	proxyURL      string
 	clientRelease string
 
-	conn       *websocket.Conn
-	mu         sync.Mutex
-	isClosed   bool
-	onReplaced func(reason string)
+	conn         *websocket.Conn
+	mu           sync.Mutex
+	isClosed     bool
+	onReplaced   func(reason string)
+	ackCounter   int
+	ackCallbacks map[int]func([]any)
 
 	handlers   map[string][]func(payload any)
 	handlersMu sync.RWMutex
@@ -46,8 +48,9 @@ func NewSocketClient(baseURL, token, deviceID, bindIP, proxyURL, accID string, o
 		deviceID:      deviceID,
 		bindIP:        bindIP,
 		proxyURL:      proxyURL,
-		clientRelease: DefaultClientRelease,
+		clientRelease: GetClientRelease(),
 		onReplaced:    onReplaced,
+		ackCallbacks:  make(map[int]func([]any)),
 		handlers:      make(map[string][]func(payload any)),
 		logPrefix:     fmt.Sprintf("[%s][WS]", accID),
 	}
@@ -198,26 +201,66 @@ func (sc *SocketClient) connectAndListen(ctx context.Context) error {
 
 		// 3.5. Respostas de confirmação (Acks) do Socket.IO: '43<ackId>[payload]'
 		if strings.HasPrefix(msg, "43") {
-			idx := strings.Index(msg, "[")
-			if idx != -1 {
+			bracketIdx := strings.Index(msg, "[")
+			if bracketIdx != -1 {
+				ackStr := msg[2:bracketIdx]
+				var ackID int
+				_, _ = fmt.Sscanf(ackStr, "%d", &ackID)
+
 				var arr []any
-				if err := json.Unmarshal([]byte(msg[idx:]), &arr); err == nil && len(arr) >= 1 {
-					if resMap, ok := arr[0].(map[string]any); ok {
-						if okVal, _ := resMap["ok"].(bool); okVal {
-							if off, ok := resMap["official"].(map[string]any); ok {
-								var v int
-								if vAny, exists := resMap["version"]; exists {
-									switch n := vAny.(type) {
-									case float64:
-										v = int(n)
-									case int:
-										v = n
-									}
+				if err := json.Unmarshal([]byte(msg[bracketIdx:]), &arr); err == nil {
+					sc.mu.Lock()
+					cb, exists := sc.ackCallbacks[ackID]
+					if exists {
+						delete(sc.ackCallbacks, ackID)
+					}
+					sc.mu.Unlock()
+
+					if exists && cb != nil {
+						go cb(arr)
+					}
+
+					if len(arr) >= 1 {
+						if resMap, ok := arr[0].(map[string]any); ok {
+							// Se contiver rootOperationId (sessão AFK a liquidar), envia confirmação
+							var rootOp string
+							if res, ok := resMap["resumed"].(map[string]any); ok {
+								rootOp, _ = res["rootOperationId"].(string)
+							}
+							if rec, ok := resMap["receipt"].(map[string]any); ok {
+								if rootOp == "" {
+									rootOp, _ = rec["rootOperationId"].(string)
 								}
-								sc.dispatch("hunt:resumeResponse", map[string]any{
-									"official": off,
-									"version":  v,
-								})
+							}
+							if rOp, ok := resMap["rootOperationId"].(string); ok && rootOp == "" {
+								rootOp = rOp
+							}
+							if rootOp != "" {
+								receiptPacket := fmt.Sprintf(`421["hunt:resumeReceipt",{"rootOperationId":"%s"}]`, rootOp)
+								sc.mu.Lock()
+								if sc.conn != nil {
+									_ = sc.conn.WriteMessage(websocket.TextMessage, []byte(receiptPacket))
+								}
+								sc.mu.Unlock()
+								log.Printf("%s 📦 Sessão AFK liquidada com sucesso (rootOperationId: %s)", sc.logPrefix, rootOp)
+							}
+
+							if okVal, _ := resMap["ok"].(bool); okVal {
+								if off, ok := resMap["official"].(map[string]any); ok {
+									var v int
+									if vAny, exists := resMap["version"]; exists {
+										switch n := vAny.(type) {
+										case float64:
+											v = int(n)
+										case int:
+											v = n
+										}
+									}
+									sc.dispatch("hunt:resumeResponse", map[string]any{
+										"official": off,
+										"version":  v,
+									})
+								}
 							}
 						}
 					}
@@ -298,6 +341,46 @@ func (sc *SocketClient) Emit(event string, payload any) error {
 
 	packet := "42" + string(data)
 	return sc.conn.WriteMessage(websocket.TextMessage, []byte(packet))
+}
+
+// EmitAck envia um evento Socket.IO aguardando confirmação (ack) com callback
+func (sc *SocketClient) EmitAck(event string, payload any, callback func(resp []any)) error {
+	sc.mu.Lock()
+	defer sc.mu.Unlock()
+	if sc.conn == nil || sc.isClosed {
+		return fmt.Errorf("websocket não conectado")
+	}
+
+	sc.ackCounter++
+	ackID := sc.ackCounter
+	if sc.ackCallbacks == nil {
+		sc.ackCallbacks = make(map[int]func([]any))
+	}
+	if callback != nil {
+		sc.ackCallbacks[ackID] = callback
+	}
+
+	var data []byte
+	var err error
+	if payload == nil {
+		data, err = json.Marshal([]any{event})
+	} else {
+		data, err = json.Marshal([]any{event, payload})
+	}
+	if err != nil {
+		delete(sc.ackCallbacks, ackID)
+		return err
+	}
+
+	packet := fmt.Sprintf("42%d%s", ackID, string(data))
+	return sc.conn.WriteMessage(websocket.TextMessage, []byte(packet))
+}
+
+// IsConnected verifica se o websocket está ativo
+func (sc *SocketClient) IsConnected() bool {
+	sc.mu.Lock()
+	defer sc.mu.Unlock()
+	return sc.conn != nil && !sc.isClosed
 }
 
 // ResumeHunt solicita ao servidor a consolidação e retorno do progresso oficial da caçada

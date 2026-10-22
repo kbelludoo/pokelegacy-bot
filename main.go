@@ -32,6 +32,9 @@ func formatNumber(n int64) string {
 }
 
 func main() {
+	// 0. Sincroniza versão da release do jogo automaticamente
+	release := game.DiscoverClientRelease(context.Background(), game.DefaultBaseURL)
+	log.Printf("Versão de release do cliente de jogo: %s\n", release)
 	log.Println("================================================================================")
 	log.Println("       ⚡ NATIVE GO MULTI-BOT ENGINE (ULTRA-LEVE & ALTA PERFORMANCE) ⚡        ")
 	log.Println("================================================================================")
