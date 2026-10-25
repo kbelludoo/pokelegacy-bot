@@ -27,8 +27,8 @@
       "maxStaminaMs": 43200000,
       "name": "Treinador #1",
       "staminaFormatted": "1h 19m",
-      "staminaMs": 4744159,
-      "staminaPct": 10,
+      "staminaMs": 4784410,
+      "staminaPct": 11,
       "status": "DESCANSO (Cidade)",
       "updatedAt": 1792929640306,
       "vocation": "Treinador"
@@ -59,9 +59,9 @@
       "maxMana": 100,
       "maxStaminaMs": 43200000,
       "name": "Treinador #2",
-      "staminaFormatted": "1h 18m",
-      "staminaMs": 4739121,
-      "staminaPct": 10,
+      "staminaFormatted": "1h 19m",
+      "staminaMs": 4780658,
+      "staminaPct": 11,
       "status": "DESCANSO (Cidade)",
       "updatedAt": 1792929650902,
       "vocation": "Treinador"
@@ -93,8 +93,8 @@
       "maxStaminaMs": 43200000,
       "name": "Treinador #3",
       "staminaFormatted": "1h 19m",
-      "staminaMs": 4746893,
-      "staminaPct": 10,
+      "staminaMs": 4787941,
+      "staminaPct": 11,
       "status": "DESCANSO (Cidade)",
       "updatedAt": 1792929632648,
       "vocation": "Treinador"
@@ -125,9 +125,9 @@
       "maxMana": 100,
       "maxStaminaMs": 43200000,
       "name": "Treinador #4",
-      "staminaFormatted": "1h 18m",
-      "staminaMs": 4737919,
-      "staminaPct": 10,
+      "staminaFormatted": "1h 19m",
+      "staminaMs": 4778585,
+      "staminaPct": 11,
       "status": "DESCANSO (Cidade)",
       "updatedAt": 1792929656133,
       "vocation": "Treinador"
@@ -158,16 +158,16 @@
       "maxMana": 100,
       "maxStaminaMs": 43200000,
       "name": "Treinador #5",
-      "staminaFormatted": "1h 18m",
-      "staminaMs": 4737239,
-      "staminaPct": 10,
+      "staminaFormatted": "1h 19m",
+      "staminaMs": 4777862,
+      "staminaPct": 11,
       "status": "DESCANSO (Cidade)",
       "updatedAt": 1792929659178,
       "vocation": "Treinador"
     }
   ],
-  "goroutines": 31,
-  "ramAllocMB": 3.5773162841796875,
+  "goroutines": 27,
+  "ramAllocMB": 2.9670562744140625,
   "ramSysMB": 13.599861145019531,
-  "uptime": "65h7m55s"
+  "uptime": "65h9m56s"
 }
