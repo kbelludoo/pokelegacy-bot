@@ -26,9 +26,9 @@
       "maxMana": 100,
       "maxStaminaMs": 43200000,
       "name": "Treinador #1",
-      "staminaFormatted": "0h 35m",
-      "staminaMs": 2147080,
-      "staminaPct": 4,
+      "staminaFormatted": "0h 36m",
+      "staminaMs": 2187567,
+      "staminaPct": 5,
       "status": "DESCANSO (Cidade)",
       "updatedAt": 1792929640306,
       "vocation": "Treinador"
@@ -59,9 +59,9 @@
       "maxMana": 100,
       "maxStaminaMs": 43200000,
       "name": "Treinador #2",
-      "staminaFormatted": "0h 35m",
-      "staminaMs": 2143061,
-      "staminaPct": 4,
+      "staminaFormatted": "0h 36m",
+      "staminaMs": 2183727,
+      "staminaPct": 5,
       "status": "DESCANSO (Cidade)",
       "updatedAt": 1792929650902,
       "vocation": "Treinador"
@@ -92,9 +92,9 @@
       "maxMana": 100,
       "maxStaminaMs": 43200000,
       "name": "Treinador #3",
-      "staminaFormatted": "0h 35m",
-      "staminaMs": 2149550,
-      "staminaPct": 4,
+      "staminaFormatted": "0h 36m",
+      "staminaMs": 2190813,
+      "staminaPct": 5,
       "status": "DESCANSO (Cidade)",
       "updatedAt": 1792929632648,
       "vocation": "Treinador"
@@ -125,9 +125,9 @@
       "maxMana": 100,
       "maxStaminaMs": 43200000,
       "name": "Treinador #4",
-      "staminaFormatted": "0h 35m",
-      "staminaMs": 2141847,
-      "staminaPct": 4,
+      "staminaFormatted": "0h 36m",
+      "staminaMs": 2182389,
+      "staminaPct": 5,
       "status": "DESCANSO (Cidade)",
       "updatedAt": 1792929656133,
       "vocation": "Treinador"
@@ -158,16 +158,16 @@
       "maxMana": 100,
       "maxStaminaMs": 43200000,
       "name": "Treinador #5",
-      "staminaFormatted": "0h 35m",
-      "staminaMs": 2141041,
-      "staminaPct": 4,
+      "staminaFormatted": "0h 36m",
+      "staminaMs": 2180549,
+      "staminaPct": 5,
       "status": "DESCANSO (Cidade)",
       "updatedAt": 1792929659178,
       "vocation": "Treinador"
     }
   ],
   "goroutines": 27,
-  "ramAllocMB": 3.0959014892578125,
+  "ramAllocMB": 3.3996429443359375,
   "ramSysMB": 13.599861145019531,
-  "uptime": "62h57m55s"
+  "uptime": "62h59m55s"
 }
