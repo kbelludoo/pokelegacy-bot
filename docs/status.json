@@ -26,8 +26,8 @@
       "maxMana": 100,
       "maxStaminaMs": 43200000,
       "name": "Treinador #1",
-      "staminaFormatted": "0h 00m",
-      "staminaMs": 28109,
+      "staminaFormatted": "0h 01m",
+      "staminaMs": 67958,
       "status": "DESCANSO (Cidade)",
       "updatedAt": 1792929640306,
       "vocation": "Treinador"
@@ -58,8 +58,8 @@
       "maxMana": 100,
       "maxStaminaMs": 43200000,
       "name": "Treinador #2",
-      "staminaFormatted": "0h 00m",
-      "staminaMs": 25688,
+      "staminaFormatted": "0h 01m",
+      "staminaMs": 65696,
       "status": "DESCANSO (Cidade)",
       "updatedAt": 1792929650902,
       "vocation": "Treinador"
@@ -90,8 +90,8 @@
       "maxMana": 100,
       "maxStaminaMs": 43200000,
       "name": "Treinador #3",
-      "staminaFormatted": "0h 00m",
-      "staminaMs": 30653,
+      "staminaFormatted": "0h 01m",
+      "staminaMs": 71418,
       "status": "DESCANSO (Cidade)",
       "updatedAt": 1792929632648,
       "vocation": "Treinador"
@@ -122,8 +122,8 @@
       "maxMana": 100,
       "maxStaminaMs": 43200000,
       "name": "Treinador #4",
-      "staminaFormatted": "0h 00m",
-      "staminaMs": 22747,
+      "staminaFormatted": "0h 01m",
+      "staminaMs": 63236,
       "status": "DESCANSO (Cidade)",
       "updatedAt": 1792929656133,
       "vocation": "Treinador"
@@ -154,15 +154,15 @@
       "maxMana": 100,
       "maxStaminaMs": 43200000,
       "name": "Treinador #5",
-      "staminaFormatted": "0h 00m",
-      "staminaMs": 21878,
+      "staminaFormatted": "0h 01m",
+      "staminaMs": 62016,
       "status": "DESCANSO (Cidade)",
       "updatedAt": 1792929659178,
       "vocation": "Treinador"
     }
   ],
   "goroutines": 27,
-  "ramAllocMB": 3.2918319702148438,
+  "ramAllocMB": 3.5672454833984375,
   "ramSysMB": 13.599861145019531,
-  "uptime": "61h11m55s"
+  "uptime": "61h13m55s"
 }
