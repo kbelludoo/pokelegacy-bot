@@ -524,7 +524,11 @@ func (b *Bot) performServerHuntStep(ctx context.Context) {
 
 	var ballID any = nil
 	spID := int(toFloat(firstWild["speciesId"]))
-	if b.config.Settings.AutoCatch || (b.config.Settings.FocusPokedex && !b.pokedexCaught[spID]) {
+	isShiny, _ := firstWild["shiny"].(bool)
+	if isShiny {
+		ballID = "ultra_ball"
+		b.addLogLocked(fmt.Sprintf("✨ SHINY AVISTADO (#%d)! Jogando Ultra Ball...", spID))
+	} else if b.config.Settings.AutoCatch || (b.config.Settings.FocusPokedex && !b.pokedexCaught[spID]) {
 		ballID = "poke_ball"
 		if b.config.Settings.PreferredBall != "" {
 			ballID = b.config.Settings.PreferredBall
