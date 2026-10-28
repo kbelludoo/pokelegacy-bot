@@ -2,12 +2,12 @@
   "accounts": [
     {
       "currentArea": "Bosque de Hoenn",
-      "durationSec": 147279,
-      "expPerHour": 2093844.2710773433,
-      "gold": 957059,
-      "hp": 141,
+      "durationSec": 147411,
+      "expPerHour": 2092311.2522131996,
+      "gold": 964941,
+      "hp": 142,
       "id": "acc-1",
-      "kills": 11222,
+      "kills": 11256,
       "level": 104,
       "logs": [
         "💥 Super Efetivo (2.0x)! Charmander explorou a fraqueza de Seedot (grass).",
@@ -26,11 +26,11 @@
       "maxMana": 100,
       "maxStaminaMs": 43200000,
       "name": "Treinador #1",
-      "staminaFormatted": "11h 41m",
-      "staminaMs": 42077607,
+      "staminaFormatted": "11h 39m",
+      "staminaMs": 41947392,
       "staminaPct": 97,
       "status": "hunting",
-      "updatedAt": 1793172967736,
+      "updatedAt": 1793173098880,
       "vocation": "Treinador"
     },
     {
@@ -62,8 +62,8 @@
       "staminaFormatted": "11h 50m",
       "staminaMs": 42643725,
       "staminaPct": 98,
-      "status": "COOLDOWN ANTI-BAN (8m28s)",
-      "updatedAt": 1793172967438,
+      "status": "COOLDOWN ANTI-BAN (6m24s)",
+      "updatedAt": 1793173091579,
       "vocation": "Treinador"
     },
     {
@@ -95,18 +95,18 @@
       "staminaFormatted": "11h 58m",
       "staminaMs": 43092517,
       "staminaPct": 99,
-      "status": "COOLDOWN ANTI-BAN (7m58s)",
-      "updatedAt": 1793172957487,
+      "status": "COOLDOWN ANTI-BAN (5m37s)",
+      "updatedAt": 1793173097980,
       "vocation": "Treinador"
     },
     {
       "currentArea": "Céu de Johto",
-      "durationSec": 147279,
-      "expPerHour": 1472237.8669056688,
-      "gold": 1263359,
-      "hp": 140,
+      "durationSec": 147411,
+      "expPerHour": 1472950.3388485254,
+      "gold": 1271925,
+      "hp": 146,
       "id": "acc-4",
-      "kills": 6679,
+      "kills": 6713,
       "level": 113,
       "logs": [
         "💥 Super Efetivo (2.0x)! Pikachu explorou a fraqueza de Mantine (water).",
@@ -125,21 +125,21 @@
       "maxMana": 100,
       "maxStaminaMs": 43200000,
       "name": "Treinador #4",
-      "staminaFormatted": "9h 59m",
-      "staminaMs": 35951969,
-      "staminaPct": 83,
+      "staminaFormatted": "9h 57m",
+      "staminaMs": 35820645,
+      "staminaPct": 82,
       "status": "hunting",
-      "updatedAt": 1793172967281,
+      "updatedAt": 1793173099279,
       "vocation": "Treinador"
     },
     {
       "currentArea": "Céu de Johto",
-      "durationSec": 147275,
-      "expPerHour": 822476.496350365,
-      "gold": 147591,
-      "hp": 142,
+      "durationSec": 147406,
+      "expPerHour": 822620.0263218593,
+      "gold": 151826,
+      "hp": 141,
       "id": "acc-5",
-      "kills": 7760,
+      "kills": 7777,
       "level": 112,
       "logs": [
         "⚡ STAMINA: Refill diário gratuito ativado automaticamente (+12h)!",
@@ -158,16 +158,16 @@
       "maxMana": 100,
       "maxStaminaMs": 43200000,
       "name": "Treinador #5",
-      "staminaFormatted": "10h 44m",
-      "staminaMs": 38660039,
+      "staminaFormatted": "10h 42m",
+      "staminaMs": 38529480,
       "staminaPct": 89,
       "status": "hunting",
-      "updatedAt": 1793172963576,
+      "updatedAt": 1793173094386,
       "vocation": "Treinador"
     }
   ],
   "goroutines": 23,
-  "ramAllocMB": 2.1989669799804688,
+  "ramAllocMB": 2.3424301147460938,
   "ramSysMB": 17.59986114501953,
-  "uptime": "40h54m42s"
+  "uptime": "40h56m52s"
 }
